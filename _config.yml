@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Nina B. Zumel / Data Science"
 title_separator          : "-"
 name                     : &name "Nina Zumel"
 description              : &description "Data Science"
@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Nina Zumel"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  avatar           : "ninaheadshotsmall.jpeg"
+  bio              : "Founder, Principal Data Scientist, Win-Vector LLC"
   location         : "San Francisco"
   employer         : "http://www.win-vector.com/site/"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
