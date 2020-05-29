@@ -1,16 +1,16 @@
 # main links links
 main:
   - title: "Practical Data Science with R"
-    url: /practical-data-science-with-r/    
-    
-  - title: "Publications"
-    url: /Nina_publications/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
+    url: /practical-data-science-with-r/   
     
   - title: "CV"
     url: /NinaCV/
     
+  - title: "Publications/Technical Writing"
+    url: /Nina_publications/
+    
   - title: "Other Writing"
     url: /Nina_other_writing/
+    
+  - title: "Blog Posts"
+    url: /year-archive/
