@@ -1,26 +1,24 @@
 ---
-layout: page
-title: Publications
-date: 2012-08-27 21:30:19.000000000 -07:00
-type: page
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories: []
-tags: []
-meta:
-  _edit_last: '4324191'
-  switch_like_status: '1'
-  _wp_page_template: fullwidth-page.php
-author:
-  login: nzumel
-  email: nzumel@mzlabs.com
-  display_name: nzumel
-  first_name: Nina
-  last_name: Zumel
-permalink: "/publications/"
+permalink: "/nina-technical/"
+title: Technical Writing
+author_profile: true
+redirect_from:
+  -/nina-technical.html
 ---
+
+## Technical Articles
+In addition to the peer-reviewed papers listed below, I also have written or collaborated on other articles and essays about a variety of topics.
+
+<p><a href="http://www.win-vector.com/blog/author/nina-zumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
+Articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting. Co-authored with John Mount.</p>
+<p><a href="http://winvector.github.io/DataPrep/EN-CNTNT-Whitepaper-Data-Prep-Using-R.pdf"><strong>Preparing data for analysis using R</strong></a><br />
+A white paper on data exploration and treatment in R, including a survey of commonly encountered data issues and how to resolve them. I also briefly introduce <a href="https://github.com/WinVector/vtreat"><code>vtreat</code></a>, Win-Vector's R package for automated data treatment (<a href="https://cran.r-project.org/web/packages/vtreat/index.html">CRAN distribution</a>). This paper was generously sponsored by Microsoft Data Science.</p>
+<p><strong>Articles that I've authored or contributed to that haven't been formally published.</strong></p>
+<p><a href="http://www.mzlabs.com/NinaZumel/publications/ImprovWhitePaper.pdf"><strong>Comparing Apples And Oranges:</strong></a> A paper with John Mount on the limits of statistical inference in the Google AdSense market.</p>
+<p><a href="http://www.mzlabs.com/NinaZumel/publications/ImprovWhitePaper.pdf"><strong>"Something out of Something": Improvisational Training for Emergency Managers:</strong></a> A white paper about improvisation, in the context of emergency management.</p>
+<p><a href="https://arxiv.org/abs/1611.09477"><strong>vtreat: a data.frame Processor for Predictive Modeling:</strong></a> Describes the theory of data preparation behind <code>vtreat</code>, and demonstrates its use.</p>
+
+## Peer-Reviewed Academic Publications
 <p><strong>The vtreat R package: a statistically sound data processor for predictive modeling</strong>. J. Mount and N. Zumel. <em>The Journal of Open Source Software</em>, Vol. 3, No. 23, p 584 (2018)<br />
 Download: <a href="http://joss.theoj.org/papers/10.21105/joss.00584">Link to <em>JOSS</em> site for pdf</a></p>
 <p><strong>Evaluating the Impact of Improvisation on the Incident Command System: A Modified Single Case Study using the DDD Simulator</strong>. Z. E. Franco, N. Zumel, J. Holman, K. Blau, L. Beutler. In J. Landgren, U. Nulden and B. Van de Walle, (Eds.) <em>Proceedings of the 6th International Conference on Information Systems for Crisis Response and Management (ISCRAM2009),</em> Gothenburg, Sweden, May 2009.<br />

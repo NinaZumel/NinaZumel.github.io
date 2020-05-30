@@ -4,10 +4,13 @@ main:
     url: /practical-data-science-with-r/   
     
   - title: "CV"
-    url: /nina-cv/
+    url: /cv/
+    
+  - title: "Talks"
+    url: /talks/
     
   - title: "Publications/Technical Writing"
-    url: /nina-publications/
+    url: /nina-technical/
     
   - title: "Other Writing"
     url: /nina-other-writing/
