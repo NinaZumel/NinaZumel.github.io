@@ -25,13 +25,13 @@ In support of [*Practical Data Science with R*, 2nd Edition](https://www.manning
 
 * The Table of Contents, and a free example chapter available from the Manning book page.
 
-* A [public repository of data sets and code] (https://github.com/WinVector/PDSwR2), under a Creative Commons Attribution-NonCommercial 3.0 Unported License where possible.
+* A [public repository of data sets and code](https://github.com/WinVector/PDSwR2), under a Creative Commons Attribution-NonCommercial 3.0 Unported License where possible.
 
 * Downloadable [example code](https://github.com/WinVector/PDSwR2/tree/master/CodeExamples).
 
 For more about the book please see the following posts from the Win-Vector blog:
 
-* [On Writing Our Book: A Little Philosophy](http://www.win-vector.com/blog/2013/05/on-writing-our-book-a-little-philosophy/) -- A note on "pre-requisites"
+* [On Writing Our Book: A Little Philosophy](http://www.win-vector.com/blog/2013/05/on-writing-our-book-a-little-philosophy/) -- A note on "prerequisites"
 
 * [How Does Practical Data Science with R Stand Out?](http://www.win-vector.com/blog/2014/06/how-does-practical-data-science-with-r-stand-out) -- Some other great, useful books for data scientists, and why our book complements them.
 
