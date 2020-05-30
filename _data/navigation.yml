@@ -3,9 +3,6 @@ main:
   - title: "Practical Data Science with R"
     url: /practical-data-science-with-r/   
     
-  - title: "CV"
-    url: /cv/
-    
   - title: "Talks"
     url: /talks/
     
@@ -15,5 +12,8 @@ main:
   - title: "Other Writing"
     url: /nina-other-writing/
     
-  - title: "Blog Posts"
+  - title: "Articles and Occasional Announcements"
     url: /year-archive/
+    
+  - title: "CV"
+    url: /cv/

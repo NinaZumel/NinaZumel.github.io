@@ -11,7 +11,7 @@ tags:
 - R packages
 - visualization
 - WVPlots
-permalink: /posts/2019/09/12/wvplots-and-color-controls/
+permalink: /2019/09/12/wvplots-and-color-controls/
 ---
 <p>I've put a new release of the <a href="https://winvector.github.io/WVPlots/"><code>WVPlots</code></a> package up on CRAN. This release adds consistent palette and/or other color controls to most of the functions in the package.</p>
 

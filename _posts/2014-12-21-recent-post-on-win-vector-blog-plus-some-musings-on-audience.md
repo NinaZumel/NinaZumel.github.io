@@ -15,7 +15,7 @@ tags:
 - scikit-learn
 - Shiny
 - sklearn
-permalink: /posts/2014/12/21/recent-post-on-win-vector-blog-plus-some-musings-on-audience/
+permalink: /2014/12/21/recent-post-on-win-vector-blog-plus-some-musings-on-audience/
 ---
 
 <p>I put a new post up on Win-Vector a couple of days ago called <a href="http://www.win-vector.com/blog/2014/12/the-geometry-of-classifiers/">"The Geometry of Classifiers"</a>, a follow-up post to a <a href="http://jmlr.csail.mit.edu/papers/v15/delgado14a.html">recent paper</a> by Fernandez-Delgado, et al. that investigates several classifiers against a body of data sets, mostly from the UCI Machine Learning Repository. Our article follows up the study with seven additional additional classifier implementations from <a href="http://scikit-learn.org/stable/"><code>scikit-learn</code></a> and an <a href="https://win-vector.shinyapps.io/ExploreModels/">interactive Shiny app</a> to explore the results.</p>

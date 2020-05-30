@@ -9,7 +9,7 @@ tags:
 - model significance
 - permutation test
 - variable selection
-permalink: /posts/2015/08/11/new-on-win-vector-checking-your-data-for-signal/
+permalink: /2015/08/11/new-on-win-vector-checking-your-data-for-signal/
 ---
 <p>I have <a href="http://www.win-vector.com/blog/2015/08/how-do-you-know-if-your-data-has-signal/">a new article</a> up on the Win-Vector Blog, on checking your input variables for signal:</p>
 

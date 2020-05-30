@@ -10,7 +10,7 @@ tags:
 - kepler
 - NASA
 - star-finding
-permalink: /posts/2014/03/01/what-is-verification-by-multiplicity/
+permalink: /2014/03/01/what-is-verification-by-multiplicity/
 ---
 <p>There's been a buzz the last few days about the <a href="http://www.universetoday.com/109764/mega-discovery-715-alien-planets-confirmed-using-a-new-trick-on-old-kepler-data/">715 new planets that NASA has verified</a>, using data from the Kepler Space Telescope. This discovery doubles the number of known planets, and turned up four new planets that could possibly support life.</p>
 

@@ -11,7 +11,7 @@ tags:
 - sessionized data
 - stepwise regression
 - variable selection
-permalink: /posts/2015/07/15/new-on-win-vector-variable-selection-for-sessionized-data/
+permalink: /2015/07/15/new-on-win-vector-variable-selection-for-sessionized-data/
 ---
 I've just put up <a href="http://www.win-vector.com/blog/2015/07/working-with-sessionized-data-2-variable-selection/">the next installment</a> of the new "Working with Sessionized Data" series on Win-Vector.
 

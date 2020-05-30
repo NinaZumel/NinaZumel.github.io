@@ -11,11 +11,11 @@ tags:
 - machine learning
 - random forest
 - SVM
-permalink: /posts/2015/02/27/balancing-classes-before-training-classifiers-addressing-a-folk-theorem/
+permalink: /2015/02/27/balancing-classes-before-training-classifiers-addressing-a-folk-theorem/
 ---
 We've been wanting to get more into training over at Win-Vector, but I don't want to completely give up client work, because clients and their problems are often the inspiration for cool solutions -- and good blog articles. Working on the video course for the last couple of months has given me some good ideas, too.
 
-<img style="display:block;margin-left:auto;margin-right:auto;" src="{{ site.baseurl }}/assets/newimage.png" alt="NewImage" border="0" /> 
+<img style="display:block;margin-left:auto;margin-right:auto;" src="{{ site.baseurl }}/assets/model_compare.png" alt="Comparing models" border="0" /> 
 
 <p>A lot of my recreational writing revolves around folklore and superstition -- the ghosty, monster-laden kind. Engineers and statisticians have their own folk beliefs, too: things we wish were true, totemistic practices we believe help. Sometimes there's a rational basis for those beliefs, sometimes, there isn't. <a href="http://www.win-vector.com/blog/2015/02/does-balancing-classes-improve-classifier-performance/">My latest Win-Vector blog post</a> is about one such folk theorem.</p>
 

@@ -9,7 +9,7 @@ tags:
 - books
 - Cesar Aira
 - reading
-permalink: /posts/2014/10/21/a-moments-digression/
+permalink: /2014/10/21/a-moments-digression/
 ---
 <p>I had a data nerd moment while reading a novel the other day. I got in an argument with the book. But I think the book started it. It's a frivolous discussion, probably, but sometimes those are the most fun. </p>
 

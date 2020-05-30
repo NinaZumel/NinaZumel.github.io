@@ -1,7 +1,7 @@
 ---
 title: The vtreat package two ways
 date: 2020-05-19 
-permalink: /posts/2020/05/19/the-vtreat-package-two-ways/
+permalink: /2020/05/19/the-vtreat-package-two-ways/
 categories:
 - Data Science
 - Statistics

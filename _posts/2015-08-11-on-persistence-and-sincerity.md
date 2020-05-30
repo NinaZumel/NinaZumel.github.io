@@ -13,7 +13,7 @@ tags:
 - self-promotion
 - sincerity
 - technical writing
-permalink: /posts/2015/08/11/on-persistence-and-sincerity/
+permalink: /2015/08/11/on-persistence-and-sincerity/
 ---
 We're in the middle of marketing efforts here at Win-Vector, and I've just spent a few hours going through the [Win-Vector blog](http://www.win-vector.com/blog/) so I could update our [Popular Articles](http://www.win-vector.com/blog/popular-articles/) page (I have to do that for [Multo](https://multoghost.wordpress.com) someday, too).
 

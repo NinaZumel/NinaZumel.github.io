@@ -7,7 +7,7 @@ categories:
 tags:
 - A/B testing
 - bandit problems
-permalink: /posts2014/04/24/new-article-on-bandit-formulations-for-ab-testing/
+permalink: /2014/04/24/new-article-on-bandit-formulations-for-ab-testing/
 ---
 <p>I have a new article up on the Win-Vector blog: <a href="http://www.win-vector.com/blog/2014/04/bandit-formulations-for-ab-tests-some-intuition/">Bandit Formulations for A/B Tests: Some Intuition</a>. The article discusses the <em>bandit problem</em> formulation as an alternative to significance-based formulations for A/B tests.</p>
 

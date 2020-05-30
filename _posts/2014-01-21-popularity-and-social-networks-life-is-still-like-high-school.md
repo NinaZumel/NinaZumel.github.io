@@ -11,7 +11,7 @@ tags:
 - psychology
 - social media
 - social networks
-permalink: /posts/2014/01/21/popularity-and-social-networks-life-is-still-like-high-school/
+permalink: /2014/01/21/popularity-and-social-networks-life-is-still-like-high-school/
 ---
 
 <p>I remember setting up the <a href="http://multoghost.wordpress.com"><em>Multo</em></a> blog a few years ago: my first blog explicitly meant for public consumption. On the "Follow" widget -- the button that allows readers to follow a blog via email notifications -- there is an option to show the count of the blog's followers.</p>

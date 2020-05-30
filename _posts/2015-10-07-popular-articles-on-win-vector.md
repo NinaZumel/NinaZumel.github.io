@@ -7,7 +7,7 @@ categories:
 tags:
 - blogging
 - marketing
-permalink: /posts/2015/10/07/popular-articles-on-win-vector/
+permalink: /2015/10/07/popular-articles-on-win-vector/
 ---
 <p>John has just put up <a target="_blank" href="http://www.win-vector.com/blog/2015/10/some-key-win-vector-serial-data-science-articles/">an article on the Win-Vector blog</a>, highlighting some of our popular series of articles, as well as our more popular posts. If you like the articles that I point to on this blog, check out some of the other posts written by John, too.</p>
 

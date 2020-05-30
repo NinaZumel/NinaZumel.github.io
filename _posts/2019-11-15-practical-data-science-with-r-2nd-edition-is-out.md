@@ -8,7 +8,7 @@ tags:
 - book announcement
 - Manning Publications
 - Practical Data Science with R
-permalink: /posts/2019/11/15/practical-data-science-with-r-2nd-edition-is-out/
+permalink: /2019/11/15/practical-data-science-with-r-2nd-edition-is-out/
 ---
 <p>We just got the authors' copies of <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R, 2nd Edtion</em></a>. Hurray!!</p>
 
