@@ -36,5 +36,4 @@ For more about the book please see the following posts from the Win-Vector blog:
 * [How Does Practical Data Science with R Stand Out?](http://www.win-vector.com/blog/2014/06/how-does-practical-data-science-with-r-stand-out) -- Some other great, useful books for data scientists, and why our book complements them.
 
 
-Order *Practical Data Science With R, 2nd Edition* now on the [Manning book page]
-(https://www.manning.com/books/practical-data-science-with-r-second-edition).
+Order *Practical Data Science With R, 2nd Edition* now on the [Manning book page](https://www.manning.com/books/practical-data-science-with-r-second-edition).
