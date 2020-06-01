@@ -18,7 +18,7 @@ permalink: /2012/12/18/on-balance/
 
 <p>It's very eighties: full of funky jackets with padded shoulders and some crazy hair. I can't recommend it enough.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>What happens if you want to be Buckaroo Banzai in real life? Here's what biologist Adam Ruben writes in his article <a href="http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_12_14/caredit.a1200137">"The Myth of the Well-Rounded Scientist:"</a></p>
 <blockquote><p>Scientists with outside interests are often regarded with suspicion in the lab; we can be seen as undedicated, unfocused, easily distracted, and so divorced from the scientific frame of mind that we’ll probably end up working in—oh, the shame—industry.</p></blockquote>
