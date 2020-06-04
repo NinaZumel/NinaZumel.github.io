@@ -9,7 +9,7 @@ redirect_from:
 ## Technical Articles
 In addition to the peer-reviewed papers listed below, I also have written or collaborated on other articles and essays about a variety of topics.
 
-<p><a href="http://www.win-vector.com/blog/author/nina-zumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
+<p><a href="http://www.winvector.com/author/nzumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
 Articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting. Co-authored with John Mount.</p>
 <p><a href="http://winvector.github.io/DataPrep/EN-CNTNT-Whitepaper-Data-Prep-Using-R.pdf"><strong>Preparing data for analysis using R</strong></a><br />
 A white paper on data exploration and treatment in R, including a survey of commonly encountered data issues and how to resolve them. I also briefly introduce <a href="https://github.com/WinVector/vtreat"><code>vtreat</code></a>, Win-Vector's R package for automated data treatment (<a href="https://cran.r-project.org/web/packages/vtreat/index.html">CRAN distribution</a>). This paper was generously sponsored by Microsoft Data Science.</p>
