@@ -11,7 +11,7 @@ permalink: /2020/05/30/site-migration/
 
 Back in the good old days, *ninazumel.com* was a static site that I maintained myself, in pure HTML. But that (to me) was so much of a hassle that I never did even the little bit of site maintenance that the website required. So I moved it to wordpress.com. 
 
-At that point, I already had [*Multo*](https://multoghost.wordpress.com/) for personal blogging, and did my technical writing on the [Win-Vector blog](win-vector.com/blog). I didn't need another blog, but since the Wordpress site had one, I did it for a while. But the frequency of my posts (never high) has fallen off quite a bit in the last few years, which makes the site look particularly moribund. Frankly, Wordpress is overkill for my needs.
+At that point, I already had [*Multo*](https://multoghost.wordpress.com/) for personal blogging, and did my technical writing on the [Win-Vector blog](https://winvector.com/blog-2). I didn't need another blog, but since the Wordpress site had one, I did it for a while. But the frequency of my posts (never high) has fallen off quite a bit in the last few years, which makes the site look particularly moribund. Frankly, Wordpress is overkill for my needs.
 
 So here I am, back to a static site, this time on Github Pages. This is a good compromise for me: the site is clean and simple to maintain, without demanding that I constantly add new content. Perfect.
 
