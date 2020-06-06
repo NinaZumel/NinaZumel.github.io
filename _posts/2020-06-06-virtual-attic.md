@@ -10,7 +10,7 @@ tags:
 permalink: /2020/06/06/virtual-attic/
 ---
 
-When the world feels like it's falling apart around you, it feels good to solve little problems that are completely under your control. And that's what I've been doing this past week. This was originally posted at [*Multo*](https://multoghost.wordpress.com/2020/06/06/a-trip-to-the-virtual-attic/)
+When the world feels like it's falling apart around you, it feels good to solve little problems that are completely under your control. And that's what I've been doing this past week. This was originally posted at [*Multo*](https://multoghost.wordpress.com/2020/06/06/a-trip-to-the-virtual-attic/).
 
 I migrated <a href="https://ninazumel.com/"><em>ninazumel.com</em></a> away from WordPress to a more appropriate host (Github Pages); I merged the old Win-Vector sites (there were two of them, self-hosted) into a <a href="https://win-vector.com/">single sleek new site</a> -- ironically, now WordPress hosted. And I reconstructed a very old and neglected site, <em>mzlabs.com</em>, and set it up <a href="https://johnmount.github.io/mzlabs/">here</a> (The address <code>mzlabs.com</code> should still reach it).
 
