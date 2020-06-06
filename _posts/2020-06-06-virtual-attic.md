@@ -34,7 +34,7 @@ And here are some nice articles from John:
 
 <a href="https://johnmount.github.io/mzlabs/JMWriting/Stationery.html"><strong>Good Stationery as a Tool of Thought</strong></a> -- a bit of a companion piece to <em>I Write, Therefore I Think</em>. Also, a peek at his pen and notebook collection. 
 
-Also, check out some images from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><strong>The Genetic Art Project</strong></a>, an old algorithmic art project that produced, among other things, the featured image of the new Win Vector site).
+Also, check out some images from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><strong>The Genetic Art Project</strong></a>, an old algorithmic art project that produced, among other things, the featured image of the new Win Vector site.
 
 <hr width="50%/" />
 
