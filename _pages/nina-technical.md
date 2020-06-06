@@ -10,14 +10,25 @@ redirect_from:
 In addition to the peer-reviewed papers listed below, I also have written or collaborated on other articles and essays about a variety of topics.
 
 <p><a href="http://www.winvector.com/author/nzumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
-Articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting. Co-authored with John Mount.</p>
+The Win Vector blog (with John Mount) publishes articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting.</p>
 
 <p><a href="http://winvector.github.io/DataPrep/EN-CNTNT-Whitepaper-Data-Prep-Using-R.pdf"><strong>Preparing data for analysis using R</strong></a><br />
 A white paper on data exploration and treatment in R, including a survey of commonly encountered data issues and how to resolve them. I also briefly introduce <a href="https://github.com/WinVector/vtreat"><code>vtreat</code></a>, Win-Vector's R package for automated data treatment (<a href="https://cran.r-project.org/web/packages/vtreat/index.html">CRAN distribution</a>). This paper was generously sponsored by Microsoft Data Science.</p>
-<p><strong>Articles that I've authored or contributed to that haven't been formally published.</strong></p>
-<p><a href="/files/publications/ImprovWhitePaper.pdf"><strong>Comparing Apples And Oranges:</strong></a> A paper with John Mount on the limits of statistical inference in the Google AdSense market.</p>
-<p><a href="/files/publications/ImprovWhitePaper.pdf"><strong>"Something out of Something": Improvisational Training for Emergency Managers:</strong></a> A white paper about improvisation, in the context of emergency management.</p>
+
+### Miscellaneous Technical Articles
+
+Articles that I've authored or contributed to that haven't been formally published. Roughly, in the order most recent first.
+
+[**Fluid data reshaping with `cdata`**](https://winvector.github.io/FluidData/FluidDataReshapingWithCdata.html): A discussion of data reshaping, and an introduction to the terminology we use to specify reshaping in the `cdata` R package (and the `data_algebra` Python package).
+
+[**Coordinatized Data: A Fluid Data Specification**](https://winvector.github.io/FluidData/RowsAndColumns.html): In which John Mount and I discuss why data *structure* (the logical form of records) is separate from data *layout* (the "physical" layout of data in rows and columns), and the implications of this observation for data reshaping.
+
 <p><a href="https://arxiv.org/abs/1611.09477"><strong>vtreat: a data.frame Processor for Predictive Modeling:</strong></a> Describes the theory of data preparation behind <code>vtreat</code>, and demonstrates its use.</p>
+
+<p><a href="/files/publications/ImprovWhitePaper.pdf"><strong>Comparing Apples And Oranges:</strong></a> A paper with John Mount on the limits of statistical inference in the Google AdSense market.</p>
+
+<p><a href="/files/publications/ImprovWhitePaper.pdf"><strong>"Something out of Something": Improvisational Training for Emergency Managers:</strong></a> A white paper about improvisation, in the context of emergency management.</p>
+
 
 ## Peer-Reviewed Academic Publications
 <p><strong>The vtreat R package: a statistically sound data processor for predictive modeling</strong>. J. Mount and N. Zumel. <em>The Journal of Open Source Software</em>, Vol. 3, No. 23, p 584 (2018)<br />
