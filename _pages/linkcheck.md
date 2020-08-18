@@ -8,12 +8,12 @@ author_profile: true
 
 From the _pages directory
 
-[/cv/](/cv/)
+[/cv/](/cv/) - this works
 
-[cv/](cv/)
+[cv/](cv/): https://ninazumel.com/linkcheck/cv/
 
-[./cv/](./cv/)
+[./cv/](./cv/): https://ninazumel.com/linkcheck/cv/
 
-[./_pages/cv/](./_pages/cv/)
+[./_pages/cv/](./_pages/cv/): https://ninazumel.com/linkcheck/_pages/cv/
 
 
