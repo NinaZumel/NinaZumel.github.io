@@ -16,7 +16,7 @@ In recent years, I have also become heavily involved with data science related t
 
 My approach to teaching, training, and technical writing is an emphasis on a solid understanding of the fundamentals. I try to synthesize relevant ideas and theories from the statistics, computer science, and other research communities so that they are understandable by technical but non-specialist learners who want to apply these ideas in their own field. 
 
-For more details, see my [CV](cv).
+For more details, see my [CV](./_pages/cv.md).
 
 When I’m not working, I [write](http://multoghost.wordpress.com/) and [dance](http://www.dholrhythms.com/).
 
