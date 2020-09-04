@@ -15,4 +15,3 @@ redirect_from:
 
 <p><a href="https://exiw.wordpress.com/tag/punjab/"><strong>Some articles originally written for the Non Stop Bhangra and Dholrhythms blogs</strong></a>: pieces about Punjabi music, culture and folklore, especially as they relate to Dholrhythms Dance Company and San Francisco's Non Stop Bhangra monthly party. </p>
 
-<p>Book reviews I've published at <a href="http://mantlethought.org/content/nina-zumel"><strong>The Mantle</strong></a>.</p>
