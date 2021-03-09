@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/2021-04-30-USFDataScience
 venue: "USF Seminar Series in Data Science"
+location: "San Francisco, California (Online)"
 date: 2021-04-30
 ---
 

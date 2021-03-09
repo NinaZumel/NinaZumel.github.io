@@ -3,7 +3,8 @@ title: "Validating Models in R"
 collection: talks
 type: "Talk"
 permalink: /talks/2016-03-29-StrataHadoop
-venue: "R Day, Strata + Hadoop World 2016 San Jose"
+venue: "R Day, Strata + Hadoop World 2016"
+location: San Jose, California
 date: 2016-03-29
 ---
 

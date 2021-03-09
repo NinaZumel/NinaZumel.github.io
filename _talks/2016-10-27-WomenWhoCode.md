@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/2016-10-27-WomenWhoCode
 venue: "Women Who Code Silicon Valley"
+location: "Palo Alto, California"
 date: 2016-10-27
 ---
 
