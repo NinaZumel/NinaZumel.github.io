@@ -19,7 +19,7 @@ BSEE, Dept. of Electrical Engineering and Computer Science, 1989.</p>
 Principal Consultant, 2008-Present</p>
 <p>Win-Vector conducts data analysis and statistical research for a variety of private sector clients, particularly in the biotech, finance, and internet sectors. Engagements that I have led or been involved in have included: revenue attribution for Google ad-words, customer modeling from online transaction data, product recommendation systems, and loan risk modeling.</p>
 
-<p>I am the co-author of the popular <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a>, a introductory data science text written from a practitioner's perspective.</p>
+<p>I am the co-author of the popular <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a>, an introductory data science text written from a practitioner's perspective.</p>
 
 I have developed original content for a number of training courses including:
 
