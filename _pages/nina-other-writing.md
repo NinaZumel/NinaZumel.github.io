@@ -9,6 +9,8 @@ redirect_from:
 
 <p><strong><a href="https://exiw.wordpress.com">Ephemera</a></strong>:  a playground for my forays into translation, fiction, personal essay, or any writing that won’t fit my other blogs. </p>
 
+[**Dark Tales Sleuth**](https://darktalessleuth.wordpress.com/): a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works.
+
 [**Some Ongoing Translation Series**](https://exiw.wordpress.com/translations/): When I have time, I like to practice translating public domain short stories of the supernatural and the macabre by Spanish language authors that I'm interested in. 
 
 <p>Folklore articles I’ve written for the <a href="http://folklorethursday.com/author/nina/"><strong>#FolkloreThursday</strong></a> blog.  </p>
