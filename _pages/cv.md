@@ -63,7 +63,7 @@ Zumel, Nina and John Mount. [*Practical Data Science with R, 2nd Edition*](https
 
 ## Patents
 
-<p>Vladimir Gorelik, Andrew Atherton, and Nina Zumel. *Method and apparatus for automatic pricing in electronic commerce.*
+<p>Vladimir Gorelik, Andrew Atherton, and Nina Zumel. <em>Method and apparatus for automatic pricing in electronic commerce.</em>
 United States 7970713</p>
 
 
