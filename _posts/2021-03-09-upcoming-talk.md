@@ -11,7 +11,7 @@ permalink: /2021/03/09/upcoming-talk/
 
 John Mount and I will be giving a talk for the online University of San Francisco Seminar Series in Data Science:
 
-**How and Why to Use Probability Models to Outpeform Decision Rules**<br>
+**How and Why to Use Probability Models to Outperform Decision Rules**<br>
 Friday, April 30, 2021 <br>
 12:30pm - 2pm Pacific Time<br>
 [See here for full details and to RSVP](https://www.meetup.com/USF-Seminar-Series-in-Data-Science/events/276764072/)
