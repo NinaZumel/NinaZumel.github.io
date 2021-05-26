@@ -10,7 +10,9 @@ redirect_from:
 
 I am a Principal Consultant with [Win-Vector LLC](http://win-vector.com/), a data science consulting and training firm based in San Francisco. My technical interests include data science, statistics, statistical learning, and data visualization. 
 
-I am the co-author with John Mount of [*Practical Data Science with R*](https://www.manning.com/books/practical-data-science-with-r-second-edition) (now in a second edition). This book presents the process and principles of data science from a practitioner’s perspective, and complements existing texts on machine learning, statistics, and R.
+I am also the VP of Data Science Practice for [Wallaroo](https://www.wallaroo.ai/). The Wallaroo platform manages the data science/ML process, in particular making the transition from model development to deployment fast and seamless. 
+
+With John Mount, I co-authored [*Practical Data Science with R*](https://www.manning.com/books/practical-data-science-with-r-second-edition) (now in a second edition). This book presents the process and principles of data science from a practitioner’s perspective, and complements existing texts on machine learning, statistics, and R.
 
 In recent years, I have also become heavily involved with data science related training and teaching. I have developed data science and machine learning related courses and material, both publically available online courses and proprietary courses for large corporations.
 
