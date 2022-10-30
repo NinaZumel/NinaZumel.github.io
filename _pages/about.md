@@ -20,5 +20,5 @@ My approach to teaching, training, and technical writing is an emphasis on a sol
 
 For more details, see my [CV](/cv/).
 
-When I’m not working, I [write](http://multoghost.wordpress.com/) and [dance](http://www.dholrhythms.com/).
+When I’m not working, I [write](https://ninazumel.com/nina-other-writing/) and [dance](http://www.dholrhythms.com/).
 
