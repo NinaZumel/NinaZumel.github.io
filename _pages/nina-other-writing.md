@@ -11,6 +11,8 @@ redirect_from:
 
 [**Dark Tales Sleuth**](https://darktalessleuth.wordpress.com/): a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works.
 
+All the above blogs, plus this one, are syndicated at [Micro.blog](https://micro.blog/MultoGhost) (user @MultoGhost).
+
 [**Some Ongoing Translation Series**](https://exiw.wordpress.com/translations/): When I have time, I like to practice translating public domain short stories of the supernatural and the macabre by Spanish language authors that I'm interested in. 
 
 <p>Folklore articles I’ve written for the <a href="http://folklorethursday.com/author/nina/"><strong>#FolkloreThursday</strong></a> blog.  </p>
