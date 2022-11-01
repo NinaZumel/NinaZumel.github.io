@@ -11,11 +11,15 @@ redirect_from:
 
 [**Dark Tales Sleuth**](https://darktalessleuth.wordpress.com/): a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works.
 
-All the above blogs, plus this one, are syndicated at [Micro.blog](https://micro.blog/MultoGhost) (user @MultoGhost).
+ Follow [@MultoGhost](https://micro.blog/MultoGhost) at Micro.blog to see a feed where I announce my latest blog posts across all my blogs.
+ 
+ Alternately, subscribe to my microblogging site [Short Thoughts](https://ninazumel.com/short_thoughts/) via RSS.
+
+<hr/>
 
 [**Some Ongoing Translation Series**](https://exiw.wordpress.com/translations/): When I have time, I like to practice translating public domain short stories of the supernatural and the macabre by Spanish language authors that I'm interested in. 
 
 <p>Folklore articles I’ve written for the <a href="http://folklorethursday.com/author/nina/"><strong>#FolkloreThursday</strong></a> blog.  </p>
 
-<p><a href="https://exiw.wordpress.com/tag/punjab/"><strong>Some articles originally written for the Non Stop Bhangra and Dholrhythms blogs</strong></a>: pieces about Punjabi music, culture and folklore, especially as they relate to Dholrhythms Dance Company and San Francisco's Non Stop Bhangra monthly party. </p>
+<p><a href="https://exiw.wordpress.com/tag/punjab/"><strong>Some articles originally written for the Non Stop Bhangra and Dholrhythms blogs</strong></a>: pieces about Punjabi music, culture and folklore, especially as they relate to Dholrhythms Dance Company and San Francisco's Non Stop Bhangra dance party. </p>
 
