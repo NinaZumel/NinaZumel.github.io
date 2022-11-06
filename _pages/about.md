@@ -22,3 +22,5 @@ For more details, see my [CV](/cv/).
 
 When I’m not working, I [write](https://ninazumel.com/nina-other-writing/) and [dance](http://www.dholrhythms.com/).
 
+<link href="https://ninazumel.com/short_thoughts/ rel="me">
+
