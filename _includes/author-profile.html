@@ -25,6 +25,16 @@
       {% if author.location %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}
+
+      {% if author.links %}
+      {% for link in author.links %}
+        {% if link.label and link.url %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}><i class="{{ link.icon | default: 'fas fa-fw fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+
       {% if author.employer %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}

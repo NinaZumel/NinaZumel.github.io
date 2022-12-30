@@ -8,8 +8,6 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme             : "mmistakes/minimal-mistakes@4.19.2"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
 
 # Site Settings
 locale                   : "en-US"
@@ -20,15 +18,15 @@ description              : &description "Data Science"
 url                      : https://NinaZumel.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "NinaZumel/NinaZumel.github.io"
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, googlesearch                   
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : false # if true, blog posts with future dates show up
+future                   : true # if true, blog posts with future dates show up
 read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+talkmap_link             : false # change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -82,7 +80,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -91,40 +89,26 @@ analytics:
 author:
   name             : "Nina Zumel"
   avatar           : "ninaheadshotsmall.jpeg"
-  bio              : "Founder, Principal Data Scientist, Win-Vector LLC"
+  bio              : "Data Scientist with Win-Vector, LLC and Wallaroo.ai"
   location         : "San Francisco"
-  employer         : Win Vector LLC
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : # "http://yourfullgooglescholarurl.com"
   email            : nzumel@win-vector.com
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : # "NinaZumel"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : # "http://orcid.org/yourorcidurl"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : # "replacethistwitterhandle"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
+  links:
+    - label: "Win Vector, LLC"
+      icon: "fas fa-fw fa-link"
+      url: "https://win-vector.com/"
+    - label: "Wallaroo.ai"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.wallaroo.ai/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin" 
+      url: "https://www.linkedin.com/in/ninazumel/"
 
+
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin" 
+      url: "https://www.linkedin.com/in/ninazumel/"
 
 # Reading Files
 include:
@@ -209,7 +193,7 @@ defaults:
       author_profile: true
       read_time: false
       comments: false
-      share: true
+      share: false
       related: false
   # _pages
   - scope:
@@ -261,7 +245,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:categories/:year/:month/:day/:title:output_ext
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
