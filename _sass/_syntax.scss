@@ -2,6 +2,26 @@
    Syntax highlighting
    ========================================================================== */
 
+/* added from mm */
+div.highlighter-rouge,
+figure.highlight {
+  position: relative;
+  margin-bottom: 1em;
+  background: $lighter-gray;
+  /* color: $base05; */
+  font-family: $monospace;
+  font-size: $type-size-6;
+  line-height: 1.8;
+  border-radius: $border-radius;
+
+  > pre,
+  pre.highlight {
+    margin: 0;
+    padding: 1em;
+  }
+}
+
+   /* ---- original -------
 div.highlighter-rouge, figure.highlight {
   position: relative;
   margin-bottom: 1em;
@@ -17,8 +37,9 @@ div.highlighter-rouge, figure.highlight {
     right: 0;
     padding: 0.5em;
     background-color: $lighter-gray;
-    content: "\f121";
-    font-family: "fontawesome" !important;
+    content: "\f121"; 
+    font-family: "fontawesome" !important; 
+    font-family: $monospace;
     font-size: $type-size-6;
     line-height: 1;
     text-transform: none;
@@ -32,6 +53,8 @@ div.highlighter-rouge, figure.highlight {
     line-height: 1.8;
   }
 }
+
+------*/
 
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
