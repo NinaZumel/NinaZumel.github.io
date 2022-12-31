@@ -1,19 +1,16 @@
 # main links links
 main:
-  - title: "Practical Data Science with R"
-    url: /practical-data-science-with-r/   
+  - title: "Data Science"
+    url: /data-science/
     
-  - title: "Talks"
-    url: /talks/
-    
-  - title: "Publications/Technical Writing"
-    url: /nina-technical/
-    
-  - title: "Other Writing"
-    url: /nina-other-writing/
-    
-  - title: "Articles and Occasional Announcements"
+  - title: "Blog"
     url: /year-archive/
+
+  - title: "Personal Writing"
+    url: /nina-other-writing/
     
   - title: "CV"
     url: /cv/
+  
+  - title: "About This Theme"
+    url: /about-theme/

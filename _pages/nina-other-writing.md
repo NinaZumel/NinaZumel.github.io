@@ -1,6 +1,6 @@
 ---
 permalink: "/nina-other-writing/"
-title: Other Writing
+title: Personal Writing
 author_profile: true
 redirect_from:
   -/nina-other-writing.html
