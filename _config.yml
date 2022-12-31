@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : &name "Nina Zumel"
 description              : &description "Data Science"
 url                      : https://NinaZumel.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : /testblog # "" # the subpath of your site, e.g. "/blog"
+baseurl                  :  # "" # the subpath of your site, e.g. "/blog"
 repository               : "NinaZumel/NinaZumel.github.io"
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
