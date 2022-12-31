@@ -10,6 +10,21 @@
  *
 */
 
+/* For the projects page (gradfolio) */
+
+// Width of the content area
+$content-width:    800px;
+$on-phone:         450px;
+$on-palm:          660px;
+$on-laptop:        1000px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";
@@ -33,6 +48,8 @@
 @import "page";
 @import "archive";
 @import "sidebar";
+
+@import "projects"; // from gradfolio 
 
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
