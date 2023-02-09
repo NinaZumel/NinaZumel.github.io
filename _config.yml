@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Nina B. Zumel / Data Science"
+title                    : "Nina B. Zumel"
 title_separator          : "-"
 name                     : &name "Nina Zumel"
 # description              : &description "Data Science"
