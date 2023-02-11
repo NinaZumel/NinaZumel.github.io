@@ -7,7 +7,7 @@ author_profile: true
 
 permalink: /books/
 ---
-> I, who always imagined Paradise </br>
+> I, who always imagined Paradise <br/>
 > To be a kind of library.
 <br/>  -- Jorge Luis Borges, "Poem of the Gifts" 
 
