@@ -1,5 +1,6 @@
 ---
 layout: review
+author_profile: true
 date: 2023-02-10 
 olid: OL28369698M # if no image (Open Library ID)
 title: "The Honjin Murders"

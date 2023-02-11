@@ -32,5 +32,13 @@ author_profile: true
         </a>
   </div>
 
+   <div class="projectTile">
+        <a href="{{ "/year-archive/" | prepend: site.baseurl | prepend: site.url }}" style="text-decoration: none">
+          <span>
+              <p><strong>{{ "Technical Blog" }}</strong></p>
+          </span>
+        </a>
+  </div>
+
   </div>
 </div>
