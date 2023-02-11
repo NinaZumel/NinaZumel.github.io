@@ -4,20 +4,7 @@ layout: default
 
 {% include base_path %}
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-    <h1><i>{{page.title}}</i> by {{ page.author}} </h1>
+    <h1> <i>{{page.title}}</i> by {{ page.author}} </h1>
 
    {% assign content = page.content | strip_newlines %}
 
@@ -63,7 +50,6 @@ layout: default
     {{ content }}
 
     {% endif %}
-</div>
 
     <style>
     figure {
@@ -139,7 +125,7 @@ layout: default
 blockquote {
 
     position: relative;
-    marginn: 0px;
+    marign: 0px;
     display: table;
 
 }
