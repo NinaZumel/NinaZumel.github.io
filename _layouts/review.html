@@ -17,6 +17,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork"></article>
     <h1><i>{{page.title}}</i> by {{ page.author}} </h1>
 
    {% assign content = page.content | strip_newlines %}
@@ -63,6 +64,7 @@ layout: default
     {{ content }}
 
     {% endif %}
+  </article>
 </div>
 
     <style>
@@ -145,7 +147,7 @@ blockquote {
 }
 blockquote:before, blockquote:after {
 
- /* properties to format the block quotes /*
+ /* properties to format the block quotes */
 
 }
 blockquote:before {

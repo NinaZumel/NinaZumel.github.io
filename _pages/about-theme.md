@@ -11,4 +11,4 @@ which itself is based on an older version of [minimal-mistakes](https://mmistake
 
 The Data Science gallery page is based on [gradfolio's](https://github.com/jitinnair1/gradfolio/) project gallery.
 
-The bookshelf is based on [jekyll-bookworm](https://subhodeeps.github.io/jekyll-bookworm/). 
+The bookshelf is based on [jekyll-bookworm](https://github.com/subhodeeps/jekyll-bookworm/). 
