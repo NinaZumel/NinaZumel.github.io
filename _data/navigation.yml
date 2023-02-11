@@ -15,7 +15,7 @@ main:
   - title: "Blog"
     url: /year-archive/
   
-  - title: "Microblog"   # not sure this will work, but let's see
+  - title: "Microblog"   
     url: /short_thoughts/
 
   - title: "About This Theme"
