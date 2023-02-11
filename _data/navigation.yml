@@ -11,9 +11,6 @@ main:
 
   - title: "Bookshelf"
     url: /books/
-
-  - title: "Blog"
-    url: /year-archive/
   
   - title: "Microblog"   
     url: /short_thoughts/
