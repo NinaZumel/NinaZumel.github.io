@@ -38,39 +38,7 @@ layout: archive
 
         {% endif %}
 
-        {% if book.status %}
-          {% assign status = book.status | upcase | strip %}
-
-          {% if status  == "READING" %}
-
-            <figcaption class="reading">{{ status }}</figcaption>
-
-          {% elsif status  == "FINISHED" %}
-
-             <figcaption class = "finished">{{ status }}</figcaption>
-
-          {% elsif status  == "QUEUED" %}
-
-             <figcaption class = "queued">{{ status }}</figcaption>
-
-          {% elsif status  == "ABANDONED" %}
-
-            <figcaption class="abandoned">{{ status }}</figcaption>
-
-            {% elsif status  == "INTERESTED" %}
-
-              <figcaption class="interested">{{ status }}</figcaption>
-
-
-            {% else %}
-
-            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
-
-
-        {% endif %}
-            {% else %}
-
-            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
+        
 
       {% endif %}
         </a>
