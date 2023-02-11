@@ -35,7 +35,7 @@ author_profile: true
    <div class="projectTile">
         <a href="{{ "/year-archive/" | prepend: site.baseurl | prepend: site.url }}" style="text-decoration: none">
           <span>
-              <p><strong>{{ "Technical/Professional Musings" }}</strong></p>
+              <p><strong>{{ "Technical Musings" }}</strong></p>
           </span>
         </a>
   </div>
