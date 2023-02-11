@@ -1,6 +1,6 @@
 ---
 permalink: "/data-science/"
-title: Data Science
+title: Data Science and other Technical Stuff
 author_profile: true
 ---
 
@@ -35,7 +35,7 @@ author_profile: true
    <div class="projectTile">
         <a href="{{ "/year-archive/" | prepend: site.baseurl | prepend: site.url }}" style="text-decoration: none">
           <span>
-              <p><strong>{{ "Technical Blog" }}</strong></p>
+              <p><strong>{{ "Technical/Professional Musings" }}</strong></p>
           </span>
         </a>
   </div>

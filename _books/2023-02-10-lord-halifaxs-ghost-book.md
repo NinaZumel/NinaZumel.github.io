@@ -1,5 +1,6 @@
 ---
 layout: review
+author_profile: true
 date: 2023-02-10 
 olid: OL14875934M
 title: "Lord Halifax's Ghost Book"
