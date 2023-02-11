@@ -12,5 +12,6 @@ permalink: /books/
 <br/>  -- Jorge Luis Borges, "Poem of the Gifts" 
 
 This bookshelf will hold the books that I've mentioned over the years at my blog, *Multo (Ghost)*.
+
 I never write about a book I don't like, nor do I always write about every book I do like. So if you find a book here, you know that, on some level, I found it interesting enough to write about.
 
