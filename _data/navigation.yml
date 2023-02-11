@@ -1,16 +1,22 @@
 # main links links
 main:
-  - title: "Data Science"
-    url: /data-science/
-    
-  - title: "Blog"
-    url: /year-archive/
-
-  - title: "Personal Writing"
-    url: /nina-other-writing/
-    
   - title: "CV"
     url: /cv/
   
+  - title: "Data Science"
+    url: /data-science/
+    
+  - title: "Personal Writing"
+    url: /nina-other-writing/
+
+  - title: "Bookshelf"
+    url: /books/
+
+  - title: "Blog"
+    url: /year-archive/
+  
+  - title: "Microblog"   # not sure this will work, but let's see
+    url: /short_thoughts/
+
   - title: "About This Theme"
     url: /about-theme/
