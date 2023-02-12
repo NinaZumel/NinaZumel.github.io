@@ -6,7 +6,7 @@ olid: OL27227371M
 title: "Things We Lost in the Fire"
 author: Mariana Enriquez
 year: 2017
-book_category: The Weird 
+book_category: Weird, Fantasy and Macabre
 book_tags:
 - Argentina
 - supernatural

@@ -13,5 +13,4 @@ permalink: /books/
 
 This bookshelf will hold the books that I've mentioned over the years at my blog, *Multo (Ghost)*.
 
-I never write about a book I don't like, nor do I always write about every book I do like. So if you find a book here, you know that, on some level, I found it interesting enough to write about.
-
+My posts aren't always reviews; for one thing, I never write about a book I don't like. Nor do I always write about every book I do like. Sometimes I just bring the book up in the context of something else I want to write about. So if you see a book here, you know both that I like it, and that it is or was somehow interesting or important to me.

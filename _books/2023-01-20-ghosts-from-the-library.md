@@ -3,9 +3,12 @@ author_profile: true
 layout: review
 date: 2023-01-20
 title: "Ghosts From the Library"
-author: Tony Medawar
+author: Tony Medawar (Editor)
 book_category: Crime
 cover: "ghostsfromthelibrary.jpg"
+book_tags:
+- supernatural
+- Golden Age
 
 ---
 
