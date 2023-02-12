@@ -5,7 +5,7 @@ date: 2013-08-10
 title: "The Beast with Five Fingers"
 author: W.F. Harvey
 book_category: Ghost Stories
-olid: OL27977610M
+olid: OL36946392M
 
 ---
 
