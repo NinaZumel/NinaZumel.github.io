@@ -13,11 +13,11 @@ book_tags:
 
 ---
 
-*The Inn at the Spessart* was one of three collections of *märchen* written by poet and Romantic Wilhelm Hauff.
-The version I read was from *Tales of Wilhelm Hauff*, as translated by S. Mendel. 
-This is one of the earliest complete collections of Hauff's *märchen* in English, and it's charming.
+*The Inn at the Spessart* was one of three collections of *märchen* written by nineteenth century poet and Romantic Wilhelm Hauff. The version 
+I read was from *Tales of Wilhelm Hauff*, as translated by S. Mendel in 1886. This is one of the earliest 
+complete collections of Hauff's *märchen* in English, and it's charming.
 
-All of the individual stories are wonderful, and the fairy-tale-like framing story is charming, too. Includes one
+All of the individual stories are wonderful, and the fairy-tale-like framing story is charming, too. Includes one 
 of Hauff's most famous tales, "The Cold Heart" (Das Kalte Herz).
 
 
