@@ -10,7 +10,7 @@ olid: OL24816046M
 ---
 
 One of two Marías short story collections that I read while on my Spanish literature kick. I've never read his novels, but I love his short stories.
-They have, variously, upernatural, ghosts, crime, and the macabre.
+They have, variously, supernatural, ghosts, crime, and the macabre.
 
 For the moment I've classified them as *magical realism*, though I don't think he'd consider himself a practitioner of that genre. But it will do, for now.
 
