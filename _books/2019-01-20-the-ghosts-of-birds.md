@@ -9,7 +9,7 @@ olid: OL27218111M
 
 ---
 
-Interesting collection of unconventional essays ("creative nonfiction," I guess): retellings of stories from folklore and mythology, prose collages, translations, and book reviews. In some cases, I'm not entirely sure of the subject of discussion (a book, or poem) really exists; shades of Jorge Luis Borges.
+Interesting collection of unconventional essays ("creative nonfiction," I guess): retellings of stories from folklore and mythology, prose collages, translations, and book reviews. In some cases, I'm not entirely sure if the subject of discussion (a book, or poem) really exists; shades of Jorge Luis Borges.
 
 This was a wonderful discovery.
 
