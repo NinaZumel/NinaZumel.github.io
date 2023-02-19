@@ -4,7 +4,7 @@ layout: review
 date: 2015-09-14
 title: "Yurei: The Japanese Ghost"
 author: Zack Davisson
-book_category: Ghost Stories
+book_category: Fairy Tales, Folklore, Mythology
 cover: "yurei.jpg"
 
 ---
