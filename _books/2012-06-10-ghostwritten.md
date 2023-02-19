@@ -8,9 +8,10 @@ book_category: Short Story Cycles
 olid: OL7426916M
 
 ---
+Stories from the lives of various characters lead one into the other, up to an inevitable (perhaps) conclusion. 
+
 Mentioned in an article listing several short story cycle style novels that I'm fond of (or was as the time).
 
-Stories from the lives of various characters lead one into the other, up to an inevitable
-(perhaps) conclusion. 
+
 
 [Discussion at *Multo*.](https://multoghost.wordpress.com/2012/06/10/stories-for-the-short-attention-span/)

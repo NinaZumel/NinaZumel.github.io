@@ -12,7 +12,7 @@ A traveling musician roams the Appalachians, encountering forest folk and mythic
 
 I've fallen a bit out of love with Manly Wade Wellman, because I find myself no longer able to tolerate his nostalgia for his (Confederate) Civil War ancestors. I'm sure Wellman himself was a perfectly good man; I just don't want to hear about the lost South any longer. Nonetheless, the John the Balladeer stories are good ones, and stay away from his family's historical legacy.
 
- When I wrote this post, Baen Books offered *John the Balladeer* as an ebook for free; that is no longer true. The best I can offer now is [the version online to borrow at the Open Library](https://archive.org/details/johnballadeer00well). 
+ When I wrote the original post, Baen Books offered *John the Balladeer* as an ebook for free; that is no longer true. The best I can offer now is [the version online to borrow at the Open Library](https://archive.org/details/johnballadeer00well). 
  
  **Newsflash!** As I write this, I see early news from Valancourt Books of a new reissue of these stories. Stay tuned!
 
