@@ -26,15 +26,15 @@ layout: archive
 
         {% if book.cover %}
 
-        <img alt="{{ book.title }} cover" src="{{ site.baseurl }}/images/covers/{{ book.cover }}" style="height:200px" />
+        <img alt="{{ book.title }} cover" src="{{ site.baseurl }}/images/covers/{{ book.cover }}" />
 
         {% elsif book.olid %}
 
-        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" style="height:200px" />
+        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" />
 
         {% elsif book.isbn %}
 
-        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" style="height:200px" />
+        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" />
 
         {% endif %}
 
@@ -51,6 +51,7 @@ layout: archive
 <style>
   figure {
     display: inline-block;
+    height:200px;
     text-align: center;
     margin: 8px; /* adjust as needed */
 
