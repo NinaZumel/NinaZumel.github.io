@@ -9,7 +9,7 @@ olid: OL24604394M
 
 ---
 
-Mentioned in an article listing several short story cycle style novels that I'm fond of (or was as the time).
+Mentioned in an article listing several short story cycle style novels that I'm fond of (or was at the time).
 
 The first chapter of this novel was originally the short story "Found Objects." It's my favorite part of the book. 
 

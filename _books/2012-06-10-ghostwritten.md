@@ -10,7 +10,7 @@ olid: OL7426916M
 ---
 Stories from the lives of various characters lead one into the other, up to an inevitable (perhaps) conclusion. 
 
-Mentioned in an article listing several short story cycle style novels that I'm fond of (or was as the time).
+Mentioned in an article listing several short story cycle style novels that I'm fond of (or was at the time).
 
 
 

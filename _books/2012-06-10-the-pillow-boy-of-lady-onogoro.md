@@ -12,6 +12,6 @@ The concubine of an eleventh century Japanese general finds that her lover doesn
 
 Believe it or not, the framing story of this novel is every bit as engrossing as the individual tales. 
 
-Mentioned in an article listing several short story cycle style novels that I'm fond of (or was as the time).
+Mentioned in an article listing several short story cycle style novels that I'm fond of (or was at the time).
 
 [Discussion at *Multo*.](https://multoghost.wordpress.com/2012/06/10/stories-for-the-short-attention-span/)
