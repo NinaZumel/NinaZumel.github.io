@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2013-03-25
-title: "Strange Tales from A Chinese Studio"
 author: Pu Songling
-book_category: Fairy Tales, Folkore, Mythology
+author_profile: true
+book_category: Fairy Tales/Folkore/Mythology
+date: 2013-03-25
+layout: review
 olid: OL7355397M
-
+title: Strange Tales from A Chinese Studio
 ---
 
 This is a collection of Chinese supernatural tales, compiled by scholar Pu Songling in the late seventeenth to early eighteenth centuries. I have several translations of tales from the collection: the Herbert Giles translation from 1880 (probably the best known translation); *Strange Stories from the Lodge of Leisure*, the 1913 translation by George Soulie; and the 2006 translation by John Minford.

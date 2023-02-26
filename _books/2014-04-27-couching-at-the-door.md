@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2014-04-27
-title: "Couching at the Door"
 author: D.K. Broster
-book_category: Weird, Fantasy and Macabre
+author_profile: true
+book_category: Weird/Fantasy/Macabre
+date: 2014-04-27
+layout: review
 olid: OL12562023M
-
+title: Couching at the Door
 ---
 
 Historical novelist D.K. Broster's only collection of ghost stories and macabre tales, published in 1942. Excellent, quietly creepy stories. It's a shame she never wrote more.

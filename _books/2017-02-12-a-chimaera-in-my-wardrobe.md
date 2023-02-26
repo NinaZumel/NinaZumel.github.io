@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2017-02-12
-title: "A Chimaera in my Wardrobe"
 author: Tina Rath
-book_category: Fairy Tales, Folkore, Mythology
+author_profile: true
+book_category: Fairy Tales/Folkore/Mythology
+date: 2017-02-12
+layout: review
 olid: OL38243361M
-
+title: A Chimaera in my Wardrobe
 ---
 
 I picked this up online somewhere (I doubt it's in physical print any more). Really cute and fun. I would have read more, if Tina Rath had ever written more.

@@ -1,16 +1,15 @@
 ---
-layout: review
-author_profile: true
-date: 2021-06-15 
-olid: OL7203430M
-title: "The Inn at the Spessart (from Tales)"
 author: Wilhelm Hauff
-year: 1827
-book_category: Fairy Tales 
+author_profile: true
+book_category: Fairy Tales/Folkore/Mythology
 book_tags:
 - Germany
 - story cycle
-
+date: 2021-06-15
+layout: review
+olid: OL7203430M
+title: The Inn at the Spessart (from Tales)
+year: 1827
 ---
 
 *The Inn at the Spessart* was one of three collections of *märchen* written by nineteenth century poet and Romantic Wilhelm Hauff. The version 

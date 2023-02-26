@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2020-06-17
-title: "Of One Blood"
 author: Pauline Hopkins
+author_profile: true
 book_category: Gothic
+date: 2020-06-17
+layout: review
 olid: OL17125899M
-
+title: Of One Blood
 ---
 
 Originally serialized in *Colored American Magazine* around 1902, and written by that magazine's editor, Pauline Hopkins. Recounts the tale of a mixed-race doctor who sails to Africa and stumbles upon Telassar, the lost capital of ancient Ethiopia.

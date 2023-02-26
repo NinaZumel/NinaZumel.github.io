@@ -1,16 +1,15 @@
 ---
-layout: review
-author_profile: true
-date: 2022-05-11 
-olid: OL26804466M
-title: "Apparitions: Ghosts of Old Edo"
 author: Miyuki Miyabe
-year: 2013
-book_category: Ghost stories
+author_profile: true
+book_category: Ghost Stories
 book_tags:
 - historical fiction
 - Japan
-
+date: 2022-05-11
+layout: review
+olid: OL26804466M
+title: 'Apparitions: Ghosts of Old Edo'
+year: 2013
 ---
 
 Ghost stories set in the Edo Period of Japan, centered around the lives of ordinary, working-class urban people. Really lovely.

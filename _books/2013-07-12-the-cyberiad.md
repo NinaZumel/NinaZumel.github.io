@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2013-07-12
-title: "The Cyberiad"
 author: Stanislaw Lem
-book_category: Weird, Fantasy and Macabre
+author_profile: true
+book_category: Weird/Fantasy/Macabre
+date: 2013-07-12
+layout: review
 olid: OL2859841M
-
+title: The Cyberiad
 ---
 
 *The Cyberiad* is a delightful collection of short stories about the constructor robots Trurl and Klapaucius as they travel the galaxy, and I know you all want me to classify it as *science fiction*. But it's not. I really want to classify it as *fairy tales*, but I'm going to compromise and call it *fantasy*, instead. 

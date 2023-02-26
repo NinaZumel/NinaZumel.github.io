@@ -1,13 +1,13 @@
 ---
-author_profile: true
-layout: review
-date: 2016-06-21
-title: "Ghosts and Family Legends"
 author: Catherine Crowe
+author_profile: true
 book_category: Ghost Stories
-cover: "ghosts_and_familylegends.jpg"
-
+cover: ghosts_and_familylegends.jpg
+date: 2016-06-21
+layout: review
+title: Ghosts and Family Legends
 ---
+
 Catherine Crowe was a fairly well-known collector of "true" supernatural phenomena. *Ghosts and Family Legends* is partly anecdotes told by friends around a fire during the Christmas season, and partly fully structured stories that I assume are fiction.
 
 I shared one [full-structured story,](https://multoghost.wordpress.com/2016/06/21/the-italians-story/) from the second half of the book, and several allegedly true anecdotes from the first half of the book, as winter tales.

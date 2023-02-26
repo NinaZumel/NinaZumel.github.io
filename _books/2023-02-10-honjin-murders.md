@@ -1,17 +1,16 @@
 ---
-layout: review
-author_profile: true
-date: 2023-02-10 
-olid: OL28369698M # if no image (Open Library ID)
-title: "The Honjin Murders"
 author: Seishi Yokomizo
-year: 1946
-book_category: Crime 
+author_profile: true
+book_category: Crime
 book_tags:
 - locked room mystery
 - Golden Age
 - Japan
-
+date: 2023-02-10
+layout: review
+olid: OL28369698M
+title: The Honjin Murders
+year: 1946
 ---
 
 A classic locked-room mystery, set in 1937 Japan. 

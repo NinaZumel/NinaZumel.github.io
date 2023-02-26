@@ -1,14 +1,12 @@
 ---
-layout: review
-author_profile: true
-date: 2022-09-06 
-olid: OL14875934M
-title: "Lord Halifax's Ghost Book"
 author: Charles Lindley Wood
+author_profile: true
+book_category: Ghost Stories
+date: 2022-09-06
+layout: review
+olid: OL14875934M
+title: Lord Halifax's Ghost Book
 year: 1936
-book_category: Ghost Stories  
-
-
 ---
 
 A compendium of "true" ghost stories collected over the years by Charles Lindley Wood, 2nd Viscount Halifax. Published posthumously by his son, Charles Wood.

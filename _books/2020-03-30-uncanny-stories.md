@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2020-03-30
-title: "Uncanny Stories"
 author: May Sinclair
+author_profile: true
 book_category: Ghost Stories
+date: 2020-03-30
+layout: review
 olid: OL6657102M
-
+title: Uncanny Stories
 ---
 
 A collection of psychologically complex ghost stories and metaphysical theorizing; the ghost stories were more enjoyable. Includes Sinclair's best known short story "Where the Fire is Not Quenched," which (in my opinion) anticipates Sartre's *No Exit* by twenty years.

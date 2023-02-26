@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2018-05-03
-title: "Serendipity and the Three Princes"
 author: Theodore G. Remer (Editor)
-book_category: Fairy Tales, Folkore, Mythology
+author_profile: true
+book_category: Fairy Tales/Folkore/Mythology
+date: 2018-05-03
+layout: review
 olid: OL5939812M
-
+title: Serendipity and the Three Princes
 ---
 
 *Peregrinaggio di tre giovani figliuoli del re di Serendippo* (The Peregrinations of the three young sons of the King of Serendippo) is a sixteenth century collection of fantastical tales in a framing story, rather like *1001 Nights* (but not so elaborate).

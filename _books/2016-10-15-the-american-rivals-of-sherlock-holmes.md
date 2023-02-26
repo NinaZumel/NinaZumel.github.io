@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2016-10-15
-title: "The American Rivals of Sherlock Holmes"
 author: Hugh Greene (Editor)
+author_profile: true
 book_category: Crime
+date: 2016-10-15
+layout: review
 olid: OL4883500M
-
+title: The American Rivals of Sherlock Holmes
 ---
 
 At interesting look at how early twentieth century American detective fiction differed from its British "drawing room mystery" counterpart. 

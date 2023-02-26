@@ -1,13 +1,13 @@
 ---
-author_profile: true
-layout: review
-date: 2012-11-25
-title: "John The Balladeer"
 author: Manly Wade Wellman
+author_profile: true
 book_category: Occult Detection
+date: 2012-11-25
+layout: review
 olid: OL7661194M
-
+title: John The Balladeer
 ---
+
 A traveling musician roams the Appalachians, encountering forest folk and mythical creatures along the way.  
 
 I've fallen a bit out of love with Manly Wade Wellman, because I find myself no longer able to tolerate his nostalgia for his (Confederate) Civil War ancestors. I'm sure Wellman himself was a perfectly good man; I just don't want to hear about the lost South any longer. Nonetheless, the John the Balladeer stories are good ones, and stay away from his family's historical legacy.

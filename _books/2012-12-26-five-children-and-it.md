@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2012-12-26
-title: "Five Children and It"
 author: Edith Nesbit
+author_profile: true
 book_category: Children's and YA Literature
+date: 2012-12-26
+layout: review
 olid: OL24271284M
-
+title: Five Children and It
 ---
 
 Classic children's adventure about five siblings and a Psammead, or sand fairy. This is apparently a staple of British childhood, but I didn't read it until I was an adult. I'm glad I did.

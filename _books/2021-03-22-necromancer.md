@@ -1,16 +1,14 @@
 ---
-
-author_profile: true
-layout: review
-date: 2021-03-22
-cover: "necromancer.jpg"
-title: "The Necromancer"
 author: Karl Friedrich Kahlert
-year: 1793
+author_profile: true
 book_category: Gothic
 book_tags:
 - literary sleuthing
-
+cover: necromancer.jpg
+date: 2021-03-22
+layout: review
+title: The Necromancer
+year: 1793
 ---
 
 *The Necromancer* was one of the "seven horrid novels" famously discussed by two young women in Jane Austin's *Northanger Abbey*. The version the pair were referring to was a 1794 translation by Peter Will (as Peter Teuthold) of the 1792 German original.

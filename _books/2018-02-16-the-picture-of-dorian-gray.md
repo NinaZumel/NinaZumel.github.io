@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2018-02-16
-title: "The Picture of Dorian Gray"
 author: Oscar Wilde
-book_category: Weird, Fantasy and Macabre
+author_profile: true
+book_category: Weird/Fantasy/Macabre
+date: 2018-02-16
+layout: review
 olid: OL39502110M
-
+title: The Picture of Dorian Gray
 ---
 
 A few years back, I did a three part series on flower symbology in *The Picture of Dorian Gray*. It was fun. The series assumes you've read the novel already---specifically the more common twenty chapter version, not the original thirteen chapter version. 

@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2014-10-26
-title: "While The Women are Sleeping"
 author: Javier Marias
+author_profile: true
 book_category: Magical Realism
+date: 2014-10-26
+layout: review
 olid: OL24816046M
-
+title: While The Women are Sleeping
 ---
 
 One of two Marías short story collections that I read while on my Spanish literature kick. I've never read his novels, but I love his short stories.

@@ -1,13 +1,13 @@
 ---
-author_profile: true
-layout: review
-date: 2012-01-20
-title: "American Gothic Tales"
 author: Joyce Carol Oates (Editor)
+author_profile: true
 book_category: Gothic
+date: 2012-01-20
+layout: review
 olid: OL988521M
-
+title: American Gothic Tales
 ---
+
 One of my blog readers took issue with Oates's (non)-definition of the Gothic; nor did they consider this anthology, as excellent as it is, to be truly representative of gothic fiction. But it *is* an excellent anthology. 
 
 I'm going to keep it in the *Gothic* category, to match its title. 

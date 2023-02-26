@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2014-09-11
-title: "A Thousand Forests in One Acorn"
 author: Valerie Miles (Editor)
+author_profile: true
 book_category: Literary Fiction
+date: 2014-09-11
+layout: review
 olid: OL27164553M
-
+title: A Thousand Forests in One Acorn
 ---
 
 The original post only linked to my review of the book at *The Mantle* -- but that magazine is gone, and alas, I no longer have the review.

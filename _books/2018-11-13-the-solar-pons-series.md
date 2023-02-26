@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2018-11-13
-title: "The Solar Pons Series"
 author: August Derleth
+author_profile: true
 book_category: Crime
+date: 2018-11-13
+layout: review
 olid: OL5466867M
-
+title: The Solar Pons Series
 ---
 
 This bookshelf entry is in honor of the entire August Derleth-authored Solar Pons series (I've not read the Basil Copper-authored Pons stories). I think it's the best Sherlock Holmes pastiche out there.

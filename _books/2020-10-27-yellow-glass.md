@@ -1,16 +1,14 @@
 ---
-
-author_profile: true
-layout: review
-date: 2020-10-27
-cover: "yellowglass.jpg"
-title: "Yellow Glass and Other Ghost Stories"
 author: Francis Young
-year: 2020
+author_profile: true
 book_category: Ghost Stories
 book_tags:
 - antiquarian
-
+cover: yellowglass.jpg
+date: 2020-10-27
+layout: review
+title: Yellow Glass and Other Ghost Stories
+year: 2020
 ---
 
 A collection of antiquarian and/or folklore-inspired ghost stories by British folklorist and historian Francis Young.

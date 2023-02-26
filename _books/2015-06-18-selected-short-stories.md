@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2015-06-18
-title: "Selected Short Stories"
 author: Rabindranath Tagore
+author_profile: true
 book_category: Literary Fiction
+date: 2015-06-18
+layout: review
 olid: OL7394616M
-
+title: Selected Short Stories
 ---
 
 I loved this so much. Every so often, I remember Tagore, and go find more of his short stories---there are easy to find public domain translations on Project Gutenberg, and other places. And I fall in love again.

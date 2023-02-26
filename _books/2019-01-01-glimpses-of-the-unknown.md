@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2019-01-01
-title: "Glimpses of the Unknown"
 author: Mike Ashley (Editor)
-book_category: Ghost Stories 
+author_profile: true
+book_category: Ghost Stories
+date: 2019-01-01
+layout: review
 olid: OL27337944M
-
+title: Glimpses of the Unknown
 ---
 
 More "lost" ghost stories! I love anthologies like this, but I accept that they can be hit or miss. *Glimpses of the Unknown* was gratifyingly more hit than miss. Great anthology.

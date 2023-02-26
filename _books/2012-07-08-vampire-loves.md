@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2012-07-08
-title: "Vampire Loves"
 author: Joann Sfar
-book_category: Weird, Fantasy and Macabre
+author_profile: true
+book_category: Weird/Fantasy/Macabre
+date: 2012-07-08
+layout: review
 olid: OL3405884M
-
+title: Vampire Loves
 ---
-The un-life and loves of the vampire Ferdinand. I only mentioned this in passing while discussing [*Shuck Unmasked*](https://multoghost.wordpress.com/2012/07/08/shuck-unmasked/), but genuinely a charming, terrific read.
 
+The un-life and loves of the vampire Ferdinand. I only mentioned this in passing while discussing [*Shuck Unmasked*](https://multoghost.wordpress.com/2012/07/08/shuck-unmasked/), but genuinely a charming, terrific read.

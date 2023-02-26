@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2018-11-25
-title: "The Croquet Player"
 author: H.G. Wells
+author_profile: true
 book_category: Dystopian Speculative Fiction
+date: 2018-11-25
+layout: review
 olid: OL8291665M
-
+title: The Croquet Player
 ---
 
 It's 1936. Something strange is happening in remote Cainsmarsh: too much fear, paranoia, suspicion. Too much drug use for such a rural region. What is the miasma that pervades the region?

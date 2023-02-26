@@ -1,13 +1,13 @@
 ---
-author_profile: true
-layout: review
-date: 2012-06-10
-title: "The Pillow Boy of Lady Onogoro"
 author: Allison Fell
+author_profile: true
 book_category: Short Story Cycles
+date: 2012-06-10
+layout: review
 olid: OL781264M
-
+title: The Pillow Boy of Lady Onogoro
 ---
+
 The concubine of an eleventh century Japanese general finds that her lover doesn't quite do it for her. So she hires a blind stableboy to whisper erotic stories to her while she and her lover are bed. 
 
 Believe it or not, the framing story of this novel is every bit as engrossing as the individual tales. 

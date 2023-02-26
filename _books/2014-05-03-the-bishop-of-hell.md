@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2014-05-03
-title: "The Bishop of Hell"
 author: Marjorie Bowen
+author_profile: true
 book_category: Gothic
+date: 2014-05-03
+layout: review
 olid: OL8914295M
-
+title: The Bishop of Hell
 ---
 
 I called this a "guilty pleasure" when I first read it; I've read a fair bit more Gothic romance since then, so perhaps I wouldn't feel so guilty if I read it now.

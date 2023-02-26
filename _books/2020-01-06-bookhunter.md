@@ -1,12 +1,11 @@
 ---
-author_profile: true
-layout: review
-date: 2020-01-06
-title: "Bookhunter"
 author: Jason Shiga
+author_profile: true
 book_category: Crime
+date: 2020-01-06
+layout: review
 olid: OL11802700M
-
+title: Bookhunter
 ---
 
 > In many respects the American Library has become the most basic First Amendment institution. We are guards, yet we guard no less than the sum of human knowledge. We are the library police. <br/>
