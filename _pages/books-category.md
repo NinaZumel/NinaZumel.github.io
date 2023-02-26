@@ -1,5 +1,5 @@
 ---
-layout: books
+layout: books-category
 title: "The Library of Babble"
 excerpt: " > When I have a little money, I buy books; and if I have any left, I buy food and clothes."
 list_title: Books I've Discussed at Multo
