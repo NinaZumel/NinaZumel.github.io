@@ -1,7 +1,7 @@
 ---
 author: Richard W. Lieban
 author_profile: true
-book_category: Anthropology
+book_category: Nonfiction
 cover: cebuano.jpeg
 date: 2012-01-10
 layout: review
