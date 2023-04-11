@@ -9,4 +9,4 @@ tags:
 - pandas
 ---
 
-Just created a [handy little Rosetta stone](https://github.com/WinVector/Examples/blob/main/pandas_polars_rosettastone/rosetta.ipynb) of common data operations in both `pandas` and `python`. Maybe you'll find it useful, too.
+Just created a [handy little Rosetta stone](https://github.com/WinVector/Examples/blob/main/pandas_polars_rosettastone/rosetta.ipynb) of common data operations in both `pandas` and `polars`. Maybe you'll find it useful, too.
