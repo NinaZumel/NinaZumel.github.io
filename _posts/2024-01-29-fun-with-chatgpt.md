@@ -1,8 +1,10 @@
 ---
 title: Fun With Chat GPT
 date: 2024-01-29
-categories: "- Data Science"
-tags:
+categories: 
+- Data Science
+tags: 
+- ChatGPT
 ---
 So, my husband typed this into ChatGPT 3.5:
 
