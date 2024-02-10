@@ -17,7 +17,7 @@ redirect_from:
 
 <hr/>
 
-[**Some Ongoing Translation Series**](https://exiw.wordpress.com/translations/): When I have time, I like to practice translating public domain short stories of the supernatural and the macabre by Spanish language authors that I'm interested in. 
+[**Some Ongoing Translation Series**](https://exiw.wordpress.com/translations/): When I have time, I like to find public domain, Spanish language short stories of the supernatural and macabre, and practice translating them.
 
 <p>Folklore articles I’ve written for the <a href="http://folklorethursday.com/author/nina/"><strong>#FolkloreThursday</strong></a> blog.  </p>
 
