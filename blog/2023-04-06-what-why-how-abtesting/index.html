@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The What, Why, and How of AB Testing</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 50em;
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+P.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #fff
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/cv/">CV</a></li>
+					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/personal-writing/">Personal Writing</a></li>
+					<li class="nav-item"><a href="/pages/practical-data-science-with-r/">Practical Data Science With R</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+<h1>The What, Why, and How of AB Testing</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-04-07">07 April 2023</time></li>
+	<li><a href="/tags/data-science/" class="post-tag">data science</a>, </li>
+	<li><a href="/tags/statistics/" class="post-tag">statistics</a>, </li>
+	<li><a href="/tags/ab-testing/" class="post-tag">ab testing</a></li>
+</ul>
+
+<p><em>This article is a shortened version of a <a href="https://www.wallaroo.ai/blog/the-what-why-and-how-of-a/b-testing">post from the Wallaroo Blog</a>, originally written by <a href="https://www.linkedin.com/in/juliobarros/">Julio Barros</a> and me. I'm posting the non-Wallaroo section of that article here, with permission, because I think it's a useful reference for A/B testing---one that I refer to myself. Hopefully, others find it helpful as well.</em></p>
+<hr>
+<h2 id="how-to-a-b-test-machine-learning-models" tabindex="-1"><strong>How to A/B Test Machine Learning Models</strong> <a class="header-anchor" href="#how-to-a-b-test-machine-learning-models">#</a></h2>
+<p><em>A/B tests are a key tool of business decision-making. In this article, we'll discuss the what and why of A/B testing, and how an A/B test is designed.</em></p>
+<h2 id="what-is-an-a-b-test" tabindex="-1">What is an A/B Test? <a class="header-anchor" href="#what-is-an-a-b-test">#</a></h2>
+<p>An <a href="https://en.wikipedia.org/wiki/A/B_testing">A/B test</a>, also called a controlled experiment or a randomized control trial, is a statistical method of determining which of a set of variants is the best. A/B tests allow organizations and policy-makers to make smarter, data-driven decisions that are less dependent on guesswork.</p>
+<p>In the simplest version of an A/B test, subjects are randomly assigned to either the control group (group A) or the treatment group (group B). Subjects in the treatment group receive the treatment (such as a new medicine, a special offer, or a new web page design) while the control group proceeds as normal without the treatment. Data is then collected on the outcomes and used to study the effects of the treatment.</p>
+<img alt="AB testing" loading="lazy" decoding="async" src="/img/AB-Testing-_poswn2rZ2-400.png" width="900" height="680" srcset="/img/AB-Testing-_poswn2rZ2-400.png 400w, /img/AB-Testing-_poswn2rZ2-800.png 800w, /img/AB-Testing-_poswn2rZ2-900.png 900w" sizes="100vw">
+<p class="caption">Author: Seobility - License: <a href="https://www.seobility.net/en/wiki/Creative_Commons_License_BY-SA_4.0">[CC BY-SA 4.0]</a>( "Creative Commons License BY-SA 4.0")</p>
+<h3 id="a-b-testing-in-history" tabindex="-1"><strong>A/B Testing in History</strong> <a class="header-anchor" href="#a-b-testing-in-history">#</a></h3>
+<p>This idea has been around for a long time. Historically, farmers have divided their fields into sections to test whether various treatments can improve their crop yield. Something like an A/B nutrition test even appears in the Old Testament!</p>
+<blockquote>
+<p>“Please test your servants for ten days. Let us be given vegetables to eat and water to drink. You can then compare our appearance with the appearance of the young men who eat the royal rations…&quot; (Daniel 1:12-13)</p>
+</blockquote>
+<p>In 1747, Dr. James Lind conducted one of the earliest clinical trials, testing the <a href="https://en.wikipedia.org/wiki/James_Lind#Prevention_and_cure_of_scurvy">efficacy of citrus fruit for curing scurvy</a>.</p>
+<h3 id="a-b-testing-today" tabindex="-1"><strong>A/B Testing Today</strong> <a class="header-anchor" href="#a-b-testing-today">#</a></h3>
+<p>Today, A/B tests are an important business tool, used to make decisions in areas like product pricing, website design, marketing campaign design, and brand messaging. A/B testing lets organizations quickly experiment and iterate in order to continually improve their business.</p>
+<p><strong>In data science</strong>, A/B tests can also be used to choose between two models in production, by measuring which model performs better in the real world. In this formulation, the control is often an existing model that is currently in production, sometimes called the <strong><em>champion</em></strong>. The treatment is a new model being considered to replace the old one. This new model is sometimes called the <strong><em>challenger</em></strong>. In our discussion, we'll use the terms <em>champion</em> and <em>challenger</em>, rather than <em>control</em> and <em>treatment</em>.</p>
+<p>Keep in mind that in machine learning, the terms <em>experiments</em> and <em>trials</em> also often refer to the process of finding a training configuration that works best for the problem at hand (this is sometimes called hyperparameter optimization). In this article, we will use the term <em>experiment</em> to refer to the use of A/B tests to compare the performance of different models in production.</p>
+<h2 id="how-to-design-an-a-b-test" tabindex="-1"><strong>How to Design an A/B Test</strong> <a class="header-anchor" href="#how-to-design-an-a-b-test">#</a></h2>
+<p>A/B tests are a useful way to rely less on opinions and intuition and to be more data-driven in decision making, but there are a few principles to keep in mind. The experimenter has to decide on a number of things.</p>
+<p><strong>First, decide what you are trying to measure.</strong> We'll call this the <em>Overall Evaluation Criterion</em> or <em>OEC</em>. This may be different and more business-focused than the loss function used while training the models, but it must be something you can measure. Common examples are revenue, click-thru rate, conversion rate, or process completion rate.</p>
+<p><strong>Second, decide how much better is &quot;better&quot;.</strong> You might want to just say &quot;Success is when the challenger is better than the champion,&quot; but that's actually not a testable question, at least not in the statistical sense. You have to decide <em>how much</em> better the challenger has to be. Let's define two quantities:</p>
+<ul>
+<li>
+<p><strong><em>y0</em></strong><em>:</em> The champion's assumed OEC. Since the champion has been running for a while, we should have a good idea of this value. For example, if we are measuring conversion rate, then we might already know that the champion typically achieves a conversion rate of <em>y0 =</em> 2%.</p>
+</li>
+<li>
+<p>𝞭: the <em>minimum delta effect size</em> we want to reliably detect. This is how much better the challenger needs to be for us to declare it &quot;the winner.&quot; For example, we may decide to switch to our challenger model if it improves the conversion rate by at least 1% – that is, we want the challenger to have a conversion rate of at least 0.02 * (1.01) = 0.0202. This means 𝞭 = 0.002.</p>
+</li>
+</ul>
+<p>Note that some sample size calculators (we'll get to that below) specify minimum effect size as a relative delta; in our example, the relative delta is 0.01 (1%), and the absolute delta is 0.002.</p>
+<p><strong>Third, decide how much error you want to tolerate</strong>. Again, you probably want to say &quot;none,&quot; but that isn't practical. The less error you can tolerate, the more data you need, and in an online setting, the longer you have to run the test. In the classical statistics formulation, an A/B test has the following parameters to describe the error:</p>
+<ul>
+<li>
+<p><strong>𝞪:</strong> the <em>significance</em>, or <em>false positive rate</em> that we are willing to tolerate. Ideally, we want 𝞪 as small as possible; in practice, 𝞪 is usually set to 0.05. You can think of this as meaning that if we run an A/B test over and over again, we will incorrectly pick an inferior challenger 5% of the time.</p>
+</li>
+<li>
+<p><strong>𝞫:</strong> the <em>power</em>, or <em>true positive rate</em> we want to achieve. Ideally, we would like 𝞫 near 1; in practice, 𝞫 is usually set to 0.8. You can think of this as meaning that if we run an A/B test over and over again we will correctly pick a superior challenger 80% of the time.</p>
+</li>
+</ul>
+<p>Note that 𝞪 and 𝞫 are talking about incompatible circumstances (that's why they don't add up to 1). The first case assumes the challenger is worse, the other case assumes it's better; finding out which situation we are in is the whole point of an A/B test.</p>
+<p>There's one last parameter in an A/B test:</p>
+<ul>
+<li><strong><em>n</em>:</strong> the minimum number of examples (per model) we have to examine to make sure our false positive rate 𝞪 and true positive rate 𝞫 thresholds are met. Or as it's commonly said: &quot;to make sure we achieve statistical significance.&quot;</li>
+</ul>
+<p>Note that n is per model: so if you are routing your customers between A and B with a 50-50 split, you need a total experiment size of 2<em>n customers. If you are routing 90% of your traffic to A and 10% to B, then B has to see at least n customers (and A will then see around 9</em>n). So a 50-50 split is the most efficient, although you may prefer an unbalanced split for other reasons, like safety or stability.</p>
+<p>To run an A/B test, the experimenter picks 𝞪, 𝞫, and the minimum effect size 𝞭, and then determines <em>n</em>. We won't go into the formula for calculating <em>n</em> here; so-called power calculators or sample-size calculators exist to do that for you. <a href="https://statsig.com/calculator">Here's one for rates, from Statsig</a>; it defaults to 𝞪 = 0.05, 𝞫 = 0.8, and split ratio of 50-50. Feel free to play around to get a sense of how big sample sizes have to be in different situations.</p>
+<p>Once you've run the A/B test long enough to achieve the necessary <em>n</em>, measure the OEC for each model. If OECchallenger - OECchampion &gt; 𝞭, then the challenger wins! Otherwise, you may wish to stick with the champion model.</p>
+<h3 id="some-practical-considerations" tabindex="-1"><strong>Some Practical Considerations</strong> <a class="header-anchor" href="#some-practical-considerations">#</a></h3>
+<p><strong>Splitting your subjects:</strong> When splitting your subjects up randomly between models, make sure the process is truly random, and think through any interference between the two groups. Do they communicate or influence each other in some way? Does the randomization method cause an unintended bias? Any bias in group assignments can invalidate the results. Also, make sure the assignment is consistent so that each subject always gets the same treatment. For example, a specific customer should not get different prices every time they reload the pricing page.</p>
+<p><strong>A/A Tests:</strong> It can be a good idea to run an A/A test, where both groups are control or treatment groups. This can help surface unintentional biases or errors in the processing and can give a better feeling for how random variations can affect intermediate results.</p>
+<p><strong>Don't Peek!:</strong> Due to human nature, it's difficult not to peek at the results early and draw conclusions or stop the experiment before the minimum sample size is reached. Resist the temptation. Sometimes the &quot;wrong&quot; model can get lucky for a while. You want to run a test long enough to be confident that the behavior you see is really representative and not just a weird fluke.</p>
+<p><strong>The more sensitive a test is, the longer it will take:</strong> The resolution of an A/B test (how small a delta effect size you can detect) increases as the square of the samples. In other words, if you want to halve the delta effect size you can detect, you have to <em>quadruple</em> your sample size.</p>
+<h3 id="extensions-to-a-b-testing" tabindex="-1"><strong>Extensions to A/B Testing</strong> <a class="header-anchor" href="#extensions-to-a-b-testing">#</a></h3>
+<p><strong>Bayesian A/B Tests</strong></p>
+<p>The classical (AKA frequentist) statistical approach to A/B testing that we described above can be a bit unintuitive for some people. In particular, note that the definitions of 𝞪 and 𝞫 posit that we run the A/B test over and over; in actuality, we generally run it only once (for a specific A and B). The Bayesian approach takes the data from a single run as a given, and asks, &quot;What OEC values are consistent with what I've observed?&quot;</p>
+<p>The general steps for a Bayesian analysis are roughly:</p>
+<ol>
+<li>
+<p>Specify prior beliefs about possible values of the OEC for the experiment groups. An example prior might be that conversion rates for both groups are different and both between 0 and 10%.</p>
+</li>
+<li>
+<p>Define a statistical model using a Bayesian analysis tool (ie. using distributional techniques) and flat, uninformative, or equal priors for each group.</p>
+</li>
+<li>
+<p>Collect data and update the beliefs on possible values for the OEC parameters as you go. The distributions of possible OEC parameters start out encompassing a wide range of possible values, and as the experiment continues the distributions tend to narrow and separate (if there is a difference).</p>
+</li>
+<li>
+<p>Continue the experiment as long as it seems valuable to refine the estimates of the OEC. From the posterior distributions of the effect sizes, it is possible to estimate the delta effect size.</p>
+</li>
+</ol>
+<img alt="Posterior distributions of a Bayesian treatment and control test." loading="lazy" decoding="async" src="/img/Fig+2-IqZooIpGrI-400.png" width="712" height="505" srcset="/img/Fig+2-IqZooIpGrI-400.png 400w, /img/Fig+2-IqZooIpGrI-712.png 712w" sizes="100vw">
+<p class="caption">Posterior distributions of a Bayesian treatment/control test. Source: <a href="https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/">Win-Vector Blog</a></p>
+<p>Note that a Bayesian approach to A/B testing does not necessarily make the test any shorter; it simply makes quantifying the uncertainties in the experiment more straightforward, and arguably more intuitive. For a worked example of frequentist and Bayesian approaches to treatment/control experiments (in the context of clinical trials), see this <a href="https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/">blog post</a> from Win Vector LLC.</p>
+<h3 id="multi-armed-bandits" tabindex="-1"><strong>Multi-Armed Bandits</strong> <a class="header-anchor" href="#multi-armed-bandits">#</a></h3>
+<p>If you want to minimize the waiting until the end of an experiment before taking action, consider <a href="https://cxl.com/blog/bandit-tests/">Multi-Armed Bandit</a> approaches. Multi-armed bandits dynamically adjust the percentage of new requests that go to each option, based on that option's past performance. Essentially, the better performing a model is, the more traffic it gets—but some small amount of traffic still goes to poorly performing models, so the experiment can still collect information about them. This balances the trade-off between <em>exploitation</em> (extracting maximal value by using models that appear to be the best) and <em>exploration</em> (collecting information about other models, in case they turn out to be better than they currently appear). If a multi-armed bandit experiment is run long enough, it will eventually converge to the best model, if one exists.</p>
+<p>Multi-armed bandit tests can be useful if you can't run a test long enough to achieve statistical significance; ironically, this situation often occurs when the delta effect size is small, so even if you pick the wrong model, you don't lose much. In fact, the exploitation-exploration tradeoff means that you potentially gain more value during the experiment than you would have running a standard A/B test.</p>
+
+<ul class="links-nextprev"><li>Next: <a href="/blog/2023-04-10-pandas-polars-rosetta-stone/">Pandas-Polars Rosetta Stone</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2024 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2023-04-06-what-why-how-abtesting/ -->
+	</body>
+</html>

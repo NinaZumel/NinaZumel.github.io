@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>Nina B. Zumel</title>
+	<subtitle>Data Scientist, San Francisco</subtitle>
+	<link href="https://ninazumel.com/feed.xml" rel="self"/>
+	<link href="https://ninazumel.com/testblog"/>
+	<updated>2024-01-29T00:00:00Z</updated>
+	<id>https://ninazumel.com/testblog</id>
+	<author>
+		<name>Nina B. Zumel</name>
+		<email>nzumel@win-vector.com</email>
+	</author>
+	
+	<entry>
+		<title>Fun With Chat GPT</title>
+		<link href="https://ninazumel.com/blog/2024-01-29-fun-with-chatgpt/"/>
+		<updated>2024-01-29T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-01-29-fun-with-chatgpt/</id>
+		<content type="html">&lt;p&gt;So, my husband typed this into ChatGPT 3.5:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What are some English words that are 4 letters long, start with f, and end with k?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;According to ChatGPT, there was only one word that fit that criterion: &lt;em&gt;fork&lt;/em&gt;.  Upon prodding, it admitted that there were maybe a few more:&lt;/p&gt;
+&lt;img alt=&quot;Screenshot from ChatGPT 3.5&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/chatgpt_fk-DwBxoayKTh-400.png&quot; width=&quot;3182&quot; height=&quot;2287&quot; srcset=&quot;https://ninazumel.com/img/chatgpt_fk-DwBxoayKTh-400.png 400w, https://ninazumel.com/img/chatgpt_fk-DwBxoayKTh-800.png 800w, https://ninazumel.com/img/chatgpt_fk-DwBxoayKTh-1200.png 1200w, https://ninazumel.com/img/chatgpt_fk-DwBxoayKTh-3182.png 3182w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p&gt;Typing a similar query into DuckDuckGo (&lt;em&gt;4 letter word starting with f ending with k&lt;/em&gt;) produced a page full of links to various crossword puzzle and Scrabble dictionaries. The first link gave me seven words. A little further down, I found a link that gave me thirteen words: faik, fank, feck, filk, fink, firk, fisk, flak, folk, fork, funk, fusk, and of course, &amp;quot;the F-word.&amp;quot;&lt;/p&gt;
+&lt;p&gt;I&#39;m sure that ChatGPT has filters to eliminate profanity, and admittedly, not all the above words are &amp;quot;common,&amp;quot; but, come on -- &lt;em&gt;folk&lt;/em&gt;? &lt;em&gt;funk&lt;/em&gt;? &lt;em&gt;flak&lt;/em&gt;??  I particularly like &lt;em&gt;feck&lt;/em&gt;, though I never hear of anyone being &amp;quot;full of feck,&amp;quot; only &amp;quot;feckless&amp;quot; ...&lt;/p&gt;
+&lt;p&gt;I&#39;m sure GPT-4 does better, but I don&#39;t care to pay to find out.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>The Sphering Transform for Detecting Distribution Drift</title>
+		<link href="https://ninazumel.com/blog/2023-08-21-the-sphering-transform/"/>
+		<updated>2023-08-21T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2023-08-21-the-sphering-transform/</id>
+		<content type="html">&lt;p&gt;I have a new blog post up on the Win Vector blog: &lt;a href=&quot;https://win-vector.com/2023/08/20/detecting-data-differences-using-the-sphering-transform/&quot;&gt;Detecting Data Differences Using the Sphering Transform&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt=&quot;Distributions of sphered norms for two data sets with different distributions&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/new_raw_comp_xformed-s2pbz_kSJE-200.png&quot; width=&quot;609&quot; height=&quot;470&quot; srcset=&quot;https://ninazumel.com/img/new_raw_comp_xformed-s2pbz_kSJE-200.png 200w, https://ninazumel.com/img/new_raw_comp_xformed-s2pbz_kSJE-400.png 400w, https://ninazumel.com/img/new_raw_comp_xformed-s2pbz_kSJE-609.png 609w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p&gt;In this post, I discuss how to convert the problem of detecting changes in multivariate distributions to the simpler problem of detecting changes in univariate distributions. Please check it out.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Pandas-Polars Rosetta Stone</title>
+		<link href="https://ninazumel.com/blog/2023-04-10-pandas-polars-rosetta-stone/"/>
+		<updated>2023-04-10T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2023-04-10-pandas-polars-rosetta-stone/</id>
+		<content type="html">&lt;p&gt;Just created a &lt;a href=&quot;https://github.com/WinVector/Examples/blob/main/pandas_polars_rosettastone/rosetta.ipynb&quot;&gt;handy little Rosetta stone&lt;/a&gt; of common data operations using both the &lt;code&gt;pandas&lt;/code&gt; and &lt;code&gt;polars&lt;/code&gt; libraries. Maybe you&#39;ll find it useful, too.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>The What, Why, and How of AB Testing</title>
+		<link href="https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/"/>
+		<updated>2023-04-07T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/</id>
+		<content type="html">&lt;p&gt;&lt;em&gt;This article is a shortened version of a &lt;a href=&quot;https://www.wallaroo.ai/blog/the-what-why-and-how-of-a/b-testing&quot;&gt;post from the Wallaroo Blog&lt;/a&gt;, originally written by &lt;a href=&quot;https://www.linkedin.com/in/juliobarros/&quot;&gt;Julio Barros&lt;/a&gt; and me. I&#39;m posting the non-Wallaroo section of that article here, with permission, because I think it&#39;s a useful reference for A/B testing---one that I refer to myself. Hopefully, others find it helpful as well.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;how-to-a-b-test-machine-learning-models&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;How to A/B Test Machine Learning Models&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;A/B tests are a key tool of business decision-making. In this article, we&#39;ll discuss the what and why of A/B testing, and how an A/B test is designed.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;what-is-an-a-b-test&quot; tabindex=&quot;-1&quot;&gt;What is an A/B Test? &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;An &lt;a href=&quot;https://en.wikipedia.org/wiki/A/B_testing&quot;&gt;A/B test&lt;/a&gt;, also called a controlled experiment or a randomized control trial, is a statistical method of determining which of a set of variants is the best. A/B tests allow organizations and policy-makers to make smarter, data-driven decisions that are less dependent on guesswork.&lt;/p&gt;
+&lt;p&gt;In the simplest version of an A/B test, subjects are randomly assigned to either the control group (group A) or the treatment group (group B). Subjects in the treatment group receive the treatment (such as a new medicine, a special offer, or a new web page design) while the control group proceeds as normal without the treatment. Data is then collected on the outcomes and used to study the effects of the treatment.&lt;/p&gt;
+&lt;img alt=&quot;AB testing&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/AB-Testing-_poswn2rZ2-400.png&quot; width=&quot;900&quot; height=&quot;680&quot; srcset=&quot;https://ninazumel.com/img/AB-Testing-_poswn2rZ2-400.png 400w, https://ninazumel.com/img/AB-Testing-_poswn2rZ2-800.png 800w, https://ninazumel.com/img/AB-Testing-_poswn2rZ2-900.png 900w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Author: Seobility - License: &lt;a href=&quot;https://www.seobility.net/en/wiki/Creative_Commons_License_BY-SA_4.0&quot;&gt;[CC BY-SA 4.0]&lt;/a&gt;( &quot;Creative Commons License BY-SA 4.0&quot;)&lt;/p&gt;
+&lt;h3 id=&quot;a-b-testing-in-history&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;A/B Testing in History&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This idea has been around for a long time. Historically, farmers have divided their fields into sections to test whether various treatments can improve their crop yield. Something like an A/B nutrition test even appears in the Old Testament!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Please test your servants for ten days. Let us be given vegetables to eat and water to drink. You can then compare our appearance with the appearance of the young men who eat the royal rations…&amp;quot; (Daniel 1:12-13)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In 1747, Dr. James Lind conducted one of the earliest clinical trials, testing the &lt;a href=&quot;https://en.wikipedia.org/wiki/James_Lind#Prevention_and_cure_of_scurvy&quot;&gt;efficacy of citrus fruit for curing scurvy&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;a-b-testing-today&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;A/B Testing Today&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Today, A/B tests are an important business tool, used to make decisions in areas like product pricing, website design, marketing campaign design, and brand messaging. A/B testing lets organizations quickly experiment and iterate in order to continually improve their business.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In data science&lt;/strong&gt;, A/B tests can also be used to choose between two models in production, by measuring which model performs better in the real world. In this formulation, the control is often an existing model that is currently in production, sometimes called the &lt;strong&gt;&lt;em&gt;champion&lt;/em&gt;&lt;/strong&gt;. The treatment is a new model being considered to replace the old one. This new model is sometimes called the &lt;strong&gt;&lt;em&gt;challenger&lt;/em&gt;&lt;/strong&gt;. In our discussion, we&#39;ll use the terms &lt;em&gt;champion&lt;/em&gt; and &lt;em&gt;challenger&lt;/em&gt;, rather than &lt;em&gt;control&lt;/em&gt; and &lt;em&gt;treatment&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Keep in mind that in machine learning, the terms &lt;em&gt;experiments&lt;/em&gt; and &lt;em&gt;trials&lt;/em&gt; also often refer to the process of finding a training configuration that works best for the problem at hand (this is sometimes called hyperparameter optimization). In this article, we will use the term &lt;em&gt;experiment&lt;/em&gt; to refer to the use of A/B tests to compare the performance of different models in production.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-design-an-a-b-test&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;How to Design an A/B Test&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A/B tests are a useful way to rely less on opinions and intuition and to be more data-driven in decision making, but there are a few principles to keep in mind. The experimenter has to decide on a number of things.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First, decide what you are trying to measure.&lt;/strong&gt; We&#39;ll call this the &lt;em&gt;Overall Evaluation Criterion&lt;/em&gt; or &lt;em&gt;OEC&lt;/em&gt;. This may be different and more business-focused than the loss function used while training the models, but it must be something you can measure. Common examples are revenue, click-thru rate, conversion rate, or process completion rate.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Second, decide how much better is &amp;quot;better&amp;quot;.&lt;/strong&gt; You might want to just say &amp;quot;Success is when the challenger is better than the champion,&amp;quot; but that&#39;s actually not a testable question, at least not in the statistical sense. You have to decide &lt;em&gt;how much&lt;/em&gt; better the challenger has to be. Let&#39;s define two quantities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;y0&lt;/em&gt;&lt;/strong&gt;&lt;em&gt;:&lt;/em&gt; The champion&#39;s assumed OEC. Since the champion has been running for a while, we should have a good idea of this value. For example, if we are measuring conversion rate, then we might already know that the champion typically achieves a conversion rate of &lt;em&gt;y0 =&lt;/em&gt; 2%.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;𝞭: the &lt;em&gt;minimum delta effect size&lt;/em&gt; we want to reliably detect. This is how much better the challenger needs to be for us to declare it &amp;quot;the winner.&amp;quot; For example, we may decide to switch to our challenger model if it improves the conversion rate by at least 1% – that is, we want the challenger to have a conversion rate of at least 0.02 * (1.01) = 0.0202. This means 𝞭 = 0.002.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that some sample size calculators (we&#39;ll get to that below) specify minimum effect size as a relative delta; in our example, the relative delta is 0.01 (1%), and the absolute delta is 0.002.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Third, decide how much error you want to tolerate&lt;/strong&gt;. Again, you probably want to say &amp;quot;none,&amp;quot; but that isn&#39;t practical. The less error you can tolerate, the more data you need, and in an online setting, the longer you have to run the test. In the classical statistics formulation, an A/B test has the following parameters to describe the error:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;𝞪:&lt;/strong&gt; the &lt;em&gt;significance&lt;/em&gt;, or &lt;em&gt;false positive rate&lt;/em&gt; that we are willing to tolerate. Ideally, we want 𝞪 as small as possible; in practice, 𝞪 is usually set to 0.05. You can think of this as meaning that if we run an A/B test over and over again, we will incorrectly pick an inferior challenger 5% of the time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;𝞫:&lt;/strong&gt; the &lt;em&gt;power&lt;/em&gt;, or &lt;em&gt;true positive rate&lt;/em&gt; we want to achieve. Ideally, we would like 𝞫 near 1; in practice, 𝞫 is usually set to 0.8. You can think of this as meaning that if we run an A/B test over and over again we will correctly pick a superior challenger 80% of the time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that 𝞪 and 𝞫 are talking about incompatible circumstances (that&#39;s why they don&#39;t add up to 1). The first case assumes the challenger is worse, the other case assumes it&#39;s better; finding out which situation we are in is the whole point of an A/B test.&lt;/p&gt;
+&lt;p&gt;There&#39;s one last parameter in an A/B test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;n&lt;/em&gt;:&lt;/strong&gt; the minimum number of examples (per model) we have to examine to make sure our false positive rate 𝞪 and true positive rate 𝞫 thresholds are met. Or as it&#39;s commonly said: &amp;quot;to make sure we achieve statistical significance.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that n is per model: so if you are routing your customers between A and B with a 50-50 split, you need a total experiment size of 2&lt;em&gt;n customers. If you are routing 90% of your traffic to A and 10% to B, then B has to see at least n customers (and A will then see around 9&lt;/em&gt;n). So a 50-50 split is the most efficient, although you may prefer an unbalanced split for other reasons, like safety or stability.&lt;/p&gt;
+&lt;p&gt;To run an A/B test, the experimenter picks 𝞪, 𝞫, and the minimum effect size 𝞭, and then determines &lt;em&gt;n&lt;/em&gt;. We won&#39;t go into the formula for calculating &lt;em&gt;n&lt;/em&gt; here; so-called power calculators or sample-size calculators exist to do that for you. &lt;a href=&quot;https://statsig.com/calculator&quot;&gt;Here&#39;s one for rates, from Statsig&lt;/a&gt;; it defaults to 𝞪 = 0.05, 𝞫 = 0.8, and split ratio of 50-50. Feel free to play around to get a sense of how big sample sizes have to be in different situations.&lt;/p&gt;
+&lt;p&gt;Once you&#39;ve run the A/B test long enough to achieve the necessary &lt;em&gt;n&lt;/em&gt;, measure the OEC for each model. If OECchallenger - OECchampion &amp;gt; 𝞭, then the challenger wins! Otherwise, you may wish to stick with the champion model.&lt;/p&gt;
+&lt;h3 id=&quot;some-practical-considerations&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;Some Practical Considerations&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Splitting your subjects:&lt;/strong&gt; When splitting your subjects up randomly between models, make sure the process is truly random, and think through any interference between the two groups. Do they communicate or influence each other in some way? Does the randomization method cause an unintended bias? Any bias in group assignments can invalidate the results. Also, make sure the assignment is consistent so that each subject always gets the same treatment. For example, a specific customer should not get different prices every time they reload the pricing page.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A/A Tests:&lt;/strong&gt; It can be a good idea to run an A/A test, where both groups are control or treatment groups. This can help surface unintentional biases or errors in the processing and can give a better feeling for how random variations can affect intermediate results.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Don&#39;t Peek!:&lt;/strong&gt; Due to human nature, it&#39;s difficult not to peek at the results early and draw conclusions or stop the experiment before the minimum sample size is reached. Resist the temptation. Sometimes the &amp;quot;wrong&amp;quot; model can get lucky for a while. You want to run a test long enough to be confident that the behavior you see is really representative and not just a weird fluke.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The more sensitive a test is, the longer it will take:&lt;/strong&gt; The resolution of an A/B test (how small a delta effect size you can detect) increases as the square of the samples. In other words, if you want to halve the delta effect size you can detect, you have to &lt;em&gt;quadruple&lt;/em&gt; your sample size.&lt;/p&gt;
+&lt;h3 id=&quot;extensions-to-a-b-testing&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;Extensions to A/B Testing&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bayesian A/B Tests&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The classical (AKA frequentist) statistical approach to A/B testing that we described above can be a bit unintuitive for some people. In particular, note that the definitions of 𝞪 and 𝞫 posit that we run the A/B test over and over; in actuality, we generally run it only once (for a specific A and B). The Bayesian approach takes the data from a single run as a given, and asks, &amp;quot;What OEC values are consistent with what I&#39;ve observed?&amp;quot;&lt;/p&gt;
+&lt;p&gt;The general steps for a Bayesian analysis are roughly:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Specify prior beliefs about possible values of the OEC for the experiment groups. An example prior might be that conversion rates for both groups are different and both between 0 and 10%.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define a statistical model using a Bayesian analysis tool (ie. using distributional techniques) and flat, uninformative, or equal priors for each group.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collect data and update the beliefs on possible values for the OEC parameters as you go. The distributions of possible OEC parameters start out encompassing a wide range of possible values, and as the experiment continues the distributions tend to narrow and separate (if there is a difference).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Continue the experiment as long as it seems valuable to refine the estimates of the OEC. From the posterior distributions of the effect sizes, it is possible to estimate the delta effect size.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img alt=&quot;Posterior distributions of a Bayesian treatment and control test.&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/Fig+2-IqZooIpGrI-400.png&quot; width=&quot;712&quot; height=&quot;505&quot; srcset=&quot;https://ninazumel.com/img/Fig+2-IqZooIpGrI-400.png 400w, https://ninazumel.com/img/Fig+2-IqZooIpGrI-712.png 712w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Posterior distributions of a Bayesian treatment/control test. Source: &lt;a href=&quot;https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/&quot;&gt;Win-Vector Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Note that a Bayesian approach to A/B testing does not necessarily make the test any shorter; it simply makes quantifying the uncertainties in the experiment more straightforward, and arguably more intuitive. For a worked example of frequentist and Bayesian approaches to treatment/control experiments (in the context of clinical trials), see this &lt;a href=&quot;https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/&quot;&gt;blog post&lt;/a&gt; from Win Vector LLC.&lt;/p&gt;
+&lt;h3 id=&quot;multi-armed-bandits&quot; tabindex=&quot;-1&quot;&gt;&lt;strong&gt;Multi-Armed Bandits&lt;/strong&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you want to minimize the waiting until the end of an experiment before taking action, consider &lt;a href=&quot;https://cxl.com/blog/bandit-tests/&quot;&gt;Multi-Armed Bandit&lt;/a&gt; approaches. Multi-armed bandits dynamically adjust the percentage of new requests that go to each option, based on that option&#39;s past performance. Essentially, the better performing a model is, the more traffic it gets—but some small amount of traffic still goes to poorly performing models, so the experiment can still collect information about them. This balances the trade-off between &lt;em&gt;exploitation&lt;/em&gt; (extracting maximal value by using models that appear to be the best) and &lt;em&gt;exploration&lt;/em&gt; (collecting information about other models, in case they turn out to be better than they currently appear). If a multi-armed bandit experiment is run long enough, it will eventually converge to the best model, if one exists.&lt;/p&gt;
+&lt;p&gt;Multi-armed bandit tests can be useful if you can&#39;t run a test long enough to achieve statistical significance; ironically, this situation often occurs when the delta effect size is small, so even if you pick the wrong model, you don&#39;t lose much. In fact, the exploitation-exploration tradeoff means that you potentially gain more value during the experiment than you would have running a standard A/B test.&lt;/p&gt;
+</content>
+	</entry>
+</feed>
