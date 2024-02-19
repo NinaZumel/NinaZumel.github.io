@@ -22,6 +22,11 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/blog/2024-02-19-new-blogging-framework/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/blog/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -77,6 +82,16 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/svd/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/python/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -92,17 +107,12 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/svd/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/data-drift/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/chatgpt/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/blogging/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 </urlset>

@@ -4,12 +4,25 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/testblog"/>
-	<updated>2024-01-29T00:00:00Z</updated>
+	<updated>2024-02-19T00:00:00Z</updated>
 	<id>https://ninazumel.com/testblog</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Blog Migration</title>
+		<link href="https://ninazumel.com/blog/2024-02-19-new-blogging-framework/"/>
+		<updated>2024-02-19T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-02-19-new-blogging-framework/</id>
+		<content type="html">&lt;p&gt;My jekyll-generated website (served by Github Pages) failed to build a couple of weeks ago; I don&#39;t know why. I&#39;m not enough of a front-end developer to diagnose the problem. After looking around for an updated template to move to, I eventually decided to give the &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy static site generator&lt;/a&gt; a try.&lt;/p&gt;
+&lt;p&gt;So this is my new site, based on Eleventy&#39;s &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;official starter blog&lt;/a&gt; template. It wasn&#39;t too hard to figure out, and deployed surprisingly easily! Best of all, Eleventy is built to be &lt;a href=&quot;https://www.11ty.dev/blog/stability/&quot;&gt;stable&lt;/a&gt;; which hopefully means I won&#39;t run into that &lt;em&gt;my website won&#39;t build, and I don&#39;t know why!&lt;/em&gt; problem again[1]. Hurray!&lt;/p&gt;
+&lt;p&gt;A better developer than I am probably could have migrated the old jekyll site completely, but I didn&#39;t manage to do that. I&#39;ve only carried a few blog posts and pages over for the moment. I&#39;ll put a few more of the old posts back, and my publications page; eventually I&#39;ll figure out how to get my bookshelf and my talks pages back up, too. But at least there&#39;s something here, for now.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;[1]: It&#39;s also designed to &lt;a href=&quot;https://www.11ty.dev/docs/performance/&quot;&gt;build really fast&lt;/a&gt;, but that matters less to me.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Fun With Chat GPT</title>
