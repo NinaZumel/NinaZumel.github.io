@@ -1,19 +1,18 @@
 {
-	"name": "ninazumel-testblog",
-	"description": "A starter repository for a blog web site using the Eleventy site generator.",
+	"name": "ninazumel",
+	"description": "My website, based on eleventy base blog v8",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=/testblog/",
-	        "start": "npx @11ty/eleventy --serve",
-	        "start-ghpages": "npx @11ty/eleventy --pathprefix=/testblog/ --serve",
+		"build-ghpages": "npx @11ty/eleventy",
+	    "start": "npx @11ty/eleventy --serve",
 		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-                "deploy": "gh-pages -d _site"
+        "deploy": "gh-pages -d _site --cname ninazumel.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/NinaZumel/testblog.git"
+		"url": "git://github.com/NinaZumel/NinaZumel.github.io.git"
 	},
 	"author": {
 		"name": "Zach Leatherman",

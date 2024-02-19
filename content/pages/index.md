@@ -13,9 +13,6 @@ layout: layouts/home.njk
 </div>
 
 
-
-Test website.
-
 * Founder and Principal Consultant with [Win-Vector LLC](https://win-vector.com/), a data science consulting and training firm based in San Francisco.
 * VP of Data Science Practice for [Wallaroo.ai](https://www.wallaroo.ai/). 
 * Co-author, with John Mount, of [<em>Practical Data Science with R</em>](https://www.manning.com/books/practical-data-science-with-r-second-edition) (now in a second edition). 
