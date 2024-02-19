@@ -4,7 +4,7 @@ layout: layouts/base.njk
 title: "Personal Writing"
 eleventyNavigation:
   key: Personal Writing
-  order: 3
+  order: 4
 ---
 
 # Personal Writing
@@ -17,7 +17,7 @@ eleventyNavigation:
 
  Follow [@MultoGhost](https://micro.blog/MultoGhost) at Micro.blog to see a feed where I announce my latest blog posts across all my blogs.
  
- Alternately, subscribe to my microblogging site [Short Thoughts](https://ninazumel.com/short_thoughts/) via RSS.
+ Alternately, subscribe to my <strong>microblogging site [Short Thoughts](https://ninazumel.com/short_thoughts/)</strong> via RSS.
 
 <hr/>
 

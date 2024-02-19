@@ -1,12 +1,8 @@
 ---
 title: What's Wrong with a Low(er)-Stress Job?
 date: 2013-01-05
-categories:
-- Musings
 tags:
-- job stress
-- opinion
-permalink: /2013/01/05/whats-wrong-with-a-lower-stress-job/
+- musings
 ---
 <p>So there's this article that's been making the rounds called <a href="http://www.careercast.com/jobs-rated/10-least-stressful-jobs-2013">"The 10 Least Stressful Jobs of 2013"</a>; perhaps you've read it. I don't normally bother with articles like that, but it came to my attention because some of my old graduate-school friends (who are professors) threw a mini-rant on social media over the fact that University Professor is the Number One least stressful job of the year, according to the article. And just now, I tripped over <a href="http://www.screwydecimal.com/2013/01/5-reasons-being-librarian-is-stressful.html">a blog post where a librarian takes umbrage over the fact that they also on the list</a>.</p>
 

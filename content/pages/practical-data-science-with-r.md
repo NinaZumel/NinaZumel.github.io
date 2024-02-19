@@ -1,16 +1,13 @@
 ---
 layout: layouts/base.njk
 title: Practical Data Science With R
-eleventyNavigation:
-  key: Practical Data Science With R
-  order: 4
 ---
 
 # Practical Data Science With R
 
 John Mount and I are proud to present our book, [*Practical Data Science with R, 2nd Edition*](https://www.manning.com/books/practical-data-science-with-r-second-edition).  This is the book for you if you are a data scientist, want to be a data scientist, work with data scientists, or hire data scientists.
 
-{% image "./images/zumel-pdsr-2ed-hi.jpg", "Practical Data Science with R", [100, 200, 400, 600], "20vw" %}
+{% image "./images/zumel-pdsr-2ed-hi.jpg", "Practical Data Science with R", "20vw" %}
 
 Our goal is to present data science from a pragmatic, practice-oriented viewpoint. The book will complement other analytics, statistics, machine learning, data science and R books with the following features:
 

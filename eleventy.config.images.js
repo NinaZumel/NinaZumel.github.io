@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
 	// Eleventy Image shortcode
 	// https://www.11ty.dev/docs/plugins/image/
 	// arguments - image source, alt text, list of sizes to generate, fallback viewport size (100 is 100% of viewport)
-	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, iwidths=[400, 800, 1200, "auto"], sizes="100vw") {
+	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, sizes="100vw", iwidths=[400, 800, 1200, "auto"]) {
 		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
 		let formats = ["png"];
 

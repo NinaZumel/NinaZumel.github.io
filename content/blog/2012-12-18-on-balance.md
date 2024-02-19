@@ -1,24 +1,18 @@
 ---
 title: On Balance
 date: 2012-12-18
-categories:
-- Data Science
-- Musings
-- Writing
 tags:
-- creative interests
-- creative process
-- life balance
-- priorities
-permalink: /2012/12/18/on-balance/
+- musings
 ---
 <p>One of my favorite cheesy movies is a gem from 1984 called <a href="http://en.wikipedia.org/wiki/The_Adventures_of_Buckaroo_Banzai_Across_the_8th_Dimension"><em>The Adventures of Buckaroo Banzai Across the 8th Dimension</em></a>. For those who haven't seen it, Buckaroo Banzai is a brilliant young neurosurgeon and particle physicist who spends his days conducting cutting-edge research. At night, he and his research colleagues -- all engineers and scientists and doctors -- rock New Jersey as a band called the Hong Kong Cavaliers. In between the brilliant science and the rock-star night life, the Cavaliers find time to save the world from an alien invasion led by none other than John Lithgow.</p>
 
-<p><img style="display:block;margin-left:auto;margin-right:auto;" src="{{ site.baseurl }}/assets/Lithgow.png" alt="John Lithgow" border="0" /></p>
+{% image "./images/Lithgow.png", "John Lithgow" %}
 
 <p>It's very eighties: full of funky jackets with padded shoulders and some crazy hair. I can't recommend it enough.</p>
 
+<p align="center">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 <p>What happens if you want to be Buckaroo Banzai in real life? Here's what biologist Adam Ruben writes in his article <a href="http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_12_14/caredit.a1200137">"The Myth of the Well-Rounded Scientist:"</a></p>
 <blockquote><p>Scientists with outside interests are often regarded with suspicion in the lab; we can be seen as undedicated, unfocused, easily distracted, and so divorced from the scientific frame of mind that we’ll probably end up working in—oh, the shame—industry.</p></blockquote>

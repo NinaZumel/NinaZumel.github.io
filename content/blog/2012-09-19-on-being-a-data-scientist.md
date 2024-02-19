@@ -1,13 +1,10 @@
 ---
 title: On Being a Data Scientist
 date: 2012-09-19
-categories:
-- Data Science
-- Musings
-- Statistics
 tags:
 - musings
-permalink: /2012/09/19/on-being-a-data-scientist/
+- data science
+- statistics
 ---
 <p>When people ask me what it means to be a data scientist, I used to answer, "it means you don't have to hold my hand." By which I meant that as a data scientist (a consulting data scientist), I can handle the data collection, the data cleaning and wrangling, the analysis, and the final presentation of results (both technical and for the business audience) with a minimal amount of assistance from my clients or their people. Not <em>no</em> assistance, of course, but little enough that I'm not interfering too much with their day-to-day job.</p>
 
@@ -29,7 +26,9 @@ permalink: /2012/09/19/on-being-a-data-scientist/
 <p>I would add that a solid understanding of statistics fundamentals is essential (and the whole <a href="http://www.win-vector.com/blog/">Win-Vector blog </a>attests to how much time we spend thinking about fundamentals), but stat and machine learning are not the core of the job. The real science, in my opinion -- the part where you form hypotheses, test them, revise them -- comes less in the modeling and more in the scrub and explore steps. Why does this branch of the bank report recoveries where they never reported losses? What is that "profit" column reporting, really? Does gross national product really predict mortgage defaults, or is it just a proxy variable for time (and in the recent economy, time predicts mortgage default rate pretty well)?</p>
 <p>And there is more science after the modeling, during the evaluation phase. Or more prosaically: the debug phase. Why does the model report absolute nonsense on this one subset of the data? Is the error in the modeling? The data handling? The programming? The "modeling" step itself is actually a very small, and relatively straightforward, part of the overall process.</p>
 <p>No one ever wants to hear this. We all come into the job hoping to wield support vector machines or neural nets like Wonder Woman wields her magic lasso: we capture the data, and then wrest the truth out of it, willy-nilly. I wish. I'd love to wear those cool bullet-deflecting bracelets, too.</p>
-<div style="width:image width px;font-size:80%;text-align:center;">
-<img style="display:block;margin-left:auto;margin-right:auto;" src="{{ site.baseurl }}/assets/newimage6.png" alt="NewImage" border="0" />Art: Alex Ross</div>
+
+{% image "./images/newimage6.png", "Wonder Woman, by Alex Ross" %}
+<p class="caption">Art: Alex Ross</p>
+
 <p>My point here is that answering the original question is more a discussion of process than a checklist of skills to have and technologies to be familiar with.</p>
 <p>What would you add? What do you think a data scientist needs to know?</p>

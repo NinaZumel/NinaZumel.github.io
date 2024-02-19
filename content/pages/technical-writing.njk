@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+numberOfLatestPostsToShow: 5
+eleventyNavigation:
+  key: Technical Writing
+  order: 3
+---
+<h1>Technical Writing</h1>
+
+<p><strong><a href="./practical-data-science-with-R/"><em>Practical Data Science with R</em></a></strong><br/>Our data science book.<p>
+
+<p><a href="http://www.winvector.com/author/nzumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
+The Win Vector blog (with John Mount) publishes articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting.</p>
+
+<p><a href="./publications/"><strong>Publications and Technical Articles</strong></a><br />
+Peer-reviewed publications, white papers, and miscellaneous technical writing.
+</p>
+
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+<h3>Latest {{ latestPostsCount }} Blog Post{% if latestPostsCount != 1 %}s{% endif %}</strong></h3>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}

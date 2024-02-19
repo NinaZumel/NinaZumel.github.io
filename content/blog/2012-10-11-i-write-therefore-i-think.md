@@ -1,25 +1,20 @@
 ---
 title: I Write, Therefore I Think
 date: 2012-10-11
-categories:
-- Musings
-- Writing
 tags:
-- analysis
-- education
-- thinking
-- words
-permalink: /2012/10/11/i-write-therefore-i-think/
+- musings
+- writing
 ---
 <p>I came across an interesting article in <em>The Atlantic</em> a little while back <a href="http://www.theatlantic.com/magazine/archive/2012/10/the-writing-revolution/309090/">that discussed the connection between writing and thinking</a>. New Dorp, a Staten Island high school in a poor and working-class neighborhood, was able to improve student performance when they realized that their students couldn’t write. These underperforming students often could read and could do math. The majority of them were well-behaved, and seemed to want to learn. Yet they couldn't pass standard proficiency tests, and couldn't graduate. All because they couldn't form complex sentences.</p>
 
 <blockquote><p>The harder they looked, the teachers began to realize, the harder it was to determine whether the students were smart or not because the tools they had to express their thoughts were so limited that such a judgment was nearly impossible.</p></blockquote>
 
-<div style="width:image width px;font-size:80%;text-align:center;"><img style="display:block;margin-left:auto;margin-right:auto;" alt="Pen" src="{{ site.baseurl }}/assets/pen.jpg" border="0" />Photo: Nina Zumel</div>
+{% image "./images/pen.jpg", "Fountain Pen. Photo by Nina Zumel", "30vw" %}
+<p class="caption">Photo: Nina Zumel</p>
 
 <p>The solution the teachers devised was to teach analytical writing skills in almost every class. For example, in chemistry classes, students had to describe the properties of chemical substances in sentences that used specific subordinate clause forms, such as a sentence with <em>although</em>, or with <em>unless</em>. Students in literature classes had to hold oral discussions using structured sentence forms: "I (dis)agree with your statement because...", "Can you explain your answer?" They had to write expository essays in history class.</p>
 <p>The result? Graduation rates have risen from 63% to almost 80% since the beginning of the program. Pass rates on proficiency tests rose from 67% to 89% for the English exam, and 64% to to 75% for the History exam. There's still room for improvement, but the outlook at New Dorp is optimistic.</p>
-<p><!--more-->Reading the <em>Atlantic</em> article, I got the suggestion that knowing how to form sentences and how to express themselves strengthened the students' ability not only to write and to pass tests, but also actually strengthened their ability to think. Once you know that there exist words and phrases like <em>because</em> or <em>for instance</em> that help expand your sentences, to elaborate on your basic premises, then you will want to start using them, right? It's like turning on a faucet.</p>
+<p>Reading the <em>Atlantic</em> article, I got the suggestion that knowing how to form sentences and how to express themselves strengthened the students' ability not only to write and to pass tests, but also actually strengthened their ability to think. Once you know that there exist words and phrases like <em>because</em> or <em>for instance</em> that help expand your sentences, to elaborate on your basic premises, then you will want to start using them, right? It's like turning on a faucet.</p>
 <p>This apparently causal relationship between writing and thinking is no surprise for anyone who has to write as part of making a living. I find that I often don't truly understand a technical topic until I sit down to write about it. And some of my best non-technical writing happens when I have no fixed notion of what I'm going to say, just a vague idea that I must write about some topic, or that I must expand on some passing thought I had over a cup of coffee. The end result of the article or blog post surprises even me. Usually pleasantly, even.</p>
 <p>Here's Joan Didion, from her wonderful essay <a href="http://people.bridgewater.edu/~atrupe/ENG310/Didion.pdf">"Why I Write"</a>:</p>
 <blockquote><p>Had I been blessed with even limited access to my own mind there would have been no reason to write. I write entirely to find out what I'm thinking, what I'm looking at, what I see and what it means. What I want and what I fear. ... <em>What is going on in these pictures in my mind?</em></p></blockquote>
