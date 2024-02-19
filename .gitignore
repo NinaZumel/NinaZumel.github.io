@@ -1,6 +1,10 @@
 _site/
-.DS_Store
-*~
+.sass-cache
+.jekyll-metadata
 Gemfile.lock
-.bundle/
-vendor/
+.DS_Store
+*/.DS_Store
+node_modules/
+package-lock.json
+*~
+

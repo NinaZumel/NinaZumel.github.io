@@ -1,0 +1,27 @@
+/* For displaying image and description*/
+
+.author_container {
+	text-align: center;
+}
+
+.author_container img {
+	  max-width: 175px;
+	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+.author_description {
+	margin-left: auto;
+    margin-right: auto;
+	line-height: 1;
+
+}
+
+.author_description p {
+	font-style: italic;
+	font-size: 1em;
+	color: #9B9C9D;
+}
+
