@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>On Writing Technical Articles for the Nonspecialist</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 50em;
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+P.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #fff
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/cv/">CV</a></li>
+					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
+					<li class="nav-item"><a href="/personal-writing/">Personal Writing</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+<h1>On Writing Technical Articles for the Nonspecialist</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2012-09-04">04 September 2012</time></li>
+	<li><a href="/tags/blogging/" class="post-tag">blogging</a>, </li>
+	<li><a href="/tags/teaching/" class="post-tag">teaching</a>, </li>
+	<li><a href="/tags/technical-writing/" class="post-tag">technical writing</a></li>
+</ul>
+
+<p>I came across a post from Emily Willingham the other day: <a href="http://www.emilywillinghamphd.com/2012/08/is-phd-required-for-good-science-writing.html">"Is a PhD required for Good Science Writing?"</a>. As a science writer with a science PhD, her answer is: is it not required, and it can often be an impediment. I saw a similar sentiment echoed once by Lee Gutkind, the founder and editor of the journal <em>Creative Nonfiction</em>. I don't remember exactly what he wrote, but it was something to the effect that scientists are exactly the wrong people to produce literary, accessible writing about matters scientific.</p>
+<img alt="A pocket watch. Photo by John Mount" loading="lazy" decoding="async" src="/img/watch-5zFYr8EKPV-382.png" width="382" height="600">
+<p class="caption">Photo: John Mount</p>
+<p>I don't agree with Gutkind's point, but I can see where it comes from. Academic writing has a reputation for being deliberately obscure and prolix, jargonistic. Very few people read journal papers for fun (well, except me, but I'm weird). On the other hand, a science writer with a PhD has been trained for critical thinking, and should have a nose for bullpucky, even outside their field of expertise. This can come in handy when writing about medical research or controversial new scientific findings. Any scientist -- any person -- is going to hype up their work. It's the writer's job to see through that hype.</p>
+<p>I'm not a science writer in the sense that Dr. Willingham is. I write statistics and data science articles (blog posts) for non-statisticians. Generally, the audience that I write for is professionally interested in the topic, but aren't necessarily experts at it. And as a writer, many of my concerns are the same as those of a popular science writer.</p>
+<p>I want to cut through the bullpucky. I want you, the reader, to come away understanding something you thought you didn't -- or even couldn't -- understand. I want you, the analyst or data science practitioner, to understand your tools well enough to innovate, not just use them blindly. And if I'm writing about one of my innovations, I want you to understand it well enough to possibly use it, not just be awed at my supposed brilliance.</p>
+<p>I don't do these things perfectly; but in the process of trying, and of reading other writers with similar objectives, I've figured out a few things.</p>
+<p><strong>It's not a research paper; don't write it like a research paper.</strong></p>
+<p>To the outsider (and sometimes, to the insider), academic writing is a giant exercise in <a href="http://en.wikipedia.org/wiki/Gamesmanship">gamesmanship</a>. The goals are to demonstrate that you are smarter than your peers, and your research is innovative and novel. Those goals impede clarity; after all, if it's hard to read, it must be difficult material, and you must be one smart cookie.</p>
+<p>When you are writing for the public, or for the practitioner, you usually aren't writing about something you invented. This frees you from the pressure of appearing novel, and the topic doesn't have to seem profound. You don't have to try to look smart, either. By definition, you know something the reader doesn't -- and if you can explain it so that it seems obvious in hindsight, you actually look that much more clever.</p>
+<p><strong>Channel your inner undergrad.</strong></p>
+<p>This is related to the first point. Your readers are not your research peers, but they aren't stupid, either. They just have a different set of expertise. They won't know all the acronyms or the standard symbology, they won't know all the terminology or all the logic shortcuts (and occasional sloppy misuse of terminology) that people in the field are accustomed to. They are, however, motivated to learn the subject matter. It's your job to make it all make sense.</p>
+<p>This is where I have an advantage in writing about statistics: my PhD isn't in statistics. I learned it after I started working, because I had to. I remember a good deal of frustration with the general presentations of standard material given in textbooks. And I can remember even more frustrations with the "insider" style of writing in research papers -- often a lot of hard work for not a lot of reward. The <a href="http://www.win-vector.com/blog/category/statistics-to-english-translation/"><em>Statistics to English</em></a> series of blog posts arose from that experience. It doesn't have to be that hard.</p>
+<p>Explain everything. If you are going to talk about p-values, for example, then define what they are; define significance, or at least point to a readable reference. Don't expect your readers to know that π means "vector of probabilities" and not "the area of a unit radius circle." In any technical field, a clear explanation of definitions -- especially terms and symbols that are used differently in different fields, like "entropy" or "likelihood" -- is worth a lot. It may not seem like much, but believe me, your readers will thank you.</p>
+<p><strong>If an explanation helps make sense of a concept to <em>you</em>, it will probably make sense to someone else.</strong></p>
+<p>... and therefore, it will be helpful to someone, if not everyone. A related point to this is that parroting the textbook or research paper explanations is not always helpful, no matter how official or technical it sounds.</p>
+<p>An example: the definition of <em>likelihood</em> (or likelihood function) from <em>The Cambridge Dictionary of Statistics</em> is as follows:</p>
+<blockquote><p>The probability of a set of observations given the value of some parameter or set of parameters.</p></blockquote>
+<p>The dictionary goes on to give an example, the likelihood of a random sample of n observations, <em>x1,..x2,...xn</em> with probability distribution <em>f(x,θ)</em>:</p>
+<img alt="Formula for the likelihood of a random sample of n observations" loading="lazy" decoding="async" src="/img/newimage-wTCVlVURcn-236.png" width="236" height="100">
+<p>This makes perfect sense, from a 50,000 foot point of view, especially if you are in the habit of thinking statistically. But what if you aren't? Or if you want to actually calculate a specific likelihood for a specific purpose? Like the person who asked a question about likelihood versus probability <a href="http://stats.stackexchange.com/questions/2641/what-is-the-difference-between-likelihood-and-probability">here</a>. This person received several excellent answers, most of which were elaborations of the Cambridge definition, with variations on how the likelihood formula was written. This seems to have helped the original questioner; but I can tell you that back in the days when I was struggling to learn these concepts, it wouldn't have helped me. I learn by concrete examples. Like this (borrowed from one of the answers at the link):</p>
+<p>I have an unfair coin, and I think that the probability that it will land heads is <em>p</em>. I flip the coin n times, and I record whether it lands heads (x_i=1), or whether it lands tails (x_i=0). The likelihood of observing my series of coin flips, given that I have guessed probability <em>p</em> correctly is:</p>
+<img alt="likelihood of a series of coin flips" loading="lazy" decoding="async" src="/img/newimage5-5vZ-DOQPmQ-400.png" width="429" height="100" srcset="/img/newimage5-5vZ-DOQPmQ-400.png 400w, /img/newimage5-5vZ-DOQPmQ-429.png 429w" sizes="30vw">
+<p>Here, I'm using the notation L(x|p) to emphasize that the likelihood of the set of observations X is dependent on my "model" -- the estimate for <em>p</em>. If the likelihood is high, I have guessed <em>p</em> correctly; if it is low, I need to re-estimate <em>p</em>.</p>
+<p>We can generalize this to any set of observations X that lead to a binary outcome, and any model for the probability, P(x).</p>
+<img alt="likelihood of a binary outcome" loading="lazy" decoding="async" src="/img/newimage3-xL4snWtU74-400.png" width="600" height="97" srcset="/img/newimage3-xL4snWtU74-400.png 400w, /img/newimage3-xL4snWtU74-600.png 600w" sizes="100vw">
+<p>Again, if the likelihood isn't high, then we need to adjust our model P(x), probably by tweaking some parameter or parameters θ within the model. This leads us back to the original Cambridge definition.</p>
+<p>My formula is not as general as the Cambridge formula (or the formulas given by the people who answered the question in my link above), and it may still not be clear enough for everyone. Still, it helped me; this is the formula I use to <a href="http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/"> explain the use of likelihood in deriving logistic regression</a>. Judging by Win-Vector's blog stats, it helps other people out there, too.</p>
+<p><strong>Few things are "obvious."</strong></p>
+<blockquote><p>But after all, the most successful device in mathmanship is to leave out one or two pages of calculations and for them substitute the word "hence," followed by a colon. This is guaranteed to hold the reader for a couple of days figuring out how you got hither from hence. Even more effective is to use "obviously" instead of "hence," since no reader is likely to show his ignorance by seeking help in elucidating anything that is obvious. This succeeds not only in frustrating him but also in bringing him down with an inferiority complex, one of the prime <em>desiderata</em> of the art.</p></blockquote>
+<div style="text-align:center;">-- Nicolas Vanserg, "Mathmanship" (1958). Originally published in <em>American Scientist</em>, collected in <a href="http://www.amazon.com/Stress-Analysis-Strapless-Evening-Gown/dp/0138526087"><em>A Stress Analysis of a Strapless Evening Gown: Essays for a Scientific Age.</em></a> Sorry, couldn't find the essay online.</div>
+<p>If it is "obvious" enough to be explained concisely, then explain it. If the calculation or derivation is short, then spell it out. Otherwise, use another phrase like "it happens to be the case", or "it can be shown," with references -- or at least cop to the fact that it's a messy calculation. Some people will complain about how long your posts are; but there will also be an army of students and other novices who will be grateful to you, because they finally "get it."</p>
+<p>And finally:</p>
+<p><strong>No matter how hard you try, someone will think you stink. Let it go.</strong></p>
+<p>Even if you don't write your article like a research paper, someone out there will read it (or criticize it) as if it were. If you try to define every concept and explain every chain of reasoning, you will get snarky "TLDR" (too long, didn't read) comments, or comments to the effect that it was a lot of reading for a point that was "obvious." If you express an opinion, no matter how mildly or with any number of qualifications (for example, my colleague John Mount's article on <a href="http://www.win-vector.com/blog/2012/02/why-i-dont-like-dynamic-typing/">why he dislikes dynamic typing</a>), you will get sarcastic comments from those who hold the opposite opinion, on why you are just wrong, or why the issues you point out are your fault, not (e.g.) dynamic typing's fault. You will get people hurling back at you points that you already addressed in the post.</p>
+<p>So fine, some people don't read (or are too impatient or closed-minded to read); they aren't your readers. Just let it go and move on.</p>
+<p>Being the concrete-minded person that I am, these points are addressed to my specific situation; but I hope that they are useful to other science writers and technical writers as well. I'm sure that I've violated many of these points in my own writing; hopefully the more I keep at it, the better my writing gets.</p>
+
+<ul class="links-nextprev"><li>Next: <a href="/blog/2012-09-19-on-being-a-data-scientist/">On Being a Data Scientist</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2024 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/ -->
+	</body>
+</html>

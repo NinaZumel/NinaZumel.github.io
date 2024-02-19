@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>On Balance</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 50em;
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+P.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #fff
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/cv/">CV</a></li>
+					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
+					<li class="nav-item"><a href="/personal-writing/">Personal Writing</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+<h1>On Balance</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2012-12-18">18 December 2012</time></li>
+	<li><a href="/tags/musings/" class="post-tag">musings</a></li>
+</ul>
+
+<p>One of my favorite cheesy movies is a gem from 1984 called <a href="http://en.wikipedia.org/wiki/The_Adventures_of_Buckaroo_Banzai_Across_the_8th_Dimension"><em>The Adventures of Buckaroo Banzai Across the 8th Dimension</em></a>. For those who haven't seen it, Buckaroo Banzai is a brilliant young neurosurgeon and particle physicist who spends his days conducting cutting-edge research. At night, he and his research colleagues -- all engineers and scientists and doctors -- rock New Jersey as a band called the Hong Kong Cavaliers. In between the brilliant science and the rock-star night life, the Cavaliers find time to save the world from an alien invasion led by none other than John Lithgow.</p>
+<img alt="John Lithgow" loading="lazy" decoding="async" src="/img/Lithgow-iA5s1FULGt-400.png" width="400" height="230">
+<p>It's very eighties: full of funky jackets with padded shoulders and some crazy hair. I can't recommend it enough.</p>
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<p>What happens if you want to be Buckaroo Banzai in real life? Here's what biologist Adam Ruben writes in his article <a href="http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_12_14/caredit.a1200137">"The Myth of the Well-Rounded Scientist:"</a></p>
+<blockquote><p>Scientists with outside interests are often regarded with suspicion in the lab; we can be seen as undedicated, unfocused, easily distracted, and so divorced from the scientific frame of mind that we’ll probably end up working in—oh, the shame—industry.</p></blockquote>
+<p>Ruben started his "Batman job," as he calls it -- stand-up comedy -- in grad school, and it was in grad school where he learned to hide his extracurricular activity.</p>
+<blockquote><p>One day, my adviser called me into his office. The campus newspaper had just published a little profile of the stand-up-comedy-performing grad student, and my adviser happened to read it. Over the next 10 minutes, I learned that my hobby was an embarrassment to the department, that there was no way I could properly focus on biology, and that every negative lab result I ever produced was a direct result of telling jokes at night.</p>
+<p>For a moment, I even believed it was true. …</p></blockquote>
+<p>It's not true, of course. Very few people truly want to spend every waking hour in the lab (or office) and, <a href="http://www.salon.com/2012/03/14/bring_back_the_40_hour_work_week/">frankly, no one should</a>. And if you're not in the lab or the office, why shouldn't you be standing onstage somewhere, performing?</p>
+<p>It's a variation on <a href="http://www.theatlantic.com/magazine/archive/2012/07/why-women-still-cant-have-it-all/309020/">the problem that professional women with children have faced for years:</a> the so-called "work/life balance" issue. I've always hated that phrase. It implies that if you have a "life" -- children, family, other creative interests, what have you -- then by definition, your work isn't part of your life. And so it follows that you aren't as "dedicated" or "passionate" about your work as you ought to be.</p>
+<p>And that's nonsense. I, too, have a "Batman job": I dance. I have rehearsal three to four times a week, and a performance at least once a month -- sometimes more. I love my Batman job. And I love my day job, too. Being a data scientist <em>is</em> a part of my life, just as much as being a dancer, a wife, a daughter, and a blogger are all parts of my life.</p>
+<p>It's not "work/life balance" -- it's "life balance." For some people, that balance honestly means spending 99.5% of their waking hours eating, breathing, and dreaming about data science or biology or math or marketing strategy. For others, like me, balance means spending 50% of my time (or whatever 40 hours a week -- sometimes a little more, not much less -- comes to) thinking about data science, and 50% of my time thinking about other things.</p>
+<p>It also means that for that 50% of my time that I spend on data science, I concentrate on data science: my clients' projects, my data science writing, or my data science reading. Having other interests is an advantage here. I am forced to be efficient with the hours I spend on my day job, because no matter what (except for a dire emergency), at 7:30 pm I have to get up and go to rehearsal. I can't make up for lazy days with long nights in front of the computer.</p>
+<p>The break probably does my brain good, too. The mathematician Jacques Hadamard, in his book <em>The Psychology of Invention in the Mathematical Field</em>, wrote about what he and Henri Poincaré called "incubation": the process of letting go of conscious thought about a difficult problem and allowing your unconscious mind to work on it instead. Incubation leads to breakthrough. Here, Hadamard quotes Poincaré:</p>
+<blockquote><p>"When, as must often happen, the thinker makes a false start, he slides insensibly into a groove and may not be able to escape at the moment. … Incubation would consist in getting rid of false leads and hampering assumptions so as to approach the problem with an 'open mind.'" We can call this the <em>forgetting-hypothesis</em>.</p></blockquote>
+<p>In other words, when you are stuck on something, stop working and literally forget about it; think about something else. What better way to get your mind out of its rut than to go out and dance, or work on your stand-up comedy routine, or play with your kids? My husband, who is a dedicated computer scientist and mathematician, tells of similar experience. He recently started to teach himself to draw, and tries to spend a at least an hour a day working on sketching exercises. As with any exercise or drill, this can sometimes begin to feel tedious. The way my husband tells it, his brain is so desperate to break out of the tedium that it will of its own volition start chewing on whatever difficult problem has presented itself in his work life. By the time he is done with his exercises, he often has a new breakthrough, and can sit at the computer to attack his sticky problem with a fresh mental outlook.</p>
+<p>Being a 50% data scientist instead of a 99% data scientist doesn't mean I don't enjoy what I do for a living. It doesn't mean I'm not good at it. It doesn't mean that I take my responsibilities to clients and peers any less seriously than a 99 percenter. It does mean that I have chosen to give up certain achievements that likely come only with a eat-breathe-dream lifestyle. I will never win a Nobel or a Fulkerson Prize. I will never be a world-famous thought leader on data science (or anything else). I will never hold a Cabinet position. I will never run a multimillion-dollar corporation, or be a senior executive at such a corporation. I will never be as rich as Bill Gates or Sergey Brin. </p>
+<p>And that's okay. As long as I have a good professional reputation, as long as my peers and clients respect me and respect my work, I'm satisfied. Just don't mistake my lack of ambition for certain measures of success as a lack of dedication to my field -- or a lack of competence.</p>
+
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2012-10-11-i-write-therefore-i-think/">I Write, Therefore I Think</a></li><li>Next: <a href="/blog/2013-01-05-whats-wrong-with-a-lower-stress-job/">What&#39;s Wrong with a Low(er)-Stress Job?</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2024 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2012-12-18-on-balance/ -->
+	</body>
+</html>

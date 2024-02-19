@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
+		<loc>https://ninazumel.com/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/</loc>
+		<lastmod>2012-09-04</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2012-09-19-on-being-a-data-scientist/</loc>
+		<lastmod>2012-09-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2012-10-11-i-write-therefore-i-think/</loc>
+		<lastmod>2012-10-11</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2012-12-18-on-balance/</loc>
+		<lastmod>2012-12-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2013-01-05-whats-wrong-with-a-lower-stress-job/</loc>
+		<lastmod>2013-01-05</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2014-11-25-design-problem-solving-and-good-taste/</loc>
+		<lastmod>2014-11-25</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2021-12-30-new-article-on-XI-coefficient/</loc>
+		<lastmod>2021-12-30</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/blog/2023-04-06-what-why-how-abtesting/</loc>
 		<lastmod>2023-04-07</lastmod>
 	</url>
@@ -52,17 +87,37 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/pages/technical-writing/</loc>
+		<loc>https://ninazumel.com/pages/publications/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/recentposts/</loc>
+		<loc>https://ninazumel.com/pages/recentposts/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ninazumel.com/tags/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/blogging/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/teaching/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/technical-writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/musings/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -77,17 +132,17 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/design/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/ab-testing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/svd/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/data-drift/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -107,12 +162,22 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/svd/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/chatgpt/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/blogging/</loc>
+		<loc>https://ninazumel.com/pages/technical-writing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 </urlset>
