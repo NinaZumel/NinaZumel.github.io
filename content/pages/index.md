@@ -20,7 +20,7 @@ layout: layouts/home.njk
 ## Personal
 
 * My [microblog](https://ninazumel.com/short_thoughts)
-* My [long-form blogs](https://ninazumel.com/nina-other-writing/)
+* My [long-form blogs](/pages/personal-writing/)
 * I [dance](http://www.dholrhythms.com/), too.
 
 

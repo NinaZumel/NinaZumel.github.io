@@ -1,13 +1,16 @@
 ---
-permalink: /personal-writing/
-layout: layouts/base.njk
+layout: layouts/home.njk
 title: "Personal Writing"
 eleventyNavigation:
   key: Personal Writing
-  order: 4
+  order: 3
 ---
 
-# Personal Writing
+<div class="author_container">
+    <img src="/img/pen-hero.jpg" alt="Fountain Pen">
+    <h1>Personal Writing</h1>
+</div>
+
 
 <p><strong><a href="http://multoghost.wordpress.com/">Multo (Ghost)</a></strong>: a blog on things ghostly: reviews of supernatural and weird fiction, essays about folklore and history, and random musings.</p>
 
