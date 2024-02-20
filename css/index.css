@@ -25,6 +25,7 @@
 	:root {
 		--color-gray-20: #e0e0e0;
 		--color-gray-50: #C0C0C0;
+		--color-gray-70: #dad8d8;
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above.*/
@@ -326,7 +327,7 @@ hr {
     justify-content: space-around;
     align-items: center;
     padding: 2rem 0;
-    background-color: #fff
+    background-color: var(--background-color0);
 	;
 }
 
