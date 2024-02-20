@@ -10,6 +10,32 @@
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
 		<style>.postlist { counter-reset: start-from 13 }
+/* For displaying image and description*/
+
+.author_container {
+	text-align: center;
+}
+
+.author_container img {
+	  max-width: 175px;
+	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+.author_description {
+	margin-left: auto;
+    margin-right: auto;
+	line-height: 1;
+
+}
+
+.author_description p {
+	font-style: italic;
+	font-size: 1em;
+	color: #9B9C9D;
+}
 * { box-sizing: border-box; }
 /* Defaults */
 :root {
@@ -374,15 +400,23 @@ hr {
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item"><a href="/pages/cv/">CV</a></li>
-					<li class="nav-item"><a href="/blog/">Blog</a></li>
 					<li class="nav-item"><a href="/pages/technical-writing/" aria-current="page">Technical Writing</a></li>
-					<li class="nav-item"><a href="/personal-writing/">Personal Writing</a></li>
+					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
+					<li class="nav-item"><a href="/blog/">Blog</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="skip">
-			<h1>Technical Writing</h1>
+			
+
+
+<div class="author_container">
+    <img src="/img/genetic-art-hero.jpg" alt="Abstract computer generated art piece, code by John Mount">
+    <h1>Technical Writing</h1>
+</div>
+
+
 
 <p><strong><a href="/pages/practical-data-science-with-r/"><em>Practical Data Science with R</em></a></strong><br/>Our data science book.<p>
 
@@ -437,6 +471,11 @@ Peer-reviewed publications, white papers, and miscellaneous technical writing.
 
 
 
+
+
+<hr/>
+
+<p><small>Image from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><em>The Genetic Art Project</em></a>, by John Mount</small></p>
 
 
 		</main>

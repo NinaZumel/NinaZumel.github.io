@@ -77,7 +77,7 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/personal-writing/</loc>
+		<loc>https://ninazumel.com/pages/personal-writing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -102,21 +102,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/musings/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/data-science/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/statistics/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/blogging/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -132,12 +117,27 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
+		<loc>https://ninazumel.com/tags/musings/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-science/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/statistics/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ninazumel.com/tags/writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/design/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -162,17 +162,17 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/chatgpt/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/svd/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/chatgpt/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	

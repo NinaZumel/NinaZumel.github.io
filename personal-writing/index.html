@@ -9,7 +9,33 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
-		<style>* { box-sizing: border-box; }
+		<style>/* For displaying image and description*/
+
+.author_container {
+	text-align: center;
+}
+
+.author_container img {
+	  max-width: 175px;
+	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+.author_description {
+	margin-left: auto;
+    margin-right: auto;
+	line-height: 1;
+
+}
+
+.author_description p {
+	font-style: italic;
+	font-size: 1em;
+	color: #9B9C9D;
+}
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -381,7 +407,12 @@ hr {
 		</header>
 
 		<main id="skip">
-			<h1 id="personal-writing" tabindex="-1">Personal Writing <a class="header-anchor" href="#personal-writing">#</a></h1>
+			
+
+<div class="author_container">
+    <img src="/img/pen-hero.jpg" alt="Fountain Pen">
+    <h1>Personal Writing</h1>
+</div>
 <p><strong><a href="http://multoghost.wordpress.com/">Multo (Ghost)</a></strong>: a blog on things ghostly: reviews of supernatural and weird fiction, essays about folklore and history, and random musings.</p>
 <p><strong><a href="https://exiw.wordpress.com">Ephemera</a></strong>:  a playground for my forays into translation, fiction, personal essay, or any writing that won’t fit my other blogs. </p>
 <p><a href="https://darktalessleuth.wordpress.com/"><strong>Dark Tales Sleuth</strong></a>: a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works.</p>
@@ -391,6 +422,7 @@ hr {
 <p><a href="https://exiw.wordpress.com/translations/"><strong>Some Ongoing Translation Series</strong></a>: When I have time, I like to find public domain, Spanish language short stories of the supernatural and macabre, and practice translating them.</p>
 <p>Folklore articles I’ve written for the <a href="http://folklorethursday.com/author/nina/"><strong>#FolkloreThursday</strong></a> blog.  </p>
 <p><a href="https://exiw.wordpress.com/tag/punjab/"><strong>Some articles originally written for the Non Stop Bhangra and Dholrhythms blogs</strong></a>: pieces about Punjabi music, culture and folklore, especially as they relate to Dholrhythms Dance Company and San Francisco's Non Stop Bhangra dance party. </p>
+
 		</main>
 
 		<!-- footer -->
