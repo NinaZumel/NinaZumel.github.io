@@ -4,12 +4,61 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/testblog"/>
-	<updated>2024-02-19T00:00:00Z</updated>
+	<updated>2024-02-21T00:00:00Z</updated>
 	<id>https://ninazumel.com/testblog</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Clarity, Not Magic</title>
+		<link href="https://ninazumel.com/blog/2024-02-21-clarity-not-magic/"/>
+		<updated>2024-02-21T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-02-21-clarity-not-magic/</id>
+		<content type="html">&lt;p&gt;After migrating this blog to Eleventy, I made the comment on Micro.blog that Eleventy &amp;quot;is so much easier to wrap my arms around&amp;quot; than Jekyll was. That got me to wondering--why is that?&lt;/p&gt;
+&lt;p&gt;After some thought, I came up with a few reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newbie-friendly design and documentation that makes the process less opaque.&lt;/li&gt;
+&lt;li&gt;Starter code that is simple to read, but that still illustrates useful functionality&lt;/li&gt;
+&lt;li&gt;A blog deployment process that is manual, but not mystical.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That last point is the crux, for me. After all, the reason I migrated my site was because the old one broke, and &lt;em&gt;I didn&#39;t know how to fix it&lt;/em&gt;. I won&#39;t lie. The way the old site got automatically built and deployed on Github Pages was mysterious to me. I found a Jekyll template I wanted, and followed some directions that seemed to work, and &lt;em&gt;Voila!&lt;/em&gt; To me, setting up that first website was not that far removed from following some arcane ritual.&lt;/p&gt;
+&lt;p&gt;And it worked, until it didn&#39;t. I knew that something, somewhere was going out of date and needed to be updated, but I didn&#39;t know what, or how. And so I had to start from scratch.&lt;/p&gt;
+&lt;p&gt;And this time, no magic incantations.&lt;/p&gt;
+&lt;p&gt;So, this post will expand upon the points above, but it&#39;s really not about my adventures with Eleventy. It&#39;s meant to be a concrete exploration of some general principles about how to design a process; how to teach (or document) a process; and the difference between informed, purposeful action versus blindly following ritual.&lt;/p&gt;
+&lt;p&gt;Read on.&lt;/p&gt;
+&lt;img alt=&quot;Illustration of the Sorcerer&#39;s Apprentice trying to bring the broom to life. Ferdinand Barth&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/sorcerer-barth-FaSJaIlHz3-400.png&quot; width=&quot;435&quot; height=&quot;480&quot; srcset=&quot;https://ninazumel.com/img/sorcerer-barth-FaSJaIlHz3-400.png 400w, https://ninazumel.com/img/sorcerer-barth-FaSJaIlHz3-435.png 435w&quot; sizes=&quot;20vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Illustration of Goethe&#39;s &lt;em&gt;Der Zauberlehrling&lt;/em&gt; (The Sorcerer&#39;s Apprentice), 1882. Artist: Ferdinand Barth&lt;br&gt; 
+Source: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Tovenaarsleerling_S_Barth.png&quot;&gt;Wikimedia&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;newbie-friendly-non-opaque-design&quot; tabindex=&quot;-1&quot;&gt;Newbie-Friendly, Non-Opaque Design &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-02-21-clarity-not-magic/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The default way of putting a blog on Github Pages involves some mysterious (to me) interaction of Gemfiles and Github Actions and automated processes that are hidden from the user. I try reading the documentation, but it&#39;s written assuming some background context/knowledge that I don&#39;t have. I can make it work--I&#39;ve put up at least three Jekyll blogs, starting from other people&#39;s templates--but I&#39;ve never really understood the workings of the process. And every time I want to put up a blog, I have to look up how to do it.&lt;/p&gt;
+&lt;p&gt;The Eleventy &amp;quot;Get Started&amp;quot; page is so newbie-friendly that it even has a link to &lt;a href=&quot;https://www.11ty.dev/docs/terminal-window/&quot;&gt;a page that explains terminal windows&lt;/a&gt;. It walked me through installing Node.js, and the commands that I need to install Eleventy, build a rudimentary website, and serve it (locally). Now, I don&#39;t know anything about Node.js or JavaScript, but by walking through the tutorial and looking at the artifacts produced: the &lt;code&gt;package.json&lt;/code&gt;, the &lt;code&gt;node_modules&lt;/code&gt; directory, and so on -- I gained some intuition about how the process works.&lt;/p&gt;
+&lt;p&gt;Because I feel like I understand what&#39;s going on, I can write down the steps in a way that makes sense to me, and &lt;em&gt;repeat it&lt;/em&gt; -- purposefully, not blindly. In other words, there is something about the design of the software &lt;em&gt;and&lt;/em&gt; its starter documentation that elucidates the process, making it easier to follow.&lt;/p&gt;
+&lt;p&gt;Incidentally, the &amp;quot;Get Started&amp;quot; page even shows you how to deploy the baby website, via Netlify. It looked pretty easy, and if I were starting brand-new, I probably would have gone that route. But I&#39;m already on Github Pages, so I decided to stick with that. I was a little nervous about this choice, but it turned out quite well---more on that later.&lt;/p&gt;
+&lt;p&gt;Most of the Eleventy documentation still goes over my head, but I&#39;m not worried about that, because I had ...&lt;/p&gt;
+&lt;h2 id=&quot;a-simple-but-functional-starter-example&quot; tabindex=&quot;-1&quot;&gt;A Simple but Functional Starter Example &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-02-21-clarity-not-magic/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This is an extension of the &amp;quot;Newbie-friendly design&amp;quot; principle. The first time I stood up my site, I knew nothing about &amp;quot;website stuff&amp;quot; except some rudimentary HTML. I needed code examples, to help teach me about CSS, and Liquid, and so on. The built-in Github Pages Jekyll themes were &lt;em&gt;too simple&lt;/em&gt; to help me understand how to build the structure of a blog. The theme I ended up using made a nice site, but it was really &lt;em&gt;too complex&lt;/em&gt; to be an effective learning instrument. So it, too, for a long time, was mostly just magic.&lt;/p&gt;
+&lt;p&gt;Eleventy&#39;s &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;base blog starter template&lt;/a&gt; has enough functionality to be useful, a clear and simple design, good file organization, and low dependencies: HTML/markdown, CSS, Nunjucks, minimal Javascript. By looking at the code, and by peeking into the &lt;code&gt;package.json&lt;/code&gt; and the &lt;code&gt;node_modules&lt;/code&gt; directory that got generated when I installed the template, I could figure out how things work. I can&#39;t build a theme from scratch, but I can figure out how to modify this one. A little at a time.&lt;/p&gt;
+&lt;p&gt;It&#39;s not magic, and eventually, I assume, more of the documentation will make sense. If I need it to.&lt;/p&gt;
+&lt;p&gt;My new site is still missing a few things I had before, but it&#39;s not bad-looking, if I do say so myself.&lt;/p&gt;
+&lt;h2 id=&quot;non-mystical-deployment&quot; tabindex=&quot;-1&quot;&gt;Non-Mystical Deployment &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-02-21-clarity-not-magic/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This was the step that made me nervous. Jekyll is the default build process for Github Pages sites. How was a non-Jekyll build going to work? Would I be able to do it?&lt;/p&gt;
+&lt;p&gt;The official answer is Github Actions, and someone did write an Action for deploying Eleventy sites. But guess what: I don&#39;t understand Github Actions. This felt like bringing more magic into the workflow, and if that Action ever broke---I&#39;d be stuck, again.&lt;/p&gt;
+&lt;p&gt;So I looked around, and figured out that I could build and deploy the site manually, with the help of &lt;a href=&quot;https://www.npmjs.com/package/gh-pages&quot;&gt;this package&lt;/a&gt;. It&#39;s far less convenient than having the site just rebuild when I push changes to the source, &lt;em&gt;but I know what it&#39;s doing&lt;/em&gt;. And my site isn&#39;t going to change that frequently, anyway. Under the circumstances, a manual process I understand is preferable to an automation that I don&#39;t understand, and don&#39;t really need. Someday, my assessment of the tradeoffs may change; and then my mind will change, too.&lt;/p&gt;
+&lt;p&gt;Right now, it works like a charm.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;But Nina, why is a Github Action magic, but a package you found on the internet not magic?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, I suppose it&#39;s magic, too, but it&#39;s magic that works over &lt;em&gt;Git&lt;/em&gt;, not &lt;em&gt;Github&lt;/em&gt;. I suspect git is somewhat more stable than any given Github feature. Also, I understand git. So I&#39;d call the package &amp;quot;less magic&amp;quot; than an Action. To me, that is; if you are comfortable with Github Actions, then none of this is magic at all. Go crazy.&lt;/p&gt;
+&lt;h2 id=&quot;so-what-have-we-learned&quot; tabindex=&quot;-1&quot;&gt;So, What Have We Learned? &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-02-21-clarity-not-magic/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Out of all this, I can try to articulate some general principles, in no particular order.&lt;/p&gt;
+&lt;p&gt;Avoid magic. If you do X by blindly following a list of steps you don&#39;t understand, you don&#39;t know how to do X. You&#39;re just following a ritual. And rituals can fail.&lt;/p&gt;
+&lt;p&gt;By the above definition, magic is relative.&lt;/p&gt;
+&lt;p&gt;A well-designed process is complex enough to be useful, but simple and clear enough to be learnable.&lt;/p&gt;
+&lt;p&gt;A good teaching example (code, documentation) should also be complex enough to be useful, but simple and clear enough to be learnable.&lt;/p&gt;
+&lt;p&gt;Try to be newbie-friendly. If you can write or design for a user who knows absolutely nothing at the start, but will have &lt;em&gt;something&lt;/em&gt; by the end, someone out there will thank you for it.&lt;/p&gt;
+&lt;p&gt;Prefer understanding a process (&amp;quot;no magic&amp;quot;) to streamlining it (opaque automations might be magic).&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Blog Migration</title>
