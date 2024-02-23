@@ -36,6 +36,43 @@
 	font-size: 1em;
 	color: #9B9C9D;
 }
+/* Message Box */
+.message-box {
+	--color-message-box:  var(--background-color); 
+    --border-color:  #f5f5dc; /*; beige, according to my R color chart */
+
+	display: block;
+	background-color: var(--color-message-box);
+	color: var(--color-gray-90);
+	padding: 1em 0.625em;  /* 16px 10px /16 */
+	padding-left: 2em;  /* bit more on the left */
+	padding-right: 2em;  /* to balance it */
+	border: 2px solid var(--border-color);
+}
+.message-box ol {
+	margin-top: 0;
+}
+
+.message-box h1 {
+	text-align: center;
+}
+
+.message-box h2 {
+	text-align: center;
+}
+
+.message-box h3 {
+	text-align: center;
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+	.message-box {
+		--color-message-box: var(--background-color);
+	}
+}
 * { box-sizing: border-box; }
 /* Defaults */
 :root {
@@ -410,6 +447,7 @@ hr {
 
 		<main id="skip">
 			
+
 
 <h1>Tagged “writing”</h1>
 

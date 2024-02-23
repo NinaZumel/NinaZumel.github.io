@@ -72,11 +72,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/pages/personal-writing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -122,11 +117,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/writing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/data-science/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -137,7 +127,17 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/design/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -172,11 +172,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/ab-testing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/pages/technical-writing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -184,5 +179,10 @@
 	<url>
 		<loc>https://ninazumel.com/blog/2024-02-21-clarity-not-magic/</loc>
 		<lastmod>2024-02-21</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/</loc>
+		<lastmod>2024-02-23</lastmod>
 	</url>
 </urlset>
