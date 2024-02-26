@@ -1,0 +1,17 @@
+{# Modified from postlist.njk. Using the post styles for the talk pages, as well #}
+
+{%- css %}.postslist { counter-reset: start-from {{ talkslist.length + 1 }} }{% endcss %}
+<ol reversed class="postslist">
+{% for talk in talkslist | reverse %}
+	<li class="postlist-item{% if talk.url == url %} postlist-item-active{% endif %}">
+		<a href="{{ talk.url }}" class="postlist-link">{% if talk.data.title %}{{ talk.data.title }}{% else %}<code>{{ talk.url }}</code>{% endif %}</a>
+		<div class="postlist-date">
+		    <em>{{ talk.data.venue }}</em> --
+			<time datetime="{{ talk.date | htmlDateString }}">{{ talk.date | readableDate("dd LLLL yyyy") }}</time> 
+		</div>
+	</li>
+{% endfor %}
+</ol>
+
+
+
