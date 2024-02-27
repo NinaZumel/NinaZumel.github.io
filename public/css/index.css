@@ -293,11 +293,11 @@ header {
 .posttalk-metadata {
 	list-style: none;
 	padding-left: 0;
+	color: var(--description-color);
 }
 
 .posttalk-metadata li {
 	font-size: 1.1em;
-	color: var(--description-color);
 }
 
 /* Direct Links / Markdown Headers */
