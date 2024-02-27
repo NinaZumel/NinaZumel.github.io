@@ -3,13 +3,90 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Nina B. Zumel</title>
+		<title>Professional</title>
 		<meta name="description" content="Data Scientist, San Francisco">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
-		<style>* { box-sizing: border-box; }
+		<style>/* For displaying image and description*/
+
+.author_container {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.author_container img {
+	  max-width: 175px;
+	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+.author_description {
+	margin-left: auto;
+    margin-right: auto;
+	line-height: 1;
+
+}
+
+.author_description p {
+	font-style: italic;
+	font-size: 1em;
+	color: #9B9C9D;
+}
+
+.padded_author_container {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.padded_author_container img {
+	max-width: 250px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Message Box */
+.message-box {
+	--color-message-box:  var(--background-color); 
+    --border-color:  #f5f5dc; /*; beige, according to my R color chart */
+
+	display: block;
+	background-color: var(--color-message-box);
+	color: var(--color-gray-90);
+	padding: 1em 0.625em;  /* 16px 10px /16 */
+	padding-left: 2em;  /* bit more on the left */
+	padding-right: 2em;  /* to balance it */
+	border: 2px solid var(--border-color);
+}
+.message-box ol {
+	margin-top: 0;
+}
+
+.message-box h1 {
+	text-align: center;
+}
+
+.message-box h2 {
+	text-align: center;
+}
+
+.message-box h3 {
+	text-align: center;
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+	.message-box {
+		--color-message-box: var(--background-color);
+	}
+}
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -23,6 +100,7 @@
 	--color-gray-70: #4D4D4D;
 	--color-gray-90: #333;
 
+	--description-color: #9B9C9D;
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-70);
@@ -295,6 +373,22 @@ header {
 	margin-right: 1em;
 }
 
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
@@ -373,28 +467,59 @@ hr {
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-					<li class="nav-item"><a href="/pages/cv/">CV</a></li>
-					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
-					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
-					<li class="nav-item"><a href="/blog/">Blog</a></li>
-					<li class="nav-item"><a href="/talks-presentations/" aria-current="page">Talks</a></li>
+					<li class="nav-item"><a href="/pages/professional/" aria-current="page">Professional</a></li>
+					<li class="nav-item"><a href="/pages/personal/">Personal</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="skip">
 			
-<h1>Talks and Presentations</h1>
-
-<ul></ul>
 
 
-
-<ul></ul>
-
-
-
-
+<div class="author_container">
+    <img src="/img/genetic-art-hero.jpg" alt="Abstract computer generated art piece, code by John Mount">
+    <h1>Professional</h1>
+</div>
+<div class="message-box">
+   <h3><em>Value understanding; avoid magic</em></h3>
+    <p> To the extent that I have an overarching mantra to define my professional life, I think the above would be it. </p>
+<p><p>It means that I value processes with clear and correct principles of operation over all else: clarity leads to understanding, and understanding to innovation. This mantra guides my work as a consultant, as a teacher, and as a data scientist.</p></p>
+</div>
+<br>
+<div class="message-box">
+<h2>My Work</h2>
+    <p>
+    I am the co-founder of <strong><a href="https://win-vector.com/">Win-Vector, LLC</a></strong>, a data-science consulting and training firm based in San Francisco. I work with clients in a variety of industries, designing and implementing data science solutions for their organizations' needs. In addition, I have developed teaching materials for a number of online and in-person courses, as well as bespoke training for several large corporations.</p> 
+<p><p>I am also the Vice President of Data Science Practice for <a href="https://www.wallaroo.ai">Wallaroo.AI</a>, helping their customers operationalize machine learning and AI initiatives in a more efficient and data-scientist friendly way.
+</p></p>
+<p><p>
+With John Mount, I co-authored  <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a>, now in its second edition.
+</p></p>
+   <p style="text-align:center;font-size:1.1em"><strong><a href="/pages/cv/">Curriculum Vita</a></strong>
+   </p>
+</div>
+<br>
+<div class="message-box">
+<h2>Publications and Other Writing</h2>
+<p>
+<a href="/pages/practical-data-science-with-r"><em><strong>Practical Data Science with R</strong></em></a><br>
+Our data science book, co-authored with John Mount.
+</p>
+<p>
+<a href="/pages/technical-writing/"><strong>Technical Writing</strong></a><br>
+Blog articles, white papers, and peer-reviewed publications.
+</p>
+</div>
+<br>
+<div class="message-box">
+<h2>Speaking</h2>
+<p>
+<a href="/pages/talks/"><strong>Talks and Presentations</strong></a><br>
+Both online and in-person.
+</p>
+</div>
+<p><small>Image from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><em>The Genetic Art Project</em></a>, by John Mount</small></p>
 
 		</main>
 
@@ -441,6 +566,6 @@ hr {
 </div>
 		<!-- /footer-- >
 
-		<!-- Current page: /talks-presentations/ -->
+		<!-- Current page: /pages/professional/ -->
 	</body>
 </html>
