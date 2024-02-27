@@ -1,9 +1,6 @@
 ---
 layout: layouts/base.njk
 title: "Curriculum Vita"
-eleventyNavigation:
-  key: CV
-  order: 1
 ---
 
 # Curriculum Vita

@@ -1,6 +1,6 @@
 ---
 layout: layouts/home.njk
-title: "Personal"
+title: "Professional"
 eleventyNavigation:
   key: Professional
   order: 2
@@ -18,6 +18,8 @@ eleventyNavigation:
     
     It means that I value clear and correct principles of operation over everything: more than speed, or technical sexiness, or almost anything else that might obfuscate the process. This mantra guides my work as a consultant, as a teacher, and as a data scientist.</p>
 </div>
+
+[**Curriculum Vita**](/pages/cv/)
 
 [**_Practical Data Science with R_**](/pages/practical-data-science-with-r/)<br/>
 Our data science book.<p>
