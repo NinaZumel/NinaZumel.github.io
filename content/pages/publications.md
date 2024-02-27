@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Technical Writing
+title: Publications and Technical Articles
 ---
 
 # Publications and Technical Articles
