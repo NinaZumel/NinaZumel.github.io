@@ -3,74 +3,179 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Nina B. Zumel</title>
+		<title>Prepping Data for Analysis Using R</title>
 		<meta name="description" content="Data Scientist, San Francisco">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
-		<style>/* For displaying image and description*/
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
 
-.author_container {
-	text-align: center;
-}
-
-.author_container img {
-	  max-width: 175px;
-	  border-radius: 50%;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-}
-
-.author_description {
-	margin-left: auto;
-    margin-right: auto;
-	line-height: 1;
-
-}
-
-.author_description p {
-	font-style: italic;
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
-	color: #9B9C9D;
-}
-/* Message Box */
-.message-box {
-	--color-message-box:  var(--background-color); 
-    --border-color:  #f5f5dc; /*; beige, according to my R color chart */
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
 
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
 	display: block;
-	background-color: var(--color-message-box);
-	color: var(--color-gray-90);
-	padding: 1em 0.625em;  /* 16px 10px /16 */
-	padding-left: 2em;  /* bit more on the left */
-	padding-right: 2em;  /* to balance it */
-	border: 2px solid var(--border-color);
-}
-.message-box ol {
-	margin-top: 0;
-}
-
-.message-box h1 {
-	text-align: center;
-}
-
-.message-box h2 {
-	text-align: center;
-}
-
-.message-box h3 {
-	text-align: center;
-}
-
-
-
-
-@media (prefers-color-scheme: dark) {
-	.message-box {
-		--color-message-box: var(--background-color);
-	}
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
 }
 * { box-sizing: border-box; }
 /* Defaults */
@@ -86,6 +191,7 @@
 	--color-gray-70: #4D4D4D;
 	--color-gray-90: #333;
 
+	--description-color: #9B9C9D;
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-70);
@@ -358,6 +464,22 @@ header {
 	margin-right: 1em;
 }
 
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
@@ -440,31 +562,27 @@ hr {
 					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
 					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/talks/">Talks</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="skip">
 			
+<h1>Prepping Data for Analysis Using R</h1>
 
 
-<div class="author_container">
-    <img src="/img/ninaheadshotsmall.jpeg" alt="Nina B. Zumel">
-<p><div class="author_description">
-<p>Data Scientist, San Francisco</p>
-</div></p>
-</div>
-<ul>
-<li>Founder and Principal Consultant with <a href="https://win-vector.com/">Win-Vector LLC</a>, a data science consulting and training firm based in San Francisco.</li>
-<li>VP of Data Science Practice for <a href="https://www.wallaroo.ai/">Wallaroo.ai</a>.</li>
-<li>Co-author, with John Mount, of <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a> (now in a second edition).</li>
+
+<ul class="posttalk-metadata">
+	<li><time datetime="2015-11-18">18 November 2015</time></li>
+	<li><em>ODSC West 2015</em> -- San Francisco Bay Area </li>
 </ul>
-<h2 id="personal" tabindex="-1">Personal <a class="header-anchor" href="#personal">#</a></h2>
-<ul>
-<li>My <a href="https://ninazumel.com/short_thoughts">microblog</a></li>
-<li>My <a href="/pages/personal-writing/">long-form blogs</a></li>
-<li>I <a href="https://www.dholrhythms.com/">dance</a>, too.</li>
-</ul>
+
+<p>This workshop (co-presented with John Mount) lays out the fundamentals of preparing data and provides interactive demonstrations in the open source R analysis environment.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Dd6idYl8mu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Full abstract and link to materials in video description.</p>
+
+
 
 
 		</main>
@@ -512,6 +630,6 @@ hr {
 </div>
 		<!-- /footer-- >
 
-		<!-- Current page: /pages/oldindex/ -->
+		<!-- Current page: /talks/2015-11-18-ODSCWest2015/ -->
 	</body>
 </html>

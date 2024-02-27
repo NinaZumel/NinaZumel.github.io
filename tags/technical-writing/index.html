@@ -14,6 +14,7 @@
 
 .author_container {
 	text-align: center;
+	vertical-align: middle;
 }
 
 .author_container img {
@@ -35,6 +36,19 @@
 	font-style: italic;
 	font-size: 1em;
 	color: #9B9C9D;
+}
+
+.padded_author_container {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.padded_author_container img {
+	max-width: 250px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* Message Box */
 .message-box {
@@ -87,6 +101,7 @@
 	--color-gray-70: #4D4D4D;
 	--color-gray-90: #333;
 
+	--description-color: #9B9C9D;
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-70);
@@ -359,6 +374,22 @@ header {
 	margin-right: 1em;
 }
 
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
@@ -441,6 +472,7 @@ hr {
 					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
 					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/talks/">Talks</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -457,7 +489,7 @@ hr {
 
 	<li class="postlist-item">
 		<a href="/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/" class="postlist-link">On Writing Technical Articles for the Nonspecialist</a>
-		<time class="postlist-date" datetime="2012-09-04">September 2012</time>
+		<time class="postlist-date" datetime="2012-09-04">04 September 2012</time>
 	</li>
 
 </ol>

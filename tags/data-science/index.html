@@ -14,6 +14,7 @@
 
 .author_container {
 	text-align: center;
+	vertical-align: middle;
 }
 
 .author_container img {
@@ -35,6 +36,19 @@
 	font-style: italic;
 	font-size: 1em;
 	color: #9B9C9D;
+}
+
+.padded_author_container {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.padded_author_container img {
+	max-width: 250px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* Message Box */
 .message-box {
@@ -87,6 +101,7 @@
 	--color-gray-70: #4D4D4D;
 	--color-gray-90: #333;
 
+	--description-color: #9B9C9D;
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-70);
@@ -359,6 +374,22 @@ header {
 	margin-right: 1em;
 }
 
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
@@ -441,6 +472,7 @@ hr {
 					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
 					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/talks/">Talks</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -457,22 +489,22 @@ hr {
 
 	<li class="postlist-item">
 		<a href="/blog/2023-08-21-the-sphering-transform/" class="postlist-link">The Sphering Transform for Detecting Distribution Drift</a>
-		<time class="postlist-date" datetime="2023-08-21">August 2023</time>
+		<time class="postlist-date" datetime="2023-08-21">21 August 2023</time>
 	</li>
 
 	<li class="postlist-item">
 		<a href="/blog/2023-04-06-what-why-how-abtesting/" class="postlist-link">The What, Why, and How of AB Testing</a>
-		<time class="postlist-date" datetime="2023-04-07">April 2023</time>
+		<time class="postlist-date" datetime="2023-04-07">07 April 2023</time>
 	</li>
 
 	<li class="postlist-item">
 		<a href="/blog/2021-12-30-new-article-on-XI-coefficient/" class="postlist-link">New Article on the XI coefficient</a>
-		<time class="postlist-date" datetime="2021-12-30">December 2021</time>
+		<time class="postlist-date" datetime="2021-12-30">30 December 2021</time>
 	</li>
 
 	<li class="postlist-item">
 		<a href="/blog/2012-09-19-on-being-a-data-scientist/" class="postlist-link">On Being a Data Scientist</a>
-		<time class="postlist-date" datetime="2012-09-19">September 2012</time>
+		<time class="postlist-date" datetime="2012-09-19">19 September 2012</time>
 	</li>
 
 </ol>

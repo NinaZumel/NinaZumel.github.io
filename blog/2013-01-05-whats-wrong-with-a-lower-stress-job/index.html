@@ -191,6 +191,7 @@ pre[class*="language-diff-"] {
 	--color-gray-70: #4D4D4D;
 	--color-gray-90: #333;
 
+	--description-color: #9B9C9D;
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-70);
@@ -463,6 +464,22 @@ header {
 	margin-right: 1em;
 }
 
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
@@ -545,6 +562,7 @@ hr {
 					<li class="nav-item"><a href="/pages/technical-writing/">Technical Writing</a></li>
 					<li class="nav-item"><a href="/pages/personal-writing/">Personal Writing</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
+					<li class="nav-item"><a href="/talks/">Talks</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -553,8 +571,10 @@ hr {
 			
 <h1>What&#39;s Wrong with a Low(er)-Stress Job?</h1>
 
+<div class="posttalk-metadata">
+  <time datetime="2013-01-05">05 January 2013</time>
+</div>
 <ul class="post-metadata">
-	<li><time datetime="2013-01-05">05 January 2013</time></li>
 	<li><a href="/tags/musings/" class="post-tag">musings</a></li>
 </ul>
 

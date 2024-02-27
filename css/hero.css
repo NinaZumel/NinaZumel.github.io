@@ -2,6 +2,7 @@
 
 .author_container {
 	text-align: center;
+	vertical-align: middle;
 }
 
 .author_container img {
@@ -23,5 +24,18 @@
 	font-style: italic;
 	font-size: 1em;
 	color: #9B9C9D;
+}
+
+.padded_author_container {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.padded_author_container img {
+	max-width: 250px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 

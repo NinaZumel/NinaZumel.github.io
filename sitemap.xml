@@ -32,6 +32,51 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/talks/2015-11-18-ODSCWest2015/</loc>
+		<lastmod>2015-11-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2015-12-02-BAWMLDS/</loc>
+		<lastmod>2015-12-02</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2016-03-29-StrataHadoop/</loc>
+		<lastmod>2016-03-29</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2016-03-31-SFODSC/</loc>
+		<lastmod>2016-03-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2016-10-27-WomenWhoCode/</loc>
+		<lastmod>2016-10-27</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2017-11-02-ODSCWest/</loc>
+		<lastmod>2017-11-02</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2019-09-03/</loc>
+		<lastmod>2019-09-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2019-12-29-Pydata/</loc>
+		<lastmod>2019-12-29</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/2020-05-07-WhyR/</loc>
+		<lastmod>2020-05-07</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/blog/2021-12-30-new-article-on-XI-coefficient/</loc>
 		<lastmod>2021-12-30</lastmod>
 	</url>
@@ -132,11 +177,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -167,7 +207,17 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/design/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/chatgpt/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/talks/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -184,5 +234,10 @@
 	<url>
 		<loc>https://ninazumel.com/</loc>
 		<lastmod>2024-02-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/talks/</loc>
+		<lastmod>2024-02-26</lastmod>
 	</url>
 </urlset>
