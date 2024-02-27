@@ -27,7 +27,7 @@ layout: layouts/home.njk
     With John Mount, I co-authored  <a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a>, now in its second edition.
     </p>
 
-    <p>When I'm not working, I <a href="/pages/personal-writing/">write</em></a> and <a href="https://www.dholrhythms.com/">dance</a>.
+    <p>When I'm not working, I write and dance.
     </p>
 
 </div>
