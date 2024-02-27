@@ -16,7 +16,7 @@ BSEE, Dept. of Electrical Engineering and Computer Science, 1989.</p>
 
 <p><strong>Wallaroo</strong> <br />
 VP, Data Science Practice, 2021-Present</p>
-<p>The Wallaroo platform makes it simple, fast, and very low cost to get AI and ML algorithms live against production data. My role is to advocate for the needs and interests of data scientists, to insure that Wallaroo is a productive and pleasant experience for them. I also help Wallaroo's customers bring new data science initiatives to the production-ready stage.
+<p>The Wallaroo platform operationalizes ML and AI models efficiently and at scale. While at Wallaroo, I have participated in the design of the Wallaroo SDK, to insure that it is intuitive and easy to use for data scientists seeking to deploy their own models with minimal assistance from DevOps. I also help Wallaroo's customers bring new data science initiatives to the production-ready stage.
 </p>
 
 <p><strong>Win-Vector, LLC.</strong> San Francisco, California<br />
