@@ -7,13 +7,13 @@ eleventyNavigation:
 ---
 
 <div class="author_container">
-    <img src="/img/pen-hero.jpg" alt="Fountain Pen">
+    <img src="/img/cactus_flower.jpeg" alt="Cactus Flowers">
     <h1>Personal</h1>
 </div>
 
 
 <div class="message-box">
-    <p> When I'm not working, I write, translate (mostly from Spanish, other times from Filipino), and indulge in what I call "literary sleuthing." I record my progress on these various projects in my many personal blogs. 
+    <p> When I'm not working, I read, write, translate (mostly from Spanish, other times from Filipino), and indulge in what I call "literary sleuthing." I record my progress on these various projects in my many personal blogs. 
 
    <p>I <a href="https://www.dholrhythms.com"/">dance</a> and choreograph, too.</p>
 
