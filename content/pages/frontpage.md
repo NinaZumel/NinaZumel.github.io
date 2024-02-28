@@ -16,10 +16,12 @@ layout: layouts/home.njk
 <br>
 
 <div class="message-box">
-    <h3>Welcome</h3>
-    <p>
-    I am a data scientist based in San Francisco, with 20+ years of experience in machine learning, statistics, and analytics. Feel free to look around!
-    </p>
+   <h3><em>Value understanding; avoid magic</em></h3>
+    <p> To the extent that I have an overarching mantra to define my professional life, I think the above would be it. </p>
+    
+    <p>It means that I value processes with clear and correct principles of operation over all else: clarity leads to understanding, and understanding to innovation. This mantra guides my work as a consultant, as a teacher, and as a data scientist.</p>
 
+    <p>Welcome to my website; feel free to look around!</p>
 </div>
+
 

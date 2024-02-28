@@ -1,28 +1,27 @@
 ---
 layout: layouts/home.njk
 numberOfLatestPostsToShow: 5
-title: Professional Writing
+title: Technical Blogging
+eleventyNavigation:
+  key: Technical Blogging
+  order: 3
 ---
 
 <div class="author_container">
     <img src="/img/pen-hero.jpg" alt="Fountain pen">
-    <h1>Technical Writing</h1>
+    <h1>Technical Blogging</h1>
 </div>
 
 
 <p><a href="http://www.winvector.com/author/nzumel/" rel="self"><strong>My articles on the Win-Vector Blog</strong></a><br />
 The Win Vector blog (with John Mount) publishes articles approximately once a month on topics in math, statistics, computation, and anything else we think is interesting.</p>
-
-<p><a href="/pages/publications/"><strong>Publications and Technical Articles</strong></a><br />
-Peer-reviewed publications, white papers, and miscellaneous technical writing.
-</p>
-
+<br><br>
 <div class="message-box">
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<h3>Latest {{ latestPostsCount }} Blog Post{% if latestPostsCount != 1 %}s{% endif %}</strong></h3>
+<h3>Latest {{ latestPostsCount }} Blog Post{% if latestPostsCount != 1 %}s{% endif %} on this Site</strong></h3>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
