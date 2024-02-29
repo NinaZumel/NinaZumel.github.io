@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Nina B. Zumel",
-	url: "https://ninazumel.com/testblog",
+	url: "https://ninazumel.com/",
 	language: "en",
 	description: "Data Scientist, San Francisco",
 	author: {
