@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -83,7 +84,11 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+
 	// Customize Markdown library settings:
+	
+	// markdownItAnchor is for adding ids and optionally permalinks to markdown headers. 
+	// https://www.npmjs.com/package/markdown-it-anchor
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.ariaHidden({
@@ -96,6 +101,10 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+	// markdown-it-footnote is for managing footnotes in markdown
+	// https://www.alpower.com/blog/configure-footnotes-with-eleventy
+	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
 
 	// Features to make your build faster (when you need them)
 
