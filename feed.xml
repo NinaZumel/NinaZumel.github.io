@@ -66,10 +66,16 @@ Source: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Tovenaarsleerli
 		<updated>2024-02-19T00:00:00Z</updated>
 		<id>https://ninazumel.com/blog/2024-02-19-new-blogging-framework/</id>
 		<content type="html">&lt;p&gt;My jekyll-generated website (served by Github Pages) failed to build a couple of weeks ago; I don&#39;t know why. I&#39;m not enough of a front-end developer to diagnose the problem. After looking around for an updated template to move to, I eventually decided to give the &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy static site generator&lt;/a&gt; a try.&lt;/p&gt;
-&lt;p&gt;So this is my new site, based on Eleventy&#39;s &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;official starter blog&lt;/a&gt; template. It wasn&#39;t too hard to figure out, and deployed surprisingly easily! Best of all, Eleventy is built to be &lt;a href=&quot;https://www.11ty.dev/blog/stability/&quot;&gt;stable&lt;/a&gt;; which hopefully means I won&#39;t run into that &lt;em&gt;my website won&#39;t build, and I don&#39;t know why!&lt;/em&gt; problem again[1]. Hurray!&lt;/p&gt;
+&lt;p&gt;So this is my new site, based on Eleventy&#39;s &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;official starter blog&lt;/a&gt; template. It wasn&#39;t too hard to figure out, and deployed surprisingly easily! Best of all, Eleventy is built to be &lt;a href=&quot;https://www.11ty.dev/blog/stability/&quot;&gt;stable&lt;/a&gt;; which hopefully means I won&#39;t run into that &lt;em&gt;my website won&#39;t build, and I don&#39;t know why!&lt;/em&gt; problem again.&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ninazumel.com/blog/2024-02-19-new-blogging-framework/&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; Hurray!&lt;/p&gt;
 &lt;p&gt;A better developer than I am probably could have migrated the old jekyll site completely, but I didn&#39;t manage to do that. I&#39;ve only carried a few blog posts and pages over for the moment. I&#39;ll put a few more of the old posts back, and my publications page; eventually I&#39;ll figure out how to get my bookshelf and my talks pages back up, too. But at least there&#39;s something here, for now.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;[1]: It&#39;s also designed to &lt;a href=&quot;https://www.11ty.dev/docs/performance/&quot;&gt;build really fast&lt;/a&gt;, but that matters less to me.&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;It&#39;s also designed to &lt;a href=&quot;https://www.11ty.dev/docs/performance/&quot;&gt;build really fast&lt;/a&gt;, but that matters less to me. &lt;a href=&quot;https://ninazumel.com/blog/2024-02-19-new-blogging-framework/&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </content>
 	</entry>
 	
