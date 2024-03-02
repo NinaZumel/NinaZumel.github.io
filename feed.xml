@@ -4,12 +4,73 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/"/>
-	<updated>2024-02-21T00:00:00Z</updated>
+	<updated>2024-03-01T00:00:00Z</updated>
 	<id>https://ninazumel.com/</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Stupid LLM Tricks, Statistics Version</title>
+		<link href="https://ninazumel.com/blog/2024-03-01-stupid-llm-tricks/"/>
+		<updated>2024-03-01T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-03-01-stupid-llm-tricks/</id>
+		<content type="html">&lt;p&gt;I recently posted elsewhere about &lt;a href=&quot;https://ninazumel.com/short_thoughts/blog/2024-02-29-more-stupid-llm-tricks/&quot;&gt;something silly ChatGPT did&lt;/a&gt; when we asked it about states&#39; names. Admittedly, that particular question was merely on the level of cocktail party conversation, or a bar bet; but it does point out that you really should never trust anything it says, unless you already know the answer.&lt;/p&gt;
+&lt;p&gt;Here&#39;s what happened when we asked it a statistics question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;User&lt;/strong&gt;&lt;br&gt;
+What are some good examples of continuous probability distribution functions with negative skew?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A distribution with negative skew looks like below: tail to the left, the bulk of the distribution to the right (generally, the median is to the right of the mean). There are several &lt;a href=&quot;https://www.statology.org/negatively-skewed-distribution-examples/&quot;&gt;real-life distributions with negative skew&lt;/a&gt;, but we were looking for a continuous &amp;quot;closed-form&amp;quot; distribution (with non-negative support, though that part didn&#39;t make it into the question).&lt;/p&gt;
+&lt;img alt=&quot;Graph of a negatively skewed (left-tailed) distribution and its mean&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/negative_skew-C6hjFAfnSa-400.png&quot; width=&quot;1280&quot; height=&quot;960&quot; srcset=&quot;https://ninazumel.com/img/negative_skew-C6hjFAfnSa-400.png 400w, https://ninazumel.com/img/negative_skew-C6hjFAfnSa-800.png 800w, https://ninazumel.com/img/negative_skew-C6hjFAfnSa-1200.png 1200w, https://ninazumel.com/img/negative_skew-C6hjFAfnSa-1280.png 1280w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p&gt;Here&#39;s the answer we got:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Skewness in a probability distribution refers to its asymmetry. A negative skew indicates that the left tail of the distribution is longer or fatter than the right tail, with the bulk of the distribution concentrated on the right side. Some examples of continuous probability distribution functions with negative skew include:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Gamma Distribution: Depending on the parameters, the gamma distribution can exhibit negative skewness, especially when the shape parameter is less than 1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;F Distribution: The F distribution can have negative skewness, particularly when the degrees of freedom for the numerator are small compared to the denominator.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exponential Distribution: While the exponential distribution is often positively skewed, it can exhibit negative skewness for certain parameter values.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Log-Normal Distribution: In some cases, the log-normal distribution can be negatively skewed, especially when the underlying normal distribution has a mean less than 1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chi-Squared Distribution: The chi-squared distribution can have negative skewness for small degrees of freedom.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These distributions can be useful in modeling various phenomena where negative skewness is observed, such as in certain financial data or in certain types of measurement errors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;None of these are negatively-skewed distributions.&lt;/strong&gt; In particular, the chi-squared distribution always has non-negative skew for any value of parameters (it&#39;s not the only one, just an obvious one).&lt;/p&gt;
+&lt;p&gt;The only negatively-skewed distribution we could think of off the top of our head --&lt;a href=&quot;https://en.wikipedia.org/wiki/Beta_distribution&quot;&gt;the Beta distribution&lt;/a&gt; with appropriate parameters -- didn&#39;t even make the list.&lt;/p&gt;
+&lt;p&gt;How is this more useful than, say, asking on the Statistics Stack Overflow (or searching to see if someone has already asked)?&lt;/p&gt;
+&lt;p&gt;Someone with a certain amount of statistical background can skim this list and realize that at least some of the answers are clearly wrong. They are then reduced to checking the whole list--which they already could have done with a list of distributions and Wikipedia. And they would have found the Beta distribution quicker from Wikipedia, too.&lt;/p&gt;
+&lt;p&gt;Someone with less of a statistical background and not a lot of time might just take the answers as correct, and go on to use them (wrongly!), no matter how many disclaimers OpenAI puts on their interface. And therein lies the problem.&lt;/p&gt;
+&lt;h2 id=&quot;llms-are-great-for-remembering-things-you-know&quot; tabindex=&quot;-1&quot;&gt;LLMs are Great for Remembering Things You Know &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-03-01-stupid-llm-tricks/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There are two uses for which I find ChatGPT incredibly useful: looking up the answers to simple code questions, and as an intelligent thesaurus.&lt;/p&gt;
+&lt;p&gt;An example of the first: &lt;strong&gt;&lt;em&gt;How do I parse an RSS feed in Python?&lt;/em&gt;&lt;/strong&gt; ChatGPT gives me the appropriate library (&lt;code&gt;feedparser&lt;/code&gt;) and some example code. I can easily check if the example code does what I want, and with the name of the library, I can look up the actual documentation.&lt;/p&gt;
+&lt;p&gt;It used to be easy to find this sort of information via search, but now the results are so poisoned by paywalls and splogs that it&#39;s far simpler, and more pleasant, to ask ChatGPT. Unlike with clicking on random search results, ChatGPT&#39;s answers are usually accurate the first time.&lt;/p&gt;
+&lt;p&gt;An example of the second: &lt;strong&gt;&lt;em&gt;What&#39;s the word for a close-up from a painting? It&#39;s used in the context of art or art history.&lt;/em&gt;&lt;/strong&gt; The answer is &lt;em&gt;detail&lt;/em&gt;, as in &amp;quot;A detail from &lt;em&gt;The Last Supper&lt;/em&gt;, showing Judas clutching a bag of coins,&amp;quot; to describe an image of Judas Iscariot cropped from &lt;em&gt;The Last Supper&lt;/em&gt;. This is a word I try to use in appropriate situations (like crediting images on my blog) but I can never remember it.&lt;/p&gt;
+&lt;p&gt;ChatGPT tends to be better at these kind of &amp;quot;What&#39;s that word for...?&amp;quot; questions than standard search, or even than my husband, if he happens to be around (he&#39;s not bad at it, just ChatGPT is better).&lt;/p&gt;
+&lt;p&gt;Here&#39;s the thing though: &lt;em&gt;I already knew the word,&lt;/em&gt; I just couldn&#39;t remember it. And I already know Python, just not all of its libraries. I can recognize when I&#39;m getting correct information, and, in these two situations, I can get it quickly. That&#39;s great!&lt;/p&gt;
+&lt;h2 id=&quot;caveat-user&quot; tabindex=&quot;-1&quot;&gt;&lt;em&gt;Caveat User&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-03-01-stupid-llm-tricks/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;My other big use for LLMs is translation. DeepL and the AI translator/explainer at Tagalog.com are super useful for my hobbies of &lt;a href=&quot;https://exiw.wordpress.com/translations/&quot;&gt;translating Spanish-language short stories&lt;/a&gt; and &lt;a href=&quot;https://multoghost.wordpress.com/darna-episodes/&quot;&gt;Filipino comics&lt;/a&gt;, respectively -- Spanish and Filipino being languages I can at least somewhat read. And DeepL and Google Translate are helpful when trying to get the gist of a document in a language I don&#39;t read.&lt;/p&gt;
+&lt;p&gt;But here&#39;s the thing; I&#39;ve seen these translation engines (even DeepL, which is generally quite good) make some egregious mistakes. I also remember trying to use the AI explainer at Tagalog.com to help me disentangle some sentence where I was getting all mixed up with the tenses and object and subjects. I think it got the grammar correct, but, boy, it just outright &lt;em&gt;lied&lt;/em&gt; to me about the meaning of the word &lt;em&gt;bubuwit&lt;/em&gt;, which means &lt;em&gt;mouse&lt;/em&gt;. I ran the sentence through the explainer multiple times, and got told that &lt;em&gt;bubuwit&lt;/em&gt; means, variously, &lt;em&gt;fish&lt;/em&gt;, &lt;em&gt;worm&lt;/em&gt;, &lt;em&gt;lizard&lt;/em&gt; ... I lost confidence, and checked several dictionaries to make sure: yes, &lt;em&gt;bubuwit&lt;/em&gt; means &lt;em&gt;mouse&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The lesson: don&#39;t entirely trust the machine translations of languages you don&#39;t read. Which I think we already knew, Google Translate having been around for a long time.&lt;/p&gt;
+&lt;p&gt;Similarly: don&#39;t entirely trust the code snippets from ChatGPT (or Copilot, I imagine) for programming languages that you don&#39;t know. Copilot and ChatGPT won&#39;t instantly make me a competent Rust programmer, any more than DeepL will make me a competent literary translator of Hungarian. This should also be obvious, but with all the genAI hype, I&#39;m not sure it is.&lt;/p&gt;
+&lt;p&gt;Because if I can find glaring errors in areas where I have some expertise, why should I be confident that there aren&#39;t glaring errors in areas I know nothing about?&lt;/p&gt;
+&lt;h2 id=&quot;information-literacy&quot; tabindex=&quot;-1&quot;&gt;Information Literacy &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-03-01-stupid-llm-tricks/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I have seen people make the argument: yeah, ChatGPT can spit out bullshit, but why should I trust it less than some random dude on the internet? They spit out bullshit, too. Yes, that&#39;s an issue, and it&#39;s called &lt;a href=&quot;https://www.unesco.org/en/ifap/information-literacy&quot;&gt;information literacy&lt;/a&gt;. Information literacy means the ability to assess the information you&#39;re given, via your own personal competencies, and your ability to recognize the legitimacy and reliability of the &lt;strong&gt;sources&lt;/strong&gt; of the information. It also means consulting multiple sources, when possible.&lt;/p&gt;
+&lt;p&gt;But how do you do that, with a monolithic information channel that obscures its sources? Not to mention, just mashes them all up and spits out a plausible sounding response that, in some sense, doesn&#39;t even have a source? All you can rely on, then, is your own personal competencies. Again: &lt;em&gt;don&#39;t ask questions you don&#39;t already know the answer to&lt;/em&gt;, or can&#39;t vet from your own knowledge.&lt;/p&gt;
+&lt;p&gt;It&#39;s back to my mantra. &lt;em&gt;Avoid magic; value understanding&lt;/em&gt;. Or as Anil Dash might put it: &lt;a href=&quot;https://www.anildash.com/2023/06/08/ai-is-unreasonable/&quot;&gt;&lt;em&gt;Avoid magic; value reason&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Generative AI can be a great tool, but like any tool, you have to use it the right way.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Clarity, Not Magic</title>
