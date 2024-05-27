@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Stupid LLM Tricks, Statistics Version</title>
+		<title>Algorithmic Art</title>
 		<meta name="description" content="Data Scientist, San Francisco">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
@@ -567,69 +567,53 @@ hr {
 
 		<main id="skip">
 			
-<h1>Stupid LLM Tricks, Statistics Version</h1>
+<h1>Algorithmic Art</h1>
 
 <div class="posttalk-metadata">
-  <time datetime="2024-03-01">01 March 2024</time>
+  <time datetime="2024-05-27">27 May 2024</time>
 </div>
 <ul class="post-metadata">
 </ul>
 
-<p>I recently posted elsewhere about <a href="https://ninazumel.com/short_thoughts/blog/2024-02-29-more-stupid-llm-tricks/">something silly ChatGPT did</a> when we asked it about states' names. Admittedly, that particular question was merely on the level of cocktail party conversation, or a bar bet; but it does point out that you really should never trust anything it says, unless you already know the answer.</p>
-<p>Here's what happened when we asked it a statistics question:</p>
-<blockquote>
-<p><strong>User</strong><br>
-What are some good examples of continuous probability distribution functions with negative skew?</p>
-</blockquote>
-<p>A distribution with negative skew looks like below: tail to the left, the bulk of the distribution to the right (generally, the median is to the right of the mean). There are several <a href="https://www.statology.org/negatively-skewed-distribution-examples/">real-life distributions with negative skew</a>, but we were looking for a continuous &quot;closed-form&quot; distribution (with non-negative support, though that part didn't make it into the question).</p>
-<img alt="Graph of a negatively skewed (left-tailed) distribution and its mean" loading="lazy" decoding="async" src="/img/negative_skew-C6hjFAfnSa-400.png" width="1280" height="960" srcset="/img/negative_skew-C6hjFAfnSa-400.png 400w, /img/negative_skew-C6hjFAfnSa-800.png 800w, /img/negative_skew-C6hjFAfnSa-1200.png 1200w, /img/negative_skew-C6hjFAfnSa-1280.png 1280w" sizes="100vw">
-<p>Here's the answer we got:</p>
-<blockquote>
-<p>Skewness in a probability distribution refers to its asymmetry. A negative skew indicates that the left tail of the distribution is longer or fatter than the right tail, with the bulk of the distribution concentrated on the right side. Some examples of continuous probability distribution functions with negative skew include:</p>
-</blockquote>
-<blockquote>
-<p>Gamma Distribution: Depending on the parameters, the gamma distribution can exhibit negative skewness, especially when the shape parameter is less than 1.</p>
-</blockquote>
-<blockquote>
-<p>F Distribution: The F distribution can have negative skewness, particularly when the degrees of freedom for the numerator are small compared to the denominator.</p>
-</blockquote>
-<blockquote>
-<p>Exponential Distribution: While the exponential distribution is often positively skewed, it can exhibit negative skewness for certain parameter values.</p>
-</blockquote>
-<blockquote>
-<p>Log-Normal Distribution: In some cases, the log-normal distribution can be negatively skewed, especially when the underlying normal distribution has a mean less than 1.</p>
-</blockquote>
-<blockquote>
-<p>Chi-Squared Distribution: The chi-squared distribution can have negative skewness for small degrees of freedom.</p>
-</blockquote>
-<blockquote>
-<p>These distributions can be useful in modeling various phenomena where negative skewness is observed, such as in certain financial data or in certain types of measurement errors.</p>
-</blockquote>
-<p><strong>None of these are negatively-skewed distributions.</strong> In particular, the chi-squared distribution always has non-negative skew for any value of parameters (it's not the only one, just an obvious one).</p>
-<p>The only negatively-skewed distribution we could think of off the top of our head --<a href="https://en.wikipedia.org/wiki/Beta_distribution">the Beta distribution</a> with appropriate parameters -- didn't even make the list.</p>
-<p>How is this more useful than, say, asking on the Statistics Stack Overflow (or searching to see if someone has already asked)?</p>
-<p>Someone with a certain amount of statistical background can skim this list and realize that at least some of the answers are clearly wrong. They are then reduced to checking the whole list--which they already could have done with a list of distributions and Wikipedia. And they would have found the Beta distribution quicker from Wikipedia, too.</p>
-<p>Someone with less of a statistical background and not a lot of time might just take the answers as correct, and go on to use them (wrongly!), no matter how many disclaimers OpenAI puts on their interface. And therein lies the problem.</p>
-<h2 id="llms-are-great-for-remembering-things-you-know" tabindex="-1">LLMs are Great for Remembering Things You Know <a class="header-anchor" href="#llms-are-great-for-remembering-things-you-know">#</a></h2>
-<p>There are two uses for which I find ChatGPT incredibly useful: looking up the answers to simple code questions, and as an intelligent thesaurus.</p>
-<p>An example of the first: <strong><em>How do I parse an RSS feed in Python?</em></strong> ChatGPT gives me the appropriate library (<code>feedparser</code>) and some example code. I can easily check if the example code does what I want, and with the name of the library, I can look up the actual documentation.</p>
-<p>It used to be easy to find this sort of information via search, but now the results are so poisoned by paywalls and splogs that it's far simpler, and more pleasant, to ask ChatGPT. Unlike with clicking on random search results, ChatGPT's answers are usually accurate the first time.</p>
-<p>An example of the second: <strong><em>What's the word for a close-up from a painting? It's used in the context of art or art history.</em></strong> The answer is <em>detail</em>, as in &quot;A detail from <em>The Last Supper</em>, showing Judas clutching a bag of coins,&quot; to describe an image of Judas Iscariot cropped from <em>The Last Supper</em>. This is a word I try to use in appropriate situations (like crediting images on my blog) but I can never remember it.</p>
-<p>ChatGPT tends to be better at these kind of &quot;What's that word for...?&quot; questions than standard search, or even than my husband, if he happens to be around (he's not bad at it, just ChatGPT is better).</p>
-<p>Here's the thing though: <em>I already knew the word,</em> I just couldn't remember it. And I already know Python, just not all of its libraries. I can recognize when I'm getting correct information, and, in these two situations, I can get it quickly. That's great!</p>
-<h2 id="caveat-user" tabindex="-1"><em>Caveat User</em> <a class="header-anchor" href="#caveat-user">#</a></h2>
-<p>My other big use for LLMs is translation. DeepL and the AI translator/explainer at Tagalog.com are super useful for my hobbies of <a href="https://exiw.wordpress.com/translations/">translating Spanish-language short stories</a> and <a href="https://multoghost.wordpress.com/darna-episodes/">Filipino comics</a>, respectively -- Spanish and Filipino being languages I can at least somewhat read. And DeepL and Google Translate are helpful when trying to get the gist of a document in a language I don't read.</p>
-<p>But here's the thing; I've seen these translation engines (even DeepL, which is generally quite good) make some egregious mistakes. I also remember trying to use the AI explainer at Tagalog.com to help me disentangle some sentence where I was getting all mixed up with the tenses and object and subjects. I think it got the grammar correct, but, boy, it just outright <em>lied</em> to me about the meaning of the word <em>bubuwit</em>, which means <em>mouse</em>. I ran the sentence through the explainer multiple times, and got told that <em>bubuwit</em> means, variously, <em>fish</em>, <em>worm</em>, <em>lizard</em> ... I lost confidence, and checked several dictionaries to make sure: yes, <em>bubuwit</em> means <em>mouse</em>.</p>
-<p>The lesson: don't entirely trust the machine translations of languages you don't read. Which I think we already knew, Google Translate having been around for a long time.</p>
-<p>Similarly: don't entirely trust the code snippets from ChatGPT (or Copilot, I imagine) for programming languages that you don't know. Copilot and ChatGPT won't instantly make me a competent Rust programmer, any more than DeepL will make me a competent literary translator of Hungarian. This should also be obvious, but with all the genAI hype, I'm not sure it is.</p>
-<p>Because if I can find glaring errors in areas where I have some expertise, why should I be confident that there aren't glaring errors in areas I know nothing about?</p>
-<h2 id="information-literacy" tabindex="-1">Information Literacy <a class="header-anchor" href="#information-literacy">#</a></h2>
-<p>I have seen people make the argument: yeah, ChatGPT can spit out bullshit, but why should I trust it less than some random dude on the internet? They spit out bullshit, too. Yes, that's an issue, and it's called <a href="https://www.unesco.org/en/ifap/information-literacy">information literacy</a>. Information literacy means the ability to assess the information you're given, via your own personal competencies, and your ability to recognize the legitimacy and reliability of the <strong>sources</strong> of the information. It also means consulting multiple sources, when possible.</p>
-<p>But how do you do that, with a monolithic information channel that obscures its sources? Not to mention, just mashes them all up and spits out a plausible sounding response that, in some sense, doesn't even have a source? All you can rely on, then, is your own personal competencies. Again: <em>don't ask questions you don't already know the answer to</em>, or can't vet from your own knowledge.</p>
-<p>It's back to my mantra. <em>Avoid magic; value understanding</em>. Or as Anil Dash might put it: <a href="https://www.anildash.com/2023/06/08/ai-is-unreasonable/"><em>Avoid magic; value reason</em></a>.</p>
-<p>Generative AI can be a great tool, but like any tool, you have to use it the right way.</p>
+<p>...or, what nowadays one might call &quot;non-AI generative art.&quot; Over this Memorial Day weekend, I played with a few simple algorithms,
+inspired by an <a href="https://codegolf.stackexchange.com/questions/22144/images-with-all-colors">old Stack Exchange code golf</a>.
+The intention here isn't to stomp on AI-based generative art, but just to remember the simple pleasures of creating pretty pictures with math.</p>
+<p>The details are all at <a href="https://github.com/NinaZumel/AlgorithmicArt/tree/main">the github repository</a>, but I thought I'd share some examples here.</p>
+<h2 id="generate-images-with-color-similarity" tabindex="-1">Generate Images with Color Similarity <a class="header-anchor" href="#generate-images-with-color-similarity">#</a></h2>
+<p>This is inspired by <a href="https://codegolf.stackexchange.com/a/22326">the code golf submission</a> from user fejesjoco, though it's not the same.
+I pick a initial pixel and color at random, then place each subsequent color such that it's nearest to the colors of its filled neighbors.
+The &quot;neighbor distance&quot; metric is the minimum distance from all of a pixel's filled neighbors.</p>
+<p>The original list of colors was the 32768 15-bit colors,
+and the idea was to fill a 256x128 image such that every pixel had a unique color. Here's what that looks like (resized to a square):</p>
+<img alt="Image generated by color similarity of 15-bit color list from random start" loading="lazy" decoding="async" src="/img/allcolors_random_start-8E6V7h94px-400.png" width="512" height="512" srcset="/img/allcolors_random_start-8E6V7h94px-400.png 400w, /img/allcolors_random_start-8E6V7h94px-512.png 512w" sizes="30vw">
+<p>I can also generate images using another image as the color source. You can see more examples in <a href="https://github.com/NinaZumel/AlgorithmicArt/blob/main/nearcolors.ipynb">my example notebook</a>.</p>
+<p>This algorithm generates lovely pictures, but it's fairly slow, since it must visit every point on the canvas multiple times, and do calculations each time.</p>
+<h2 id="generate-images-with-a-series-of-random-walks" tabindex="-1">Generate Images with a Series of Random Walks <a class="header-anchor" href="#generate-images-with-a-series-of-random-walks">#</a></h2>
+<p>Again, the goal here is to fill the image with unique pixel colors. I pick a start point and a start color at random, then sort the colorlist by distance from the starting point.
+Then the starting point picks a random direction (up/down/left/right) to go. If the next pixel hasn't been filled, then we step there, filling it with the next color on the list.
+This continues until we reach a dead end (a point where all the neighbors are already filled). Then we pick another random (unfilled) starting point and (unused) starting color, and take another walk. This continues until every color has been used, which also colors every pixel.</p>
+<p>That looks like this (again, resized to a square):</p>
+<img alt="Image generated by non-crossing random walks and a 15-bit color list" loading="lazy" decoding="async" src="/img/random_walk_15bit_random_start-1qXtqIQ72O-400.png" width="512" height="512" srcset="/img/random_walk_15bit_random_start-1qXtqIQ72O-400.png 400w, /img/random_walk_15bit_random_start-1qXtqIQ72O-512.png 512w" sizes="30vw">
+<p>This one is not quite as pretty (to my mind), but it's a little faster. With good bookkeeping, you only visit every point once, with no calculation,
+other than the color re-sorting at the beginning of a walk. The problem is that (as we will see), a random walk crosses itself quite frequently if left alone, and
+we do reach dead ends quite a lot with this procedure. So I wouldn't call it fast.</p>
+<p>There are more examples in <a href="https://github.com/NinaZumel/AlgorithmicArt/blob/main/randomwalk.ipynb">the example notebook</a>.</p>
+<h2 id="random-walk-of-a-bug-in-paint" tabindex="-1">Random Walk of a Bug in Paint <a class="header-anchor" href="#random-walk-of-a-bug-in-paint">#</a></h2>
+<p>Let's give up on filling every pixel of the image, though we will walk through all the colors on our colorlist. This time, we'll put a &quot;bug&quot; (a point) on a square plate, and let it randomly walk around (up/down/left/right), with crossings. Each footstep is a different color from the colorlist. This is quite fast, and can produce some pretty pictures.</p>
+<img alt="Image generated by a random walk and a 15-bit color list" loading="lazy" decoding="async" src="/img/bug_doing_random_walk-nyRzVcYp9r-256.png" width="256" height="256">
+<p>Here, I started at a random point with a random color from the 15-bit colorlist, and then sorted the colorlist by distance from the starting color. You can also get some interesting effects by walking the colors from a source image with no re-sorting. Here's what happened when I used this image</p>
+<img alt="Hawaiian Chieftains greeting the arrival of Western ships." loading="lazy" decoding="async" src="/img/greeting-by-chiefs-1928-02iyDtsw71-210.png" width="210" height="148">
+<p class="caption"><em>Greeting by Chiefs</em> (1928). Artist: Arman Manookian</br> 
+Source: <a href="https://www.wikiart.org/en/arman-manookian/greeting-by-chiefs-1928">WikiArt</a></p>
+<p>and traversed the colors from the painting in order, line by line, as my bug wandered its plate:</p>
+<p><img alt="Image generated by a random walk and the colors from the painting Greeting by Chiefs" loading="lazy" decoding="async" src="/img/chiefswalk-RNhgBlMJIs-256.png" width="256" height="256">.</p>
+<p>The primary reason I implemented this was to animate the walk, so my function produces (fairly large) animated gifs, in addition to the final image.
+Here's an <a href="https://vimeo.com/950859184">animation of the above image being created</a>. You can
+see how often the bug walks over the same area of the plate. This will give you an idea of why filling the image space by random walk takes so long.</p>
+<p>You can see more examples in the <a href="https://github.com/NinaZumel/AlgorithmicArt/blob/main/randomwalk_animation.ipynb">example notebook</a>. There's also more <a href="https://github.com/NinaZumel/AlgorithmicArt/blob/main/more_randomwalks.ipynb">here</a>, including the gif-to-mp4 conversion code. The mp4s tend to be much smaller than the original gifs.</p>
+<p>And that's my weekend so far! Hope yours has been fun, too.</p>
 
-<ul class="links-nextprev"><li>Previous: <a href="/blog/2024-02-21-clarity-not-magic/">Clarity, Not Magic</a></li><li>Next: <a href="/blog/2024-05-27-algorithmic-art/">Algorithmic Art</a></li>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2024-03-01-stupid-llm-tricks/">Stupid LLM Tricks, Statistics Version</a></li>
 </ul>
 
 		</main>
@@ -677,6 +661,6 @@ What are some good examples of continuous probability distribution functions wit
 </div>
 		<!-- /footer-- >
 
-		<!-- Current page: /blog/2024-03-01-stupid-llm-tricks/ -->
+		<!-- Current page: /blog/2024-05-27-algorithmic-art/ -->
 	</body>
 </html>
