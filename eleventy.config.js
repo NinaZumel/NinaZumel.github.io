@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItFootnote = require("markdown-it-footnote");
+const mathjax3 = require("markdown-it-mathjax3");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -105,6 +106,8 @@ module.exports = function(eleventyConfig) {
 	// markdown-it-footnote is for managing footnotes in markdown
 	// https://www.alpower.com/blog/configure-footnotes-with-eleventy
 	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
+
+	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(mathjax3));
 
 	// Features to make your build faster (when you need them)
 

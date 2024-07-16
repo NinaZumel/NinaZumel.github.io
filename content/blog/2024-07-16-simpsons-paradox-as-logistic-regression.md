@@ -47,7 +47,11 @@ model where the coefficients $\beta_{ifasting}$ and $\beta_{exercise}$
 are both non-negative, as any treatment should increase the odds that
 the subject loses weight.
 
-Now suppose that, unbeknownst to the researchers, there are two
+Let's show an example where our expectations aren't met, in R.
+
+### Trends for individual subpopulations
+
+Suppose that, unbeknownst to the researchers, there are two
 subpopulations amongst the subject. The first, Population A, responds
 quite well to the intermittent fasting regimen.
 
@@ -71,6 +75,7 @@ popA = data.table::rbindlist(list(
 mA = glm(success ~ ifasting + exercise, data=popA, family=binomial)
 summary(mA)
 ```
+```
 
     ## 
     ## Call:
@@ -92,6 +97,7 @@ summary(mA)
     ## AIC: 290.79
     ## 
     ## Number of Fisher Scoring iterations: 6
+```
 
 As expected, the coefficients for `ifasting` and `exercise` are both
 positive. We can look at the rates that the model predicts.
@@ -107,34 +113,32 @@ testdata = data.frame(
 testdata$predictA = predict(mA, newdata=testdata, type="response")
 testdata
 ```
+```
 
     ##   ifasting exercise    predictA
     ## 1        0        0 0.008988764
     ## 2        0        1 0.020000000
     ## 3        1        0 0.800000000
     ## 4        1        1 0.900000000
+```
 
 ``` r
 # confirm it by doing the averages by hand
 library(poorman, warn.conflicts = FALSE) # for data-wrangling; uses dplyr API
-```
 
-    ## 
-    ##   I'd seen my father. He was a poor man, and I watched him do astonishing things.
-    ##     - Sidney Poitier
-
-``` r
 popA |> 
   mutate(gp = ifelse(ifasting & exercise, 'both',
                      ifelse(ifasting, 'ifast alone', 'exercise alone'))) |>
   group_by(gp) |>
   summarize(success_rate = mean(success))
 ```
+```
 
     ##               gp success_rate
     ## 1           both         0.90
     ## 2 exercise alone         0.02
     ## 3    ifast alone         0.80
+```
 
 For Population A, exercise alone has a 2% success rate, intermitting
 fasting an 80% success rate, and both together have a 90% success rate.
@@ -154,7 +158,7 @@ popB = data.table::rbindlist(list(
 mB = glm(success ~ ifasting + exercise, data=popB, family=binomial)
 summary(mB)
 ```
-
+```
     ## 
     ## Call:
     ## glm(formula = success ~ ifasting + exercise, family = binomial, 
@@ -175,20 +179,24 @@ summary(mB)
     ## AIC: 429.06
     ## 
     ## Number of Fisher Scoring iterations: 7
+```
 
 ``` r
 testdata$predictB = predict(mB, newdata=testdata, type="response")
 testdata
 ```
-
+```
     ##   ifasting exercise    predictA    predictB
     ## 1        0        0 0.008988764 0.006688963
     ## 2        0        1 0.020000000 0.010000000
     ## 3        1        0 0.800000000 0.400000000
     ## 4        1        1 0.900000000 0.500000000
+```
 
 For Population B, the coefficients for `ifasting` and `exercise` are
 still positive, but smaller, and the success rates are lower.
+
+### Trends for the whole population
 
 Now what happens if we model both populations together?
 
@@ -197,7 +205,7 @@ popAll = data.table::rbindlist(list(popA, popB))
 mAll = glm(success ~ ifasting + exercise, data=popAll, family=binomial)
 summary(mAll)
 ```
-
+```
     ## 
     ## Call:
     ## glm(formula = success ~ ifasting + exercise, family = binomial, 
@@ -218,6 +226,7 @@ summary(mAll)
     ## AIC: 813.36
     ## 
     ## Number of Fisher Scoring iterations: 6
+```
 
 Now exercise has a negative coefficient, making it appear that
 intermittent fasting and exercise together has *worse* outcomes than
@@ -227,17 +236,18 @@ intermittent fasting alone!
 testdata$predictAll = predict(mAll, newdata=testdata, type="response")
 testdata
 ```
-
+```
     ##   ifasting exercise    predictA    predictB predictAll
     ## 1        0        0 0.008988764 0.006688963 0.01732739
     ## 2        0        1 0.020000000 0.010000000 0.01500000
     ## 3        1        0 0.800000000 0.400000000 0.66666667
     ## 4        1        1 0.900000000 0.500000000 0.63333333
+```
 
-This is an example how Simpson’s paradox might manifest itself in a
+This is an example of how Simpson’s paradox might manifest itself in a
 logistic regression model, and it’s due to the unmodelled confounding
-variable–population type–plus some bad luck in the relative sizes of the
-treatment groups with respect to that variable.
+variable, population type. This, plus some bad luck in the relative sizes of the
+treatment groups with respect to population type, lead to the above, counterintuitive, results.
 
 Simpson’s paradox isn’t the only reason for a coefficient with an
 unexpected sign; this can also happen when the data is [separated or
@@ -253,22 +263,28 @@ popAll |>
   group_by(gp) |>
   summarize(success_rate = mean(success))
 ```
-
+```
     ##               gp success_rate
     ## 1           both    0.6333333
     ## 2 exercise alone    0.0150000
     ## 3    ifast alone    0.6666667
+```
 
 So separation isn’t the problem; the unmodelled confounding variable is.
 
-If the researchers did have access to the subjects’ population type,
+## Resolving the issue
+
+When faced with a counterintuitive result, try to determine if there's
+a factor you're not taking into account.
+
+In this example, if the researchers did have access to the subjects’ population type,
 then they could control for that in the modelling.
 
 ``` r
 mAllplus = glm(success ~ ifasting + exercise + label, data=popAll, family=binomial)
 summary(mAllplus)
 ```
-
+```
     ## 
     ## Call:
     ## glm(formula = success ~ ifasting + exercise + label, family = binomial, 
@@ -290,6 +306,7 @@ summary(mAllplus)
     ## AIC: 717.51
     ## 
     ## Number of Fisher Scoring iterations: 7
+```
 
 As expected, both `ifasting` and `exercise` now have positive (and
 significant, to p=0.05) coefficients, indicating that both actions
@@ -297,5 +314,5 @@ increase the probability of weight loss, and doing them both increases
 it even more.
 
 The model also correctly identifies that subjects of population type B
-have a (significantly) lower success rate that subjects from Population
+have a (significantly) lower success rate than subjects from Population
 A.
