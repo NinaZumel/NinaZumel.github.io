@@ -3,7 +3,7 @@ date: 2024-08-20
 title: Adjusting Saturated Multivariate Linear Models
 ---
 
-This is a followup to the article [*Post-hoc Adjustment for
+This is a followup to the Win Vector blog article [*Post-hoc Adjustment for
 Zero-Thresholded Linear
 Models*](https://win-vector.com/2024/08/16/post-hoc-adjustment-for-zero-thresholded-linear-models/),
 in which I showed how to use a one-variable GAM (e.g., a spline) to
@@ -11,18 +11,20 @@ adjust a linear model in a problem space where outcomes are strictly
 nonnegative. If you haven’t read that article, I suggest you check it
 out, first.
 
-> When you don’t expect to see too many zeros in practice, modeling the
-> process as linear and thresholding negative predictions at zero is not
-> unreasonable. But the more zeros (saturations) you expect to see, the
-> less well a linear model will perform.
-
 ## Some Background
 
 The original motivation for the work we did here was to help a client
 who had built a fairly complex multivariate model to predict expected
 count data. Their underlying assumption was that in their domain, a
-count of zero is a rare event. Their model training and deployment
-process was automated and put into production across multiple sites.
+count of zero is a rare event. To quote my previous article:
+
+> When you don’t expect to see too many zeros in practice, modeling the
+> process as linear and thresholding negative predictions at zero is not
+> unreasonable. But the more zeros (saturations) you expect to see, the
+> less well a linear model will perform.
+
+They then automated the model training and deployment process, and put
+it into production across multiple sites.
 
 Unfortunately, zero-counts are not so rare as they originally believed,
 at some of their sites. Because coming up with and deploying a new model
@@ -53,7 +55,7 @@ believe that your process is truly linear in its non-saturated regions
 
 In the second part of the article, I’ll try fitting a model directly to
 the input data, using both GAM and Tobit, since ideally, that’s what
-you’d do if you were approaching this problem *de novo*.
+you’d do if you were approaching this modeling task *de novo*.
 
 For legibility and brevity, I’m going to hide a lot of the code when
 generating this article, but you can find the original R Markdown source
@@ -90,6 +92,7 @@ traind = trueprocess(1000)
 head(traind)
 ```
 
+``` text
     ##           u         v         y
     ## 1 0.1634115 0.2125462 0.6570359
     ## 2 0.5249624 0.6152054 0.0000000
@@ -97,6 +100,7 @@ head(traind)
     ## 4 0.9277528 0.8064937 1.5395565
     ## 5 0.5715193 0.9990540 0.0000000
     ## 6 0.2602110 0.5206304 0.0000000
+```
 
 Let’s plot a heatmap of the training data. Note that there’s lots of
 saturation.
@@ -162,7 +166,7 @@ Let’s look at the RMSE and bias of each model.
 | gamadj          | GAM-adjusted model     | 0.2261695 |  0.0007868 |
 | tobitadj        | Tobit-adjusted model   | 0.2293762 | -0.0097394 |
 
-Model RMSE and bias on training data
+**_Model RMSE and bias on training data_**
 
 As expected (if you’ve read the previous article), the GAM-adjusted
 model has the lowest training RMSE, and also lower bias than the other
@@ -202,7 +206,7 @@ for(adj in names(adjustments)) {
 | gamadj          | GAM-adjusted model     | 0.2285600 |  0.0043918 |
 | tobitadj        | Tobit-adjusted model   | 0.2300590 | -0.0064108 |
 
-Model RMSE and bias on holdout data
+**_Model RMSE and bias on holdout data_**
 
 ## Part II : Fitting directly to the input data
 
@@ -234,7 +238,7 @@ linear models.
 | gam             | Full GAM model       | 0.3505055 |  0.0668857 |
 | tobit           | Full Tobit model     | 0.2280450 | -0.0099883 |
 
-**Model RMSE and bias on training data**
+**_Model RMSE and bias on training data_**
 
 The full (thresholded) Tobit model does essentially as well as the
 Tobit-adjusted linear model, but the thresholded GAM doesn’t do so well.
@@ -252,9 +256,9 @@ We can also evaluate these models on holdout data.
 | gam             | Full GAM model       | 0.3574985 |  0.0658623 |
 | tobit           | Full Tobit model     | 0.2280260 | -0.0072236 |
 
-**Model RMSE and bias on holdout data**
+**_Model RMSE and bias on holdout data_**
 
-We get similar results. Let’s plot some slices to get an idea of what’s
+We get similar results. We can plot some slices to get an idea of what’s
 happening.
 
 {% image "./images/saturated-models/unnamed-chunk-16-1.png", "Comparing Linear to thresholded GAM and Tobit models across various slices of the data" %}
@@ -273,7 +277,7 @@ process you are modeling is well-approximated as linear in the
 non-saturated region, then a thresholded Tobit model appears to be a
 good choice.
 
-Obviously, to fit a full model (or even an adjustment), one can try many
+Obviously, to fit a full model, one can try many
 more methods: Poisson regression, trees, MARS, boosting, random forest,
 and so on. A typical task for the data scientist is to try many
 plausible methods on the client’s data and pick the one that appears to
@@ -285,7 +289,7 @@ be the best practical trade-off for the given client.
     because of limitations of the measurement itself: for example, you
     can’t track a subject for more than five years, so the longest
     lifetime you can expect to measure is 5, even if the subject lives
-    for decades longer. So models like Tobit try to predict *as if* the
+    for decades longer. Models like Tobit try to predict *as if* the
     data isn’t censored: they can predict a lifetime longer than 5
     years, even though those lifetimes can’t be measured. I am using the
     word “saturated” to indicate that the outcome being measured
