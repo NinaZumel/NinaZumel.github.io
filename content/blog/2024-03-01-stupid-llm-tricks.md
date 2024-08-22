@@ -1,6 +1,10 @@
 ---
 date: 2024-03-01
 title: "Stupid LLM Tricks, Statistics Version"
+tags:
+ - statistics
+ - blogging
+ - ChatGPT
 ---
 
 I recently posted elsewhere about [something silly ChatGPT did](https://ninazumel.com/short_thoughts/blog/2024-02-29-more-stupid-llm-tricks/) when we asked it about states' names. Admittedly, that particular question was merely on the level of cocktail party conversation, or a bar bet; but it does point out that you really should never trust anything it says, unless you already know the answer.

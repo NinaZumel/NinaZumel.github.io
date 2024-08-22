@@ -1,6 +1,9 @@
 ---
 date: 2024-05-27
 title: Algorithmic Art
+tags:
+ - design
+ - python
 ---
 
 ...or, what nowadays one might call "non-AI generative art." Over this Memorial Day weekend, I played with a few simple algorithms, 

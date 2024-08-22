@@ -1,6 +1,11 @@
 ---
 date: 2024-08-20
 title: Adjusting Saturated Multivariate Linear Models
+tags:
+ - data science
+ - statistics
+ - linear models
+ - censoring
 ---
 
 This is a followup to the Win Vector blog article [*Post-hoc Adjustment for

@@ -1,6 +1,10 @@
 ---
 date: 2024-07-16
 title: Simpson’s Paradox as a Logistic Regression
+tags:
+ - data science
+ - statistics
+ - logistic regression
 ---
 
 [Simpson’s paradox](https://en.wikipedia.org/wiki/Simpson's_paradox) is
