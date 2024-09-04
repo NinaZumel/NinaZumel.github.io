@@ -142,11 +142,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/talks/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/blogging/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -167,17 +162,27 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/writing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/data-science/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ninazumel.com/tags/statistics/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/design/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -212,16 +217,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/ab-testing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -233,6 +228,11 @@
 	
 	<url>
 		<loc>https://ninazumel.com/tags/censoring/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/talks/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -279,5 +279,10 @@
 	<url>
 		<loc>https://ninazumel.com/blog/2024-08-20-saturated-models/</loc>
 		<lastmod>2024-08-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2024-09-04-sidenotes/</loc>
+		<lastmod>2024-09-04</lastmod>
 	</url>
 </urlset>

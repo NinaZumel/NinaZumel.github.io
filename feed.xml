@@ -4,12 +4,26 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/"/>
-	<updated>2024-08-20T00:00:00Z</updated>
+	<updated>2024-09-04T00:00:00Z</updated>
 	<id>https://ninazumel.com/</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Playing With Sidenotes</title>
+		<link href="https://ninazumel.com/blog/2024-09-04-sidenotes/"/>
+		<updated>2024-09-04T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-09-04-sidenotes/</id>
+		<content type="html">&lt;p&gt;For no particular reason, I started wondering if I could add sidenotes to my blog. I&#39;ve always liked them better than endnotes, especially for longer documents. This led me to the more general question: &lt;em&gt;Is there an eleventy template for sidenotes&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;The answer is &lt;a href=&quot;https://eleventufte.netlify.app/&quot;&gt;yes&lt;/a&gt;. But before plunging in, I decided to try a fresh blog first. My &lt;a href=&quot;https://github.com/NinaZumel/TwelveMedievalGhostStories&quot;&gt;repository of medieval ghost stories&lt;/a&gt; (forked from an earlier repo) seemed like a useful test case.&lt;/p&gt;
+&lt;p&gt;It was also a hard test case: these are scholarly documents, and the notes are long and dense -- exactly the case that Tufte-CSS based sidenote solutions don&#39;t handle well. I ended up using a &lt;a href=&quot;https://markllobrera.com/posts/sidenotes/&quot;&gt;javascript based solution&lt;/a&gt; that I found on the web.&lt;/p&gt;
+&lt;p&gt;The result is the &lt;a href=&quot;https://ninazumel.com/TwelveMedievalGhostStories/&quot;&gt;Twelve Medieval Ghost Stories&lt;/a&gt; website.&lt;/p&gt;
+&lt;p&gt;It looks great; the sidenotes work really well, and drop down to regular endnotes on narrow browsers. But the grid-based paradigm this solution uses seems really brittle, and I don&#39;t want to restructure my entire blog template to support it.&lt;/p&gt;
+&lt;p&gt;So back to thinking about Tufte-CSS. But this wasn&#39;t a waste; I&#39;ve learned some potentially useful things, and this is a fairly nice presentation of the ghost stories. I&#39;ll just let it percolate in my head for a little longer.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Adjusting Saturated Multivariate Linear Models</title>

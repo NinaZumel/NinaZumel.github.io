@@ -11,6 +11,14 @@
 	},
 	"items": [
 		{
+			"id": "https://ninazumel.com/blog/2024-09-04-sidenotes/",
+			"url": "https://ninazumel.com/blog/2024-09-04-sidenotes/",
+			"title": "Playing With Sidenotes",
+			"content_html": "<p>For no particular reason, I started wondering if I could add sidenotes to my blog. I've always liked them better than endnotes, especially for longer documents. This led me to the more general question: <em>Is there an eleventy template for sidenotes</em>?</p>\n<p>The answer is <a href=\"https://eleventufte.netlify.app/\">yes</a>. But before plunging in, I decided to try a fresh blog first. My <a href=\"https://github.com/NinaZumel/TwelveMedievalGhostStories\">repository of medieval ghost stories</a> (forked from an earlier repo) seemed like a useful test case.</p>\n<p>It was also a hard test case: these are scholarly documents, and the notes are long and dense -- exactly the case that Tufte-CSS based sidenote solutions don't handle well. I ended up using a <a href=\"https://markllobrera.com/posts/sidenotes/\">javascript based solution</a> that I found on the web.</p>\n<p>The result is the <a href=\"https://ninazumel.com/TwelveMedievalGhostStories/\">Twelve Medieval Ghost Stories</a> website.</p>\n<p>It looks great; the sidenotes work really well, and drop down to regular endnotes on narrow browsers. But the grid-based paradigm this solution uses seems really brittle, and I don't want to restructure my entire blog template to support it.</p>\n<p>So back to thinking about Tufte-CSS. But this wasn't a waste; I've learned some potentially useful things, and this is a fairly nice presentation of the ghost stories. I'll just let it percolate in my head for a little longer.</p>\n",
+			"date_published": "2024-09-04T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://ninazumel.com/blog/2024-08-20-saturated-models/",
 			"url": "https://ninazumel.com/blog/2024-08-20-saturated-models/",
 			"title": "Adjusting Saturated Multivariate Linear Models",
