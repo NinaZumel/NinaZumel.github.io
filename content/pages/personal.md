@@ -47,6 +47,6 @@ eleventyNavigation:
 
 <p><a href="https://exiw.wordpress.com/tag/punjab/"><strong>Some articles originally written for the Non Stop Bhangra and Dholrhythms blogs</strong></a>: pieces about Punjabi music, culture and folklore, especially as they relate to Dholrhythms Dance Company and San Francisco's Non Stop Bhangra dance party. </p>
 
-[**Twelve Medieval Ghost Stories**](https://github.com/NinaZumel/TwelveMedievalGhostStories): A Github repository with the Latin text and English translations of ghost stories that were transcribed by M.R. James from a Byland Abbey manuscript, and originally published in 1922. I forked David Minmo's original repository, and reorganized the documents to make them a little more readable online.
+[**Twelve Medieval Ghost Stories**](http://ninazumel.com/TwelveMedievalGhostStories/): The Latin text and English translations of ghost stories from a Byland Abbey manuscript, transcribed by M.R. James and originally published in 1922. The OCR transcriptions and introductory text are from David Mimno's original GitHub repository, which I forked so I could reorganize the documents to make them a little more readable online. And then I made a website, as an experiment in creating margin notes instead of footnotes.
 
 </div>
