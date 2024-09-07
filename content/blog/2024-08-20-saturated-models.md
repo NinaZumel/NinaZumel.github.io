@@ -296,8 +296,9 @@ be the best practical trade-off for the given client.
     lifetime you can expect to measure is 5, even if the subject lives
     for decades longer. Models like Tobit try to predict *as if* the
     data isn’t censored: they can predict a lifetime longer than 5
-    years, even though those lifetimes can’t be measured. I am using the
-    word “saturated” to indicate that the outcome being measured
+    years, even though those lifetimes can’t be measured. 
+    
+      I am using the word “saturated” to indicate that the outcome being measured
     literally cannot go beyond the threshold: counts can never be
     negative. A possibly useful analogy is the image from a digital
     camera: too much light “blows out” the photo. If you are trying to
