@@ -7,6 +7,9 @@ By Francis William Bain (1898)[^1]
 
 [^1]: Transcriber’s Note: Taken from Day 19 of F. W. Bain’s Arabian Nights-style story cycle, *A Digit of the Moon (1898)*. I’ve removed the continuity passages and left just the standalone story. All footnotes are by Bain, except those marked [NZ], which are by me. I’ve also re-paragraphed the story, for legibility.
 
+{% image "./images/vikram_vetala.jpg", "A vetala, or Indian vampire, with horns and wings, flying through clouds" %}
+<p class="caption">Illustration by Ernest Griset for Vikram and the Vampire, Richard F. Burton (1893 edition).</br> Source: <a href="https://archive.org/details/vikramvampireort1893burt/page/n9/mode/2up">Internet Archive.</a></p>
+
 There was once a Brahman named Kritákrita,{% marginnote "kritakrita", "*Kritákrita*: Done and not done." %} who neglected the study of the Wédas, and walked in the black path, abandoning all his duties{% marginnote "abandoning", "*abandoning...*: *Achárabhrashta*, an apostate or decasted person.." %}, and associating with gamblers, harlots, and outcasts. And he frequented the cemeteries at night, and became familiar with ghosts and vampires and dead bodies, and impure and unholy rites and incantations.
 
 And one night, amid the flaming of funeral pyres and the reek of burning corpses, a certain Vampire{% marginnote "vampire", "*Vampire…*: *Wétála*, an uncanny being, generally possessing magic powers, given to occupying empty corpses and devouring human flesh." %} of his acquaintance said to him: I am hungry: bring me fresh meat to devour, or I will tear you in pieces.

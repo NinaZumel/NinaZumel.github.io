@@ -24,7 +24,7 @@ So, this post will expand upon the points above, but it's really not about my ad
 Read on.
 
 {% image "./images/sorcerer-barth.png", "Illustration of the Sorcerer's Apprentice trying to bring the broom to life. Ferdinand Barth", "20vw" %}
-<p class="caption">Illustration of Goethe's <em>Der Zauberlehrling</em> (The Sorcerer's Apprentice), 1882. Artist: Ferdinand Barth</br> 
+<p class="caption">Illustration of Goethe's <em>Der Zauberlehrling</em> (The Sorcerer's Apprentice), 1882.</br> Artist: Ferdinand Barth. 
 Source: <a href="https://commons.wikimedia.org/wiki/File:Tovenaarsleerling_S_Barth.png">Wikimedia</a></p>
 
 ## Newbie-Friendly, Non-Opaque Design

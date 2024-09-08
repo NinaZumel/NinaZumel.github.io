@@ -3,6 +3,7 @@ title: Blog Migration
 date: 2024-02-19
 tags:
 - blogging
+- website
 ---
 
 My jekyll-generated website (served by Github Pages) failed to build a couple of weeks ago; I don't know why. I'm not enough of a front-end developer to diagnose the problem. After looking around for an updated template to move to, I eventually decided to give the [Eleventy static site generator](https://www.11ty.dev/) a try.
