@@ -57,7 +57,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 50em;
+	max-width: 70em; /* a little wider to accomodate margin notes */
 }
 
 /* 
@@ -105,7 +105,7 @@ p {
 	/* font-size: 1.2em; */
 }
 
-P.caption {
+p.caption {
 	text-align: center;
 	font-style: italic;
 	font-size: 0.9em;
@@ -181,6 +181,17 @@ code {
 	word-break: break-all;
 }
 
+/*
+  Custom containters
+*/
+div.message-box {
+	max-width: 50em; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
 /* Header */
 header {
 	display: flex;
@@ -221,6 +232,7 @@ header {
 	list-style: none;
 	padding: 0;
 	padding-left: 1.5rem;
+	max-width: 50em; /* keep it narrower than the new wider body width */
 }
 .postlist-item {
 	display: flex;

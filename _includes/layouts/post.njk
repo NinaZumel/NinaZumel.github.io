@@ -4,6 +4,8 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+{%- css %}{% include "public/css/marginnote.css" %}{%- endcss %}
+
 <h1>{{ title }}</h1>
 
 <div class="posttalk-metadata">
@@ -16,7 +18,10 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
+{# wrap the content in an article container so that the margin notes work #}
+<article>
 {{ content | safe }}
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
