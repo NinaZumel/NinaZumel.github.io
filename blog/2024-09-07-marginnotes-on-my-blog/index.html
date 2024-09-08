@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>I Added Margin Notes to my Blog</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* minimal implementation; just plain text in the margin, no blockquotes, code, etc */
+/* only (unnumbered) margin notes, no sidenotes */
+/* stripped down from https://github.com/edwardtufte/tufte-css */
+
+/* need this for correct sidenote numbering; but I'm not using sidenotes */
+/*
+body {
+    counter-reset: sidenote-counter; 
+} 
+*/
+
+/* since I imagine these will change with different templates */
+:root {
+    --content-width: 65%;
+    --image-padding: 5%;
+    --image-max: 60%;  /* total image+padding <= content-width */
+    --notewidth: 30%; 
+    /* content-width + notewidth <  100%. I think you should leave some wiggle room. */
+    --note-right-margin: -45%; 
+    /* if this margin is -(notewidth), the note will start just on the right border of the text */
+    /* so push it a little to the right (more negative) */
+}
+
+article {
+	padding-top: 1rem; 
+}
+
+/* make room for the notes in the article container */
+article > p,
+article > pre,
+article > ul {
+    width: var(--content-width);
+}
+
+/* blockquotes should be a little shorter */
+article > blockquote {
+    width: calc(var(--content-width) * 0.8);
+}
+
+/* keep images/captions in the text column, rather than centered in the article container */
+article > img {
+    margin-left: 0;
+    padding-left: var(--image-padding);
+    max-width: var(--image-max); 
+}
+
+article > p.caption {
+	text-align: left;
+    padding-left: var(--image-padding);
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+ /* finally, the margin note */
+.marginnote {    
+    float: right;
+    clear: right;
+    width: var(--notewidth);         
+    margin-right: var(--note-right-margin);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+
+input.margin-toggle {
+    display: none;
+}
+
+
+label.margin-toggle {    
+    display: none;
+
+}
+
+/* The mobile fallback: */
+/* making max-width bigger makes the note fall inline sooner */
+@media (max-width: 768px) {  
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    article > p,
+    article > blockquote,
+    article > pre {
+        width: 100%;
+    }
+
+    label.margin-toggle {
+        display: inline;
+    }
+       
+    .marginnote {           
+         display: none;        
+        }    
+
+      
+    .margin-toggle:checked + .marginnote {            
+        display: block;            
+        float: left;            
+        left: 1rem;            
+        clear: both;            
+        width: 95%;            
+        margin: 1rem 2.5%;            
+        vertical-align: baseline;            
+        position: relative;        
+    }
+    label {
+        cursor: pointer;
+    }
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--description-color: #9B9C9D;
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-70: #dad8d8;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 70em; /* a little wider to accomodate margin notes */
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+p.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/*
+  Custom containters
+*/
+div.message-box {
+	max-width: 50em; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+	max-width: 50em; /* keep it narrower than the new wider body width */
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--background-color0);
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/professional/">Professional</a></li>
+					<li class="nav-item"><a href="/pages/personal/">Personal</a></li>
+					<li class="nav-item"><a href="/pages/technical-blogging/">Technical Blogging</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+
+<h1>I Added Margin Notes to my Blog</h1>
+
+<div class="posttalk-metadata">
+  <time datetime="2024-09-04">04 September 2024</time>
+</div>
+<ul class="post-metadata">
+	<li><a href="/tags/design/" class="post-tag">design</a>, </li>
+	<li><a href="/tags/website/" class="post-tag">website</a>, </li>
+	<li><a href="/tags/marginalia/" class="post-tag">marginalia</a></li>
+</ul>
+
+
+<article>
+<p><em>Note: This post is best seen on my site, on a desktop/laptop. Mobile and RSS readers won't show you all the margin-y goodness.</em></p>
+<hr/>
+<p>Because I can't leave a challenge alone, I added basic margin notes to this blog. The approach is basically from <a href="https://github.com/edwardtufte/tufte-css">Tufte-CSS</a>, and I now have both (unnumbered) margin notes<label for="defs" class="margin-toggle">⊕</label>
+<input type="checkbox" id="defs" class="margin-toggle"/>
+<span class="marginnote">Following Tufte, I'll use <em>margin note</em> for unnumbered marginalia, and <em>side note</em> for numbered ones.</span> and standard footnotes. Here's an <a href="/pages/story-of-kritakrita">example page</a> to show it off.</p>
+<p>And here's a sneak preview of how to add a margin note:<label for="tip" class="margin-toggle">⊕</label>
+<input type="checkbox" id="tip" class="margin-toggle"/>
+<span class="marginnote">It took me a bit to find out <a href="https://markllobrera.com/posts/eleventy-escaping-nunjucks-statements-in-markdown-code-blocks/">how to escape the shortcode in this code snippet</a>.</span></p>
+<pre class="language-javascript" tabindex="0"><code class="language-javascript">
+Here is some text<span class="token punctuation">{</span><span class="token operator">%</span> marginnote <span class="token string">"demo"</span><span class="token punctuation">,</span> <span class="token string">"This is a note."</span> <span class="token operator">%</span><span class="token punctuation">}</span> to annotate<span class="token punctuation">.</span>
+</code></pre>
+<p>Which produces:</p>
+<blockquote>
+<p>Here is some text<label for="demo" class="margin-toggle">⊕</label>
+<input type="checkbox" id="demo" class="margin-toggle"/>
+<span class="marginnote">This is a note.</span> to annotate.</p>
+</blockquote>
+<p>Although, as you can see, I don't have it working quite right with notes in blockquotes. Later....</p>
+<h3 id="deciding-on-the-approach" tabindex="-1">Deciding on the Approach <a class="header-anchor" href="#deciding-on-the-approach">#</a></h3>
+<p>When deciding whether and how to do this, I had a couple of criteria for an acceptable solution:</p>
+<ul>
+<li>It had drop into the blog with minimal template tweaking.</li>
+<li>It had to be maintainable and <a href="/blog/2024-02-21-clarity-not-magic/">not magic</a>.</li>
+</ul>
+<p>This eliminated both <a href="https://eleventufte.netlify.app/">eleventufte</a> and <a href="https://github.com/luhmann/tufte-markdown"><code>tufte-markdown</code></a>, the parser that powers eleventufte, since the <code>tufte-markdown</code> project is no longer actively maintained. Sure, it works now; but if/when it ever stops working, I can't fix it. It also eliminated the javascript solution from Mark Llobrera that I discussed in my <a href="/blog/2024-09-04-sidenotes/">last post</a>. His particular implementation felt tightly coupled to his grid-based blog layout; and while a better web developer than I could probably decouple them, I can't, and I'm not overhauling my entire blog, either.</p>
+<p>Going straight to the implementation in Tufte-CSS seemed the best. I just hoped I had enough CSS know-how to figure it out.</p>
+<h3 id="let-s-do-it" tabindex="-1">Let's do it! <a class="header-anchor" href="#let-s-do-it">#</a></h3>
+<p>Adding the markdown CSS was not as painful as I thought it would be. I'll walk through it now, somewhat slowly, for the benefit of any readers at my level of non-expertise, who might be considering this. The discussion will be in the context of my static blog generator, eleventy; but the process should be generalizable to other frameworks.</p>
+<h3 id="1-add-marginnote-css-to-wherever-your-blog-keeps-its-stylesheets" tabindex="-1">1. Add <code>marginnote.css</code> to wherever your blog keeps its stylesheets. <a class="header-anchor" href="#1-add-marginnote-css-to-wherever-your-blog-keeps-its-stylesheets">#</a></h3>
+<p>Here's my CSS, <a href="https://github.com/NinaZumel/NinaZumel.github.io/blob/master/public/css/marginnote.css"><code>marginnote.css</code></a>, which is stripped down and slightly modified from the original <a href="https://github.com/edwardtufte/tufte-css/blob/gh-pages/tufte.css"><code>tufte.css</code></a>. What it does, in English: Assume your annotated content is in an <code>article</code> container. Then the stylesheet defines the major content containers (<code>p</code>, <code>pre</code>, <code>ul</code> and <code>blockquote</code>) to only occupy a fraction of the <code>article</code> container's width (65%, for me), on the left. The <code>marginnote</code> container can then float to the right side, into the empty space. The stylesheet also adjusts <code>img</code> and image captions to only occupy the content space (not the note space).</p>
+<p>There's also a fallback for narrow viewports, like mobile. When the viewport is too narrow to hold the margin notes, a little symbol, ⊕ (that's &quot;<code>&amp;#8853;</code>&quot;), appears next to where the margin note is anchored (like the number on a footnote). Clicking on the symbol toggles the note on and off, inline. Try it: just narrow your browser window until the margin notes disappear; you should see the little markers where the notes should be.</p>
+<p>If you are thinking about doing this, you can start with my stylesheet, and adjust the variables to suit your blog.<label for="newbie" class="margin-toggle">⊕</label>
+<input type="checkbox" id="newbie" class="margin-toggle"/>
+<span class="marginnote">If you are truly a novice at this, as I am, it can be helpful to put colored borders around the body, paragraph, and marginnote containers. This helps you visualize how changes to offsets, margins, and paddings affect the layout.</span> Note that <strong>this template assumes you'll only use <code>&lt;article&gt;</code> for potentially annotated content</strong> (in my case, only posts). If you use <code>article</code> for other purposes, you'll probably have to
+create a special class---<code>&lt;article class=&quot;annotated&quot;&gt;</code>, or something---and modify the css accordingly.</p>
+<h3 id="2-modify-the-post-template" tabindex="-1">2. Modify the post template. <a class="header-anchor" href="#2-modify-the-post-template">#</a></h3>
+<p>It seems reasonable to assume I'll only need margin notes in blog posts, which is good -- I can localize my changes. I use Nunjucks to define my layout, so
+I made a couple of changes to my template, <code>post.njk</code>.<label for="page" class="margin-toggle">⊕</label>
+<input type="checkbox" id="page" class="margin-toggle"/>
+<span class="marginnote">I created a simple annotated page template, too, but the example I linked to above is probably the only time I'll ever use it.</span></p>
+<p>1. I included the css, of course:</p>
+<pre class="language-javascript" tabindex="0"><code class="language-javascript">
+<span class="token punctuation">{</span><span class="token operator">%</span><span class="token operator">-</span> css <span class="token operator">%</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token operator">%</span> include <span class="token string">"public/css/marginnote.css"</span> <span class="token operator">%</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token operator">%</span><span class="token operator">-</span> endcss <span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre>
+<p>2. Then I wrapped the post content in an <code>article</code> container:</p>
+<pre class="language-html" tabindex="0"><code class="language-html">
+{# wrap the content in an article container so that the margin notes work #}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span><span class="token punctuation">></span></span>
+  {{ content | safe }}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="3-if-needed-widen-the-body-width" tabindex="-1">3. (If needed) Widen the body width. <a class="header-anchor" href="#3-if-needed-widen-the-body-width">#</a></h3>
+<p>You might want to widen the width of your content area to accomodate the notes. I suppose I could have made my <code>article</code> container wider than my <code>body</code>, but then I'd have to fiddle with alignments and stuff. I just widened the entire blog. Presumably, the setting is in your primary stylesheet.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+	<span class="token property">max-width</span><span class="token punctuation">:</span> 70em<span class="token punctuation">;</span> <span class="token comment">/* used to be 50em */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>That was all that was truly necessary. I did restrict the widths of a couple of other container classes back down to 50em, but that was strictly for aesthetic reasons. The site certainly wouldn't break if I'd left them at their defaults.</p>
+<p>This now gives you margin notes, if you are willing to put the html in your posts by hand (I know you're not, but I think it helps to see the steps). That would look
+like this:</p>
+<pre class="language-html" tabindex="0"><code class="language-html">This is some text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note-id<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>margin-toggle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity" title="&#8853;">&amp;#8853;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+			   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note-id<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>margin-toggle<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+			   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>marginnote<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is the note.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> 
+to annotate.</code></pre>
+<blockquote>
+<p>This is some text<label for="note-id" class="margin-toggle">⊕</label>
+<input type="checkbox" id="note-id" class="margin-toggle"/>
+<span class="marginnote">This is the note.</span>
+to annotate.</p>
+</blockquote>
+<p>Yeah, it's ugly, but that's how the Tufte-CSS folks designed it. Hence, the shortcode. If I were really clever, I'd figure out how to redefine the footnote syntax; but I'm not really clever. I assume redefining the footnote notation is what <code>tufte-markdown</code> does, but as I said above, that's not an option.</p>
+<h3 id="4-define-the-shortcode" tabindex="-1">4. Define the shortcode. <a class="header-anchor" href="#4-define-the-shortcode">#</a></h3>
+<p>For eleventy, this goes in <code>eleventy.config.js</code>, or <code>eleventy.js</code>, depending on how your site is set up. For other frameworks, consult your documentation.</p>
+<pre class="language-javascript" tabindex="0"><code class="language-javascript">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// lots of config, blah blah blah...</span>
+
+    <span class="token comment">// shortcode for adding margin notes</span>
+    eleventyConfig<span class="token punctuation">.</span><span class="token function">addShortcode</span><span class="token punctuation">(</span><span class="token string">'marginnote'</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> content</span><span class="token punctuation">)</span> <span class="token operator">=></span> 
+            <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;label for="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" class="margin-toggle">&amp;#8853;&lt;/label>
+            &lt;input type="checkbox" id="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" class="margin-toggle"/>
+            &lt;span class="marginnote"></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>content<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/span></span><span class="token template-punctuation string">`</span></span>
+        
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// more config ...</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The shortcode has two arguments: an id for the note, and the note content, which is a string of markdown. You can include links or formatting. The id matches the toggle to the note in narrow mode, so make them unique, or a single toggle will hide/display multiple notes on the page. The ugly html example above then becomes:</p>
+<pre class="language-javascript" tabindex="0"><code class="language-javascript">
+This is some text<span class="token punctuation">{</span><span class="token operator">%</span> marginnote <span class="token string">"note-id"</span><span class="token punctuation">,</span> <span class="token string">"This is the note."</span> <span class="token operator">%</span><span class="token punctuation">}</span> to annotate<span class="token punctuation">.</span>
+</code></pre>
+<p>And that's it! You can now annotate your posts with marginalia!</p>
+<h2 id="shortcomings-of-the-approach" tabindex="-1">Shortcomings of the approach <a class="header-anchor" href="#shortcomings-of-the-approach">#</a></h2>
+<h3 id="only-margin-notes-and-only-short-ones" tabindex="-1">Only margin notes, and only short ones. <a class="header-anchor" href="#only-margin-notes-and-only-short-ones">#</a></h3>
+<p>Tufte-CSS includes both (numbered) sidenotes and (unnumbered) margin notes. With the sidenotes, in narrow mode, the toggling was attached to the number, as with a footnote. I could get the sidenotes to appear in the margin, but I couldn't make them toggle in narrow mode. I'm not sure why. My best guess is that something in my main css was clobbering it. It was too much work to figure that out, and maybe it's for the best. If I did have them, I'd have to figure out how to set different numbering systems (1,2,3; a,b,c...) for the sidenotes and the footnotes.</p>
+<p>Because it's good to still have the footnotes! Unlike the javascript-based solution that I used for <a href="https://ninazumel.com/TwelveMedievalGhostStories/"><em>Twelve Medieval Ghost Stories</em></a>, this CSS-only solution will not prevent notes from overlapping if they are too close together or too long. So having standard footnotes is still the right solution for lengthy notes, like the note in <a href="/blog/2024-08-20-saturated-models/">this post</a>.<label for="long" class="margin-toggle">⊕</label>
+<input type="checkbox" id="long" class="margin-toggle"/>
+<span class="marginnote">That's also a multi-paragraph note, which I just discovered you can do! With footnotes only, not margin notes.</span></p>
+<h3 id="they-don-t-cos-play-as-footnotes" tabindex="-1">They don't cos-play as footnotes. <a class="header-anchor" href="#they-don-t-cos-play-as-footnotes">#</a></h3>
+<p>The javascript-based solution at <em>Twelve Medieval Ghost Stories</em> uses standard footnote notation in the markdown, and a footnote class that can switch between a sidenote and footnote appearance as necessary. This means sidenotes &quot;degrade&quot; gracefully to standard footnotes on mobile, and presumably, in RSS readers. Though I admit, I've never checked.</p>
+<p>This solution degrades gracefully on mobile, but I suspect a lot of readers won't realize the &quot;⊕&quot; symbol marks the presence of a note, so the notes effectively get lost. And I don't think RSS readers will handle them well at all. In fact, I shudder to think how this post must look in RSS, since I've been profligate with notes (after all, now that I have them...). But, well, what's the point of having a nice-looking blog if no one's going to look at it? Click through to people's sites, sometimes, folks!</p>
+<h2 id="on-the-positive-side" tabindex="-1">On the positive side... <a class="header-anchor" href="#on-the-positive-side">#</a></h2>
+<p>For obscenely long articles (like this one), margin notes (or sidenotes) are clearly preferable. They save the reader from having to constantly click back and forth from the text to the note, which I suspect most readers don't. I've always wanted them, and now I can check them off my &quot;nice-to-have&quot; list.</p>
+
+</article>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2024-09-04-sidenotes/">Playing With Sidenotes</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2024 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2024-09-07-marginnotes-on-my-blog/ -->
+	</body>
+</html>
