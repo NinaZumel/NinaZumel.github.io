@@ -177,6 +177,124 @@ pre[class*="language-diff-"] {
 	text-decoration: none; /* override del, ins, mark defaults */
 	color: inherit; /* override del, ins, mark defaults */
 }
+/* minimal implementation; just plain text in the margin, no blockquotes, code, etc */
+/* only (unnumbered) margin notes, no sidenotes */
+/* stripped down from https://github.com/edwardtufte/tufte-css */
+
+/* need this for correct sidenote numbering; but I'm not using sidenotes */
+/*
+body {
+    counter-reset: sidenote-counter; 
+} 
+*/
+
+/* since I imagine these will change with different templates */
+:root {
+    --content-width: 65%;
+    --image-padding: 5%;
+    --image-max: 60%;  /* total image+padding <= content-width */
+    --notewidth: 30%; 
+    /* content-width + notewidth <  100%. I think you should leave some wiggle room. */
+    --note-right-margin: -45%; 
+    /* if this margin is -(notewidth), the note will start just on the right border of the text */
+    /* so push it a little to the right (more negative) */
+}
+
+article {
+	padding-top: 1rem; 
+}
+
+/* make room for the notes in the article container */
+article > p,
+article > pre,
+article > ul {
+    width: var(--content-width);
+}
+
+/* blockquotes should be a little shorter */
+article > blockquote {
+    width: calc(var(--content-width) * 0.8);
+}
+
+/* keep images/captions in the text column, rather than centered in the article container */
+article > img {
+    margin-left: 0;
+    padding-left: var(--image-padding);
+    max-width: var(--image-max); 
+}
+
+article > p.caption {
+	text-align: left;
+    padding-left: var(--image-padding);
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+ /* finally, the margin note */
+.marginnote {    
+    float: right;
+    clear: right;
+    width: var(--notewidth);         
+    margin-right: var(--note-right-margin);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+
+input.margin-toggle {
+    display: none;
+}
+
+
+label.margin-toggle {    
+    display: none;
+
+}
+
+/* The mobile fallback: */
+/* making max-width bigger makes the note fall inline sooner */
+@media (max-width: 768px) {  
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    article > p,
+    article > blockquote,
+    article > pre {
+        width: 100%;
+    }
+
+    label.margin-toggle {
+        display: inline;
+    }
+       
+    .marginnote {           
+         display: none;        
+        }    
+
+      
+    .margin-toggle:checked + .marginnote {            
+        display: block;            
+        float: left;            
+        left: 1rem;            
+        clear: both;            
+        width: 95%;            
+        margin: 1rem 2.5%;            
+        vertical-align: baseline;            
+        position: relative;        
+    }
+    label {
+        cursor: pointer;
+    }
+}
 * { box-sizing: border-box; }
 /* Defaults */
 :root {
@@ -237,7 +355,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 50em;
+	max-width: 70em; /* a little wider to accomodate margin notes */
 }
 
 /* 
@@ -285,7 +403,7 @@ p {
 	/* font-size: 1.2em; */
 }
 
-P.caption {
+p.caption {
 	text-align: center;
 	font-style: italic;
 	font-size: 0.9em;
@@ -361,6 +479,17 @@ code {
 	word-break: break-all;
 }
 
+/*
+  Custom containters
+*/
+div.message-box {
+	max-width: 50em; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
 /* Header */
 header {
 	display: flex;
@@ -401,6 +530,7 @@ header {
 	list-style: none;
 	padding: 0;
 	padding-left: 1.5rem;
+	max-width: 50em; /* keep it narrower than the new wider body width */
 }
 .postlist-item {
 	display: flex;
@@ -567,6 +697,7 @@ hr {
 
 		<main id="skip">
 			
+
 <h1>The Sphering Transform for Detecting Distribution Drift</h1>
 
 <div class="posttalk-metadata">
@@ -579,10 +710,13 @@ hr {
 	<li><a href="/tags/data-drift/" class="post-tag">data drift</a></li>
 </ul>
 
+
+<article>
 <p>I have a new blog post up on the Win Vector blog: <a href="https://win-vector.com/2023/08/20/detecting-data-differences-using-the-sphering-transform/">Detecting Data Differences Using the Sphering Transform</a>.</p>
 <img alt="Distributions of sphered norms for two data sets with different distributions" loading="lazy" decoding="async" src="/img/new_raw_comp_xformed-s2pbz_kSJE-400.png" width="609" height="470" srcset="/img/new_raw_comp_xformed-s2pbz_kSJE-400.png 400w, /img/new_raw_comp_xformed-s2pbz_kSJE-609.png 609w" sizes="50vw">
 <p>In this post, I discuss how to convert the problem of detecting changes in multivariate distributions to the simpler problem of detecting changes in univariate distributions. Please check it out.</p>
 
+</article>
 <ul class="links-nextprev"><li>Previous: <a href="/blog/2023-04-10-pandas-polars-rosetta-stone/">Pandas-Polars Rosetta Stone</a></li><li>Next: <a href="/blog/2024-01-29-fun-with-chatgpt/">Fun With Chat GPT</a></li>
 </ul>
 

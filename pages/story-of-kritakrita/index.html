@@ -3,179 +3,51 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>On Balance</title>
+		<title>The Story of Kritákrita</title>
 		<meta name="description" content="Data Scientist, San Francisco">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
-		<style>/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
+		<style>/* For displaying image and description*/
 
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #f8f8f2;
-	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+.author_container {
+	text-align: center;
+	vertical-align: middle;
 }
 
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.3em;
+.author_container img {
+	  max-width: 175px;
+	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #272822;
+.author_description {
+	margin-left: auto;
+    margin-right: auto;
+	line-height: 1;
+
 }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #8292a2;
-}
-
-.token.punctuation {
-	color: #f8f8f2;
-}
-
-.token.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #f92672;
-}
-
-.token.boolean,
-.token.number {
-	color: #ae81ff;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #a6e22e;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #e6db74;
-}
-
-.token.keyword {
-	color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
+.author_description p {
 	font-style: italic;
+	font-size: 1em;
+	color: #9B9C9D;
 }
 
-.token.entity {
-	cursor: help;
-}
-/*
- * New diff- syntax
- */
-
-pre[class*="language-diff-"] {
-	--eleventy-code-padding: 1.25em;
-	padding-left: var(--eleventy-code-padding);
-	padding-right: var(--eleventy-code-padding);
-}
-.token.deleted {
-	background-color: hsl(0, 51%, 37%);
-	color: inherit;
-}
-.token.inserted {
-	background-color: hsl(126, 31%, 39%);
-	color: inherit;
+.padded_author_container {
+	text-align: center;
+	padding-top: 100px;
 }
 
-/* Make the + and - characters unselectable for copy/paste */
-.token.prefix.unchanged,
-.token.prefix.inserted,
-.token.prefix.deleted {
-	-webkit-user-select: none;
-	user-select: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-.token.prefix.inserted,
-.token.prefix.deleted {
-	width: var(--eleventy-code-padding);
-	background-color: rgba(0,0,0,.2);
-}
-
-/* Optional: full-width background color */
-.token.inserted:not(.prefix),
-.token.deleted:not(.prefix) {
+.padded_author_container img {
+	max-width: 250px;
+	border-radius: 50%;
 	display: block;
-	margin-left: calc(-1 * var(--eleventy-code-padding));
-	margin-right: calc(-1 * var(--eleventy-code-padding));
-	text-decoration: none; /* override del, ins, mark defaults */
-	color: inherit; /* override del, ins, mark defaults */
+	margin-left: auto;
+	margin-right: auto;
 }
 /* minimal implementation; just plain text in the margin, no blockquotes, code, etc */
 /* only (unnumbered) margin notes, no sidenotes */
@@ -698,43 +570,49 @@ hr {
 		<main id="skip">
 			
 
-<h1>On Balance</h1>
-
-<div class="posttalk-metadata">
-  <time datetime="2012-12-18">18 December 2012</time>
-</div>
-<ul class="post-metadata">
-	<li><a href="/tags/musings/" class="post-tag">musings</a></li>
-</ul>
-
-
 <article>
-<p>One of my favorite cheesy movies is a gem from 1984 called <a href="http://en.wikipedia.org/wiki/The_Adventures_of_Buckaroo_Banzai_Across_the_8th_Dimension"><em>The Adventures of Buckaroo Banzai Across the 8th Dimension</em></a>. For those who haven't seen it, Buckaroo Banzai is a brilliant young neurosurgeon and particle physicist who spends his days conducting cutting-edge research. At night, he and his research colleagues -- all engineers and scientists and doctors -- rock New Jersey as a band called the Hong Kong Cavaliers. In between the brilliant science and the rock-star night life, the Cavaliers find time to save the world from an alien invasion led by none other than John Lithgow.</p>
-<img alt="John Lithgow" loading="lazy" decoding="async" src="/img/Lithgow-iA5s1FULGt-400.png" width="400" height="230">
-<p>It's very eighties: full of funky jackets with padded shoulders and some crazy hair. I can't recommend it enough.</p>
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>What happens if you want to be Buckaroo Banzai in real life? Here's what biologist Adam Ruben writes in his article <a href="http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_12_14/caredit.a1200137">"The Myth of the Well-Rounded Scientist:"</a></p>
-<blockquote><p>Scientists with outside interests are often regarded with suspicion in the lab; we can be seen as undedicated, unfocused, easily distracted, and so divorced from the scientific frame of mind that we’ll probably end up working in—oh, the shame—industry.</p></blockquote>
-<p>Ruben started his "Batman job," as he calls it -- stand-up comedy -- in grad school, and it was in grad school where he learned to hide his extracurricular activity.</p>
-<blockquote><p>One day, my adviser called me into his office. The campus newspaper had just published a little profile of the stand-up-comedy-performing grad student, and my adviser happened to read it. Over the next 10 minutes, I learned that my hobby was an embarrassment to the department, that there was no way I could properly focus on biology, and that every negative lab result I ever produced was a direct result of telling jokes at night.</p>
-<p>For a moment, I even believed it was true. …</p></blockquote>
-<p>It's not true, of course. Very few people truly want to spend every waking hour in the lab (or office) and, <a href="http://www.salon.com/2012/03/14/bring_back_the_40_hour_work_week/">frankly, no one should</a>. And if you're not in the lab or the office, why shouldn't you be standing onstage somewhere, performing?</p>
-<p>It's a variation on <a href="http://www.theatlantic.com/magazine/archive/2012/07/why-women-still-cant-have-it-all/309020/">the problem that professional women with children have faced for years:</a> the so-called "work/life balance" issue. I've always hated that phrase. It implies that if you have a "life" -- children, family, other creative interests, what have you -- then by definition, your work isn't part of your life. And so it follows that you aren't as "dedicated" or "passionate" about your work as you ought to be.</p>
-<p>And that's nonsense. I, too, have a "Batman job": I dance. I have rehearsal three to four times a week, and a performance at least once a month -- sometimes more. I love my Batman job. And I love my day job, too. Being a data scientist <em>is</em> a part of my life, just as much as being a dancer, a wife, a daughter, and a blogger are all parts of my life.</p>
-<p>It's not "work/life balance" -- it's "life balance." For some people, that balance honestly means spending 99.5% of their waking hours eating, breathing, and dreaming about data science or biology or math or marketing strategy. For others, like me, balance means spending 50% of my time (or whatever 40 hours a week -- sometimes a little more, not much less -- comes to) thinking about data science, and 50% of my time thinking about other things.</p>
-<p>It also means that for that 50% of my time that I spend on data science, I concentrate on data science: my clients' projects, my data science writing, or my data science reading. Having other interests is an advantage here. I am forced to be efficient with the hours I spend on my day job, because no matter what (except for a dire emergency), at 7:30 pm I have to get up and go to rehearsal. I can't make up for lazy days with long nights in front of the computer.</p>
-<p>The break probably does my brain good, too. The mathematician Jacques Hadamard, in his book <em>The Psychology of Invention in the Mathematical Field</em>, wrote about what he and Henri Poincaré called "incubation": the process of letting go of conscious thought about a difficult problem and allowing your unconscious mind to work on it instead. Incubation leads to breakthrough. Here, Hadamard quotes Poincaré:</p>
-<blockquote><p>"When, as must often happen, the thinker makes a false start, he slides insensibly into a groove and may not be able to escape at the moment. … Incubation would consist in getting rid of false leads and hampering assumptions so as to approach the problem with an 'open mind.'" We can call this the <em>forgetting-hypothesis</em>.</p></blockquote>
-<p>In other words, when you are stuck on something, stop working and literally forget about it; think about something else. What better way to get your mind out of its rut than to go out and dance, or work on your stand-up comedy routine, or play with your kids? My husband, who is a dedicated computer scientist and mathematician, tells of similar experience. He recently started to teach himself to draw, and tries to spend a at least an hour a day working on sketching exercises. As with any exercise or drill, this can sometimes begin to feel tedious. The way my husband tells it, his brain is so desperate to break out of the tedium that it will of its own volition start chewing on whatever difficult problem has presented itself in his work life. By the time he is done with his exercises, he often has a new breakthrough, and can sit at the computer to attack his sticky problem with a fresh mental outlook.</p>
-<p>Being a 50% data scientist instead of a 99% data scientist doesn't mean I don't enjoy what I do for a living. It doesn't mean I'm not good at it. It doesn't mean that I take my responsibilities to clients and peers any less seriously than a 99 percenter. It does mean that I have chosen to give up certain achievements that likely come only with a eat-breathe-dream lifestyle. I will never win a Nobel or a Fulkerson Prize. I will never be a world-famous thought leader on data science (or anything else). I will never hold a Cabinet position. I will never run a multimillion-dollar corporation, or be a senior executive at such a corporation. I will never be as rich as Bill Gates or Sergey Brin. </p>
-<p>And that's okay. As long as I have a good professional reputation, as long as my peers and clients respect me and respect my work, I'm satisfied. Just don't mistake my lack of ambition for certain measures of success as a lack of dedication to my field -- or a lack of competence.</p>
+<h1 id="the-story-of-kritakrita" tabindex="-1">The Story of Kritákrita <a class="header-anchor" href="#the-story-of-kritakrita">#</a></h1>
+<p>By Francis William Bain (1898)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>There was once a Brahman named Kritákrita,<label for="kritakrita" class="margin-toggle">⊕</label>
+<input type="checkbox" id="kritakrita" class="margin-toggle"/>
+<span class="marginnote"><em>Kritákrita</em>: Done and not done.</span> who neglected the study of the Wédas, and walked in the black path, abandoning all his duties<label for="abandoning" class="margin-toggle">⊕</label>
+<input type="checkbox" id="abandoning" class="margin-toggle"/>
+<span class="marginnote"><em>abandoning...</em>: <em>Achárabhrashta</em>, an apostate or decasted person..</span>, and associating with gamblers, harlots, and outcasts. And he frequented the cemeteries at night, and became familiar with ghosts and vampires and dead bodies, and impure and unholy rites and incantations.</p>
+<p>And one night, amid the flaming of funeral pyres and the reek of burning corpses, a certain Vampire<label for="vampire" class="margin-toggle">⊕</label>
+<input type="checkbox" id="vampire" class="margin-toggle"/>
+<span class="marginnote"><em>Vampire…</em>: <em>Wétála</em>, an uncanny being, generally possessing magic powers, given to occupying empty corpses and devouring human flesh.</span> of his acquaintance said to him: I am hungry: bring me fresh meat to devour, or I will tear you in pieces.</p>
+<p>Then Kritákrita said: I will bring it, but not for nothing. What will you give me for it?</p>
+<p>The Vampire replied: Bring me a newly slain Brahman, and I will teach you a spell for raising the dead.</p>
+<p>But Kritákrita said: That is not enough. And they haggled in the cemetery about the price.</p>
+<p>At last that abandoned Brahman said: Throw in a pair of dice that will enable me always to win at play, and I will bring you the flesh you require. So the Vampire said: Be it so.</p>
+<p>Then Kritákrita went away, and knowing no other resource secretly murdered his own brother, and brought him to the cemetery at midnight. And the Vampire kept his word, giving him the dice, and teaching him the spell.</p>
+<p>Then some time afterwards, Kritákrita said to himself: I will try the efficacy of this spell that the Vampire has taught me. So he procured the body of a dead Chandála,<label for="chandala" class="margin-toggle">⊕</label>
+<input type="checkbox" id="chandala" class="margin-toggle"/>
+<span class="marginnote"><em>Chandála</em>: The lowest caste, whose very proximity was pollution to a Brahman.</span> and taking it at the dead of night to the cemetery, placed it on the ground, and began to recite the spell.</p>
+<p>But when he had got halfway through, he looked at the corpse, and saw its left arm, and leg, and eye moving horribly with life, the other half being still dead. And he was so terrified at the sight, that he utterly forgot the rest of the spell, and leaped up and ran away.</p>
+<p>But the corpse jumped up also, and a vampire entered its dead half, and it rushed rapidly after him, shuffling on one leg, and rolling its one eye, and yelling indistinctly: <em>Underdone, overdone, undone!</em><label for="underdone" class="margin-toggle">⊕</label>
+<input type="checkbox" id="underdone" class="margin-toggle"/>
+<span class="marginnote"><em>Underdone, overdone, undone…</em>: This is all one word in the original, <em>únádhikákritamkritam</em>, ‘what has been done is too little, too much, and not done at all.’</span></p>
+<p>But Kritákrita fled at full speed to his house, and getting into bed lay there trembling. And after a while he fell asleep. And then suddenly he awoke, hearing a noise, and he looked and saw the door open, and the corpse of that dead Chándála came in, and shuffled swiftly towards him on its left leg, rolling its left eye, with its dead half hanging down beside it, and crying in a terrible voice: <em>Underdone, overdone, undone!</em></p>
+<p>And Kritákrita sprang out of bed, and ran out by another door, and mounting a horse, fled as fast as he could to another city a great way off.</p>
+<p>And there he thought: Here I am safe. So he went day by day to the gambling hall, and playing with his dice, won great sums of money, and lived at his ease, feasting himself and others. But one night, when he was sitting among the gamblers in the gambling hall, throwing the dice, he heard behind him a noise of shuffling. And he looked round, and saw, coming swiftly towards him on one leg, the corpse of that dead Chándála, with its dead half rotting and hanging down, and its left eye rolling in anger, and calling out in a voice of thunder: <em>Underdone, overdone, undone!</em></p>
+<p>And he rose up with a shriek, and leaped over the table, and fled away by an opposite door and left that city, and ran as fast as he could, constantly looking behind him through the forest for many days and nights, never daring to stop even to take breath, till he reached another city a long way off. And there he remained, disguised and concealed, as it were in a hole. But all the gamblers in that gambling saloon died of fear.</p>
+<p>And after some time he again accumulated wealth by gambling in that city, and lived in extravagance at his ease. But one night, when he was sitting with an <em>hetæra</em><label for="hetaera" class="margin-toggle">⊕</label>
+<input type="checkbox" id="hetaera" class="margin-toggle"/>
+<span class="marginnote"><em>hetæra…</em> (Ancient Greek): A highly cultivated hired female companion who would entertain upper-class male clients and might perform sex acts for them. (Wiktionary) [NZ]</span> whom he loved, in the inner room of her house, he heard the noise of shuffling.</p>
+<p>And he looked round, and saw once more the corpse of that dead Chándála coming swiftly towards him on one leg, with its dead half, from whose bones the flesh had rotted away, hanging down, and its left eye blazing with flames of rage, calling out with a voice like the scream of Ráwana:<label for="rawana" class="margin-toggle">⊕</label>
+<input type="checkbox" id="rawana" class="margin-toggle"/>
+<span class="marginnote"><em>Ráwana…</em>: In the Ramayana, <a href="https://en.wikipedia.org/wiki/Ravana">Ravana</a> was the king of Lanka, who kidnapped Rama’s wife Sita. The name means “roaring” or “screamer.” [NZ]</span> <em>Underdone, overdone, undone!</em></p>
+<p>Then that <em>hetæra</em> then and there abandoned the body in her terror. And Kritákrita rose up, and ran out by a door, which led out upon the balcony, while the Chándála hastened after him. And finding no other outlet, Kritákrita flung himself down into the street, and was dashed to pieces, and died.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Transcriber’s Note: Taken from Day 19 of F. W. Bain’s Arabian Nights-style story cycle, <em>A Digit of the Moon (1898)</em>. I’ve removed the continuity passages and left just the standalone story. All footnotes are by Bain, except those marked [NZ], which are by me. I’ve also re-paragraphed the story, for legibility. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 </article>
-<ul class="links-nextprev"><li>Previous: <a href="/blog/2012-10-11-i-write-therefore-i-think/">I Write, Therefore I Think</a></li><li>Next: <a href="/blog/2013-01-05-whats-wrong-with-a-lower-stress-job/">What&#39;s Wrong with a Low(er)-Stress Job?</a></li>
-</ul>
-
 		</main>
 
 		<!-- footer -->
@@ -780,6 +658,6 @@ hr {
 </div>
 		<!-- /footer-- >
 
-		<!-- Current page: /blog/2012-12-18-on-balance/ -->
+		<!-- Current page: /pages/story-of-kritakrita/ -->
 	</body>
 </html>
