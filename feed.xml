@@ -33,7 +33,7 @@ Here is some text&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&
 &lt;input type=&quot;checkbox&quot; id=&quot;demo&quot; class=&quot;margin-toggle&quot;&gt;
 &lt;span class=&quot;marginnote&quot;&gt;This is a note.&lt;/span&gt; to annotate.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Although, as you can see, I don&#39;t have it working quite right with notes in blockquotes. Later....&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Although, as you can see, I don&#39;t have it working quite right with notes in blockquotes. Later....&lt;/s&gt; [Fixed it.]&lt;/p&gt;
 &lt;h3 id=&quot;deciding-on-the-approach&quot; tabindex=&quot;-1&quot;&gt;Deciding on the Approach &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When deciding whether and how to do this, I had a couple of criteria for an acceptable solution:&lt;/p&gt;
 &lt;ul&gt;

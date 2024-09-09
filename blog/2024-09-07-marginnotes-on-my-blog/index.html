@@ -211,9 +211,12 @@ article > ul {
     width: var(--content-width);
 }
 
-/* blockquotes should be a little shorter */
-article > blockquote {
-    width: calc(var(--content-width) * 0.8);
+/* 
+  blockquotes should be a little shorter 
+  This assumes that left indentation is 2em, which is what it looks like.
+  */
+  article > blockquote {
+    width: calc(var(--content-width) - 2em); 
 }
 
 /* keep images/captions in the text column, rather than centered in the article container */
@@ -728,7 +731,7 @@ Here is some text<span class="token punctuation">{</span><span class="token oper
 <input type="checkbox" id="demo" class="margin-toggle"/>
 <span class="marginnote">This is a note.</span> to annotate.</p>
 </blockquote>
-<p>Although, as you can see, I don't have it working quite right with notes in blockquotes. Later....</p>
+<p><s>Although, as you can see, I don't have it working quite right with notes in blockquotes. Later....</s> [Fixed it.]</p>
 <h3 id="deciding-on-the-approach" tabindex="-1">Deciding on the Approach <a class="header-anchor" href="#deciding-on-the-approach">#</a></h3>
 <p>When deciding whether and how to do this, I had a couple of criteria for an acceptable solution:</p>
 <ul>

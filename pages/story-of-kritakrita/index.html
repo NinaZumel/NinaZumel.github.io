@@ -83,9 +83,12 @@ article > ul {
     width: var(--content-width);
 }
 
-/* blockquotes should be a little shorter */
-article > blockquote {
-    width: calc(var(--content-width) * 0.8);
+/* 
+  blockquotes should be a little shorter 
+  This assumes that left indentation is 2em, which is what it looks like.
+  */
+  article > blockquote {
+    width: calc(var(--content-width) - 2em); 
 }
 
 /* keep images/captions in the text column, rather than centered in the article container */
