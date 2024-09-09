@@ -24,7 +24,7 @@ Which produces:
 
 > Here is some text{% marginnote "demo", "This is a note." %} to annotate.
 
-Although, as you can see, I don't have it working quite right with notes in blockquotes. Later....
+~~Although, as you can see, I don't have it working quite right with notes in blockquotes. Later....~~ [Fixed it.]
 
 ### Deciding on the Approach
 
