@@ -55,4 +55,4 @@ Both online and in-person.
 </div>
 
 
-<p><small>Image from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><em>The Genetic Art Project</em></a>, by John Mount</small></p>
+<p style="padding-left:9em"><small>Image from <a href="https://johnmount.github.io/mzlabs/GeneticArt/"><em>The Genetic Art Project</em></a>, by John Mount</small></p>
