@@ -142,21 +142,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/musings/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/data-science/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/statistics/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/blogging/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -168,6 +153,21 @@
 	
 	<url>
 		<loc>https://ninazumel.com/tags/technical-writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/musings/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-science/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/statistics/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	

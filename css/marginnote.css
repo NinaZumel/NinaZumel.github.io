@@ -28,9 +28,23 @@ article {
 /* make room for the notes in the article container */
 article > p,
 article > pre,
-article > ul {
+article > ul,
+article > ol {
     width: var(--content-width);
 }
+
+article > hr {
+    max-width: var(--content-width);
+    margin: 0
+}
+
+article > h1, 
+article > h2,
+article > h3,
+article > h4 {
+    max-width: var(--content-width);
+}
+
 
 /* 
   blockquotes should be a little shorter 
