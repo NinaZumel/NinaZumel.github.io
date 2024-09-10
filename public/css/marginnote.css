@@ -32,6 +32,19 @@ article > ul {
     width: var(--content-width);
 }
 
+article > hr {
+    max-width: var(--content-width);
+    margin: 0
+}
+
+article > h1, 
+article > h2,
+article > h3,
+article > h4 {
+    max-width: var(--content-width);
+}
+
+
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
