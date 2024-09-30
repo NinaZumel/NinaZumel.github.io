@@ -12,15 +12,15 @@ this puzzle is originally from *Problèmes plaisans et délectables qui se
 font par les nombres* (Pleasant and delectable number problems), by
 French mathematician [Claude Gaspar Bachet de
 Méziriac](https://en.wikipedia.org/wiki/Claude_Gaspar_Bachet_de_M%C3%A9ziriac)
-(1851-1636).[^1]
+(1551-1636).[^1]
 
 {% image "./images/four-weights.png", "Illustration of a balance scale and four weightss" %}
 <p class="caption">A balance scale and four weights.
 <a href="https://archive.org/details/TheStrandMagazineAnIllustratedMonthly/TheStrandMagazine1908bVol.XxxviJan-jun/page/n787/mode/1up?view=theater">Image Source</a></p>
 
 > You have four (integral) weights $w_1, w_2, w_3, w_4$ and a balance
-> scale such that you can weigh any (integral) number of pounds from 1
-> lb to 40 lbs. The weights may go on either side of the scale (eg, with
+> scale such that you can weigh any object weighing from 1
+> lb to 40 lbs (no fractions). The weights may go on either side of the scale (eg, with
 > the object, or in the opposite pan). What are the $w_i$?
 
 This seems like a variation on the [Frobenius coin
