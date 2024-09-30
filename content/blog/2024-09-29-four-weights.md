@@ -42,7 +42,7 @@ computationally, let’s compute the solution using induction.
 Let’s rephrase the problem as
 
 > You have $n$ weights… such that you can weigh any number of pounds in
-> the range `1:m`….”
+> the range `1:m`….
 
 where $m$ depends on how many weights you have. We can also observe that
 the sum of all the weights must equal the weight of the heaviest object
@@ -76,7 +76,7 @@ $$
 s_1 w_1 + s_2 w_2 = x
 $$
 
-where $(w_1, w_2) = (1, 3)$ and $s_1 \in \{-1, 0, 1\}$. A positive
+where $(w_1, w_2) = (1, 3)$ and $s_i \in \{-1, 0, 1\}$. A positive
 coefficient means the weight is in the left pan, a negative one means
 it’s in the right pan, and zero means the weight isn’t used. This is
 essentially a “signed trinary” representation of $x$. For two digits,
