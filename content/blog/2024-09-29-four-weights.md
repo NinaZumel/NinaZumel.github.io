@@ -7,7 +7,7 @@ tags:
 ---
 
 Here’s another puzzle from Henry Dudeney’s article “The World’s Best
-Puzzles,”, *The Strand Magazine*, December 1908. According to Dudeney,
+Puzzles”, *The Strand Magazine*, December 1908. According to Dudeney,
 this puzzle is originally from *Problèmes plaisans et délectables qui se
 font par les nombres* (Pleasant and delectable number problems), by
 French mathematician [Claude Gaspar Bachet de
