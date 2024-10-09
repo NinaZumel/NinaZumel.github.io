@@ -1,6 +1,6 @@
 ---
 title: I Added Margin Notes to my Blog
-date: 2024-09-04
+date: 2024-09-07
 tags:
  - design
  - website
