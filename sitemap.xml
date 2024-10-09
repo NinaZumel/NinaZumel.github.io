@@ -142,7 +142,17 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/talks/</loc>
+		<loc>https://ninazumel.com/tags/blogging/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/teaching/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/technical-writing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -202,11 +212,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/blogging/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/website/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -237,17 +242,12 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/teaching/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/technical-writing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/math-puzzles/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/talks/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -324,5 +324,10 @@
 	<url>
 		<loc>https://ninazumel.com/blog/2024-10-03-perplexed-banker/</loc>
 		<lastmod>2024-10-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2024-10-08-coin-puzzles/</loc>
+		<lastmod>2024-10-08</lastmod>
 	</url>
 </urlset>

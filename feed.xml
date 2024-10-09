@@ -4,12 +4,67 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/"/>
-	<updated>2024-10-03T00:00:00Z</updated>
+	<updated>2024-10-08T00:00:00Z</updated>
 	<id>https://ninazumel.com/</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Coin Puzzles</title>
+		<link href="https://ninazumel.com/blog/2024-10-08-coin-puzzles/"/>
+		<updated>2024-10-08T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2024-10-08-coin-puzzles/</id>
+		<content type="html">&lt;p&gt;Here are a couple of puzzles from Henry Dudeney&#39;s article &amp;quot;The Best Puzzles with Coins,&amp;quot; in the &lt;em&gt;Strand Magazine&lt;/em&gt;, July 1909. These are maybe less interesting than the mathematical puzzles that John and I have been doing, but for whatever reason, they caught my eye.&lt;/p&gt;
+&lt;h2 id=&quot;kissing-coins&quot; tabindex=&quot;-1&quot;&gt;Kissing Coins &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-10-08-coin-puzzles/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If I lay a penny flat on the table, how many other pennies can I place around it, every one also lying flat on the table, so that they all touch the first one?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It needn&#39;t be pennies, of course. Any coin (or any disc) will do, as long as all the coins in question are the same size. Try to do this one by geometry, not experiment.&lt;/p&gt;
+&lt;h2 id=&quot;making-change&quot; tabindex=&quot;-1&quot;&gt;Making Change &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-10-08-coin-puzzles/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you split the check at restaurants a lot, then you probably have practical experience with this one, or at least you did until you and all your friends got Venmo. Remember, this puzzle is from 1909, though I&#39;ve reworded it slightly.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A tourist went into a shop in New York and bought goods at a cost of thirty-four cents. The only money they had was a dollar (100 cents),
+a three-cent piece, and a two-cent piece.&lt;label for=&quot;coins&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;coins&quot; class=&quot;margin-toggle&quot;&gt;
+&lt;span class=&quot;marginnote&quot;&gt;Yes! The U.S. &lt;a href=&quot;https://en.wikipedia.org/wiki/Two-cent_piece_(United_States)&quot;&gt;two-cent piece&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Three-cent_piece&quot;&gt;three-cent piece&lt;/a&gt; really existed, although by 1909 they probably weren&#39;t in circulation anymore.&lt;/span&gt;
+The seller had only a half-dollar and a quarter (25 cents). But another customer happened to be present, and when asked to help produced two dimes (dime = 10 cents), a nickel (5 cents), a two-cent piece, and a penny (1 cent). How did the seller make change?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Solutions beneath the 3-cent nickel.&lt;/p&gt;
+&lt;img alt=&quot;U.S. 3-cent nickel, front and back&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/1866_3_Cent_Nickel-_Cer9cEl3m-400.png&quot; width=&quot;800&quot; height=&quot;400&quot; srcset=&quot;https://ninazumel.com/img/1866_3_Cent_Nickel-_Cer9cEl3m-400.png 400w, https://ninazumel.com/img/1866_3_Cent_Nickel-_Cer9cEl3m-800.png 800w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Source: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:1866_3_Cent_Nickel.jpg&quot;&gt;Wikimedia&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;solutions&quot; tabindex=&quot;-1&quot;&gt;Solutions &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-10-08-coin-puzzles/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;kissing-coins-1&quot; tabindex=&quot;-1&quot;&gt;Kissing Coins &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-10-08-coin-puzzles/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Imagine three coins of radius &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.02ex&quot; height=&quot;1.025ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 451 453&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45F&quot; d=&quot;M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;, and lay them out so that they all just kiss each other:&lt;/p&gt;
+&lt;img alt=&quot;Sketch of three circles of radius r, just touching each other in a triangle shape&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/tripod-MxmaJF-KMG-400.png&quot; width=&quot;4284&quot; height=&quot;4284&quot; srcset=&quot;https://ninazumel.com/img/tripod-MxmaJF-KMG-400.png 400w, https://ninazumel.com/img/tripod-MxmaJF-KMG-800.png 800w, https://ninazumel.com/img/tripod-MxmaJF-KMG-1200.png 1200w, https://ninazumel.com/img/tripod-MxmaJF-KMG-4284.png 4284w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Why yes, we do have a chalkboard in our office.&lt;/p&gt;
+&lt;p&gt;Then the triangle formed by the center of the three coins is an equilateral triangle with sides &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.152ex&quot; height=&quot;1.532ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -666 951 677&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;path data-c=&quot;1D45F&quot; d=&quot;M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;. Each interior angle of the triangle is 60°.&lt;/p&gt;
+&lt;p&gt;360°/ 60° = 6, so we can lay out six such triangles around a center coin, where each coin just kisses its two neighboring coins. That&#39;s six coins (because every perimeter coin is in two triangles).&lt;/p&gt;
+&lt;img alt=&quot;Sketch of three circles of radius r, just touching each other in a triangle shape&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/kissing_discs-9Pmm1NeQEy-400.png&quot; width=&quot;600&quot; height=&quot;600&quot; srcset=&quot;https://ninazumel.com/img/kissing_discs-9Pmm1NeQEy-400.png 400w, https://ninazumel.com/img/kissing_discs-9Pmm1NeQEy-600.png 600w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;I didn&#39;t have any pennies to hand to demonstrate this, so I used refrigerator magnets instead..&lt;/p&gt;
+&lt;h3 id=&quot;making-change-1&quot; tabindex=&quot;-1&quot;&gt;Making change &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2024-10-08-coin-puzzles/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;At the start, the allocations are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;buyer: 100¢, 3¢, 2¢, and wants to make a 34¢ purchase&lt;/li&gt;
+&lt;li&gt;seller: 50¢, 25¢&lt;/li&gt;
+&lt;li&gt;customer: 10¢, 10¢, 5¢, 2¢, 1¢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the buyer gives the seller a dollar, then the change is 66¢, which obviously isn&#39;t going to work. So the buyer changes their 3¢ coin with the customer, for the 2¢ coin and the penny. This gives:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;buyer: 100¢, 2¢, 2¢, 1¢&lt;/li&gt;
+&lt;li&gt;seller: 50¢, 25¢&lt;/li&gt;
+&lt;li&gt;customer: 10¢, 10¢, 5¢, 3¢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now the buyer gives the seller $1.04, and needs 70¢ back.  So the seller changes their quarter with the customer for two dimes and a nickel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;buyer: &lt;s&gt;100¢, 2¢, 2¢,&lt;/s&gt; 1¢ and a 34¢ purchase&lt;/li&gt;
+&lt;li&gt;seller: (100¢, 2¢, 2¢) 50¢, 10¢, 10¢, 5¢,&lt;/li&gt;
+&lt;li&gt;customer: 25¢, 3¢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A half-dollar and two dimes is 70¢, so the seller can make change, and everyone is happy.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>The Perplexed Banker</title>

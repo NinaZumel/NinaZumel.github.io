@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Coin Puzzles</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* minimal implementation; just plain text in the margin, no blockquotes, code, etc */
+/* only (unnumbered) margin notes, no sidenotes */
+/* stripped down from https://github.com/edwardtufte/tufte-css */
+
+/* need this for correct sidenote numbering; but I'm not using sidenotes */
+/*
+body {
+    counter-reset: sidenote-counter; 
+} 
+*/
+
+/* since I imagine these will change with different templates */
+:root {
+    --content-width: 65%;
+    --image-padding: 5%;
+    --image-max: 60%;  /* total image+padding <= content-width */
+    --notewidth: 30%; 
+    /* content-width + notewidth <  100%. I think you should leave some wiggle room. */
+    --note-right-margin: -45%; 
+    /* if this margin is -(notewidth), the note will start just on the right border of the text */
+    /* so push it a little to the right (more negative) */
+}
+
+article {
+	padding-top: 1rem; 
+}
+
+/* make room for the notes in the article container */
+article > p,
+article > pre,
+article > ul,
+article > ol {
+    width: var(--content-width);
+}
+
+article > hr {
+    max-width: var(--content-width);
+    margin: 0
+}
+
+article > h1, 
+article > h2,
+article > h3,
+article > h4 {
+    max-width: var(--content-width);
+}
+
+
+/* 
+  blockquotes should be a little shorter 
+  This assumes that left indentation is 2em, which is what it looks like.
+  */
+  article > blockquote {
+    width: calc(var(--content-width) - 2em); 
+}
+
+/* keep images/captions in the text column, rather than centered in the article container */
+article > img {
+    margin-left: 0;
+    padding-left: var(--image-padding);
+    max-width: var(--image-max); 
+}
+
+article > p.caption {
+	text-align: left;
+    padding-left: var(--image-padding);
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+
+ /* finally, the margin note */
+.marginnote {    
+    float: right;
+    clear: right;
+    width: var(--notewidth);         
+    margin-right: var(--note-right-margin);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+
+input.margin-toggle {
+    display: none;
+}
+
+
+label.margin-toggle {    
+    display: none;
+
+}
+
+/* The mobile fallback: */
+/* making max-width bigger makes the note fall inline sooner */
+@media (max-width: 768px) {  
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    article > p,
+    article > blockquote,
+    article > pre {
+        width: 100%;
+    }
+
+    label.margin-toggle {
+        display: inline;
+    }
+       
+    .marginnote {           
+         display: none;        
+        }    
+
+      
+    .margin-toggle:checked + .marginnote {            
+        display: block;            
+        float: left;            
+        left: 1rem;            
+        clear: both;            
+        width: 95%;            
+        margin: 1rem 2.5%;            
+        vertical-align: baseline;            
+        position: relative;        
+    }
+    label {
+        cursor: pointer;
+    }
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--description-color: #9B9C9D;
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-70: #dad8d8;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 70em; /* a little wider to accomodate margin notes */
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+p.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+ 
+/* for the credits at the bottom of a page */
+p.credit {
+	max-width: 50em;
+	font-size: 0.9em;
+	margin-left: auto;
+	margin-right: auto;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/*
+  Custom containters
+*/
+div.message-box {
+	max-width: 50em; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+	max-width: 50em; /* keep it narrower than the new wider body width */
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--background-color0);
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/professional/">Professional</a></li>
+					<li class="nav-item"><a href="/pages/personal/">Personal</a></li>
+					<li class="nav-item"><a href="/pages/technical-blogging/">Technical Blogging</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+
+<h1>Coin Puzzles</h1>
+
+<div class="posttalk-metadata">
+  <time datetime="2024-10-08">08 October 2024</time>
+</div>
+<ul class="post-metadata">
+	<li><a href="/tags/math-puzzles/" class="post-tag">math puzzles</a></li>
+</ul>
+
+
+<article>
+<p>Here are a couple of puzzles from Henry Dudeney's article &quot;The Best Puzzles with Coins,&quot; in the <em>Strand Magazine</em>, July 1909. These are maybe less interesting than the mathematical puzzles that John and I have been doing, but for whatever reason, they caught my eye.</p>
+<h2 id="kissing-coins" tabindex="-1">Kissing Coins <a class="header-anchor" href="#kissing-coins">#</a></h2>
+<blockquote>
+<p>If I lay a penny flat on the table, how many other pennies can I place around it, every one also lying flat on the table, so that they all touch the first one?</p>
+</blockquote>
+<p>It needn't be pennies, of course. Any coin (or any disc) will do, as long as all the coins in question are the same size. Try to do this one by geometry, not experiment.</p>
+<h2 id="making-change" tabindex="-1">Making Change <a class="header-anchor" href="#making-change">#</a></h2>
+<p>If you split the check at restaurants a lot, then you probably have practical experience with this one, or at least you did until you and all your friends got Venmo. Remember, this puzzle is from 1909, though I've reworded it slightly.</p>
+<blockquote>
+<p>A tourist went into a shop in New York and bought goods at a cost of thirty-four cents. The only money they had was a dollar (100 cents),
+a three-cent piece, and a two-cent piece.<label for="coins" class="margin-toggle">⊕</label>
+<input type="checkbox" id="coins" class="margin-toggle"/>
+<span class="marginnote">Yes! The U.S. <a href="https://en.wikipedia.org/wiki/Two-cent_piece_(United_States)">two-cent piece</a> and <a href="https://en.wikipedia.org/wiki/Three-cent_piece">three-cent piece</a> really existed, although by 1909 they probably weren't in circulation anymore.</span>
+The seller had only a half-dollar and a quarter (25 cents). But another customer happened to be present, and when asked to help produced two dimes (dime = 10 cents), a nickel (5 cents), a two-cent piece, and a penny (1 cent). How did the seller make change?</p>
+</blockquote>
+<p>Solutions beneath the 3-cent nickel.</p>
+<img alt="U.S. 3-cent nickel, front and back" loading="lazy" decoding="async" src="/img/1866_3_Cent_Nickel-_Cer9cEl3m-400.png" width="800" height="400" srcset="/img/1866_3_Cent_Nickel-_Cer9cEl3m-400.png 400w, /img/1866_3_Cent_Nickel-_Cer9cEl3m-800.png 800w" sizes="100vw">
+<p class="caption">Source: <a href="https://commons.wikimedia.org/wiki/File:1866_3_Cent_Nickel.jpg">Wikimedia</a></p>
+<h2 id="solutions" tabindex="-1">Solutions <a class="header-anchor" href="#solutions">#</a></h2>
+<h3 id="kissing-coins-1" tabindex="-1">Kissing Coins <a class="header-anchor" href="#kissing-coins-1">#</a></h3>
+<p>Imagine three coins of radius <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.02ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 451 453" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi></math></mjx-assistive-mml></mjx-container>, and lay them out so that they all just kiss each other:</p>
+<img alt="Sketch of three circles of radius r, just touching each other in a triangle shape" loading="lazy" decoding="async" src="/img/tripod-MxmaJF-KMG-400.png" width="4284" height="4284" srcset="/img/tripod-MxmaJF-KMG-400.png 400w, /img/tripod-MxmaJF-KMG-800.png 800w, /img/tripod-MxmaJF-KMG-1200.png 1200w, /img/tripod-MxmaJF-KMG-4284.png 4284w" sizes="100vw">
+<p class="caption">Why yes, we do have a chalkboard in our office.</p>
+<p>Then the triangle formed by the center of the three coins is an equilateral triangle with sides <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.152ex" height="1.532ex" role="img" focusable="false" viewBox="0 -666 951 677" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width: 3;"/></g><g data-mml-node="mi" transform="translate(500,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>r</mi></math></mjx-assistive-mml></mjx-container>. Each interior angle of the triangle is 60°.</p>
+<p>360°/ 60° = 6, so we can lay out six such triangles around a center coin, where each coin just kisses its two neighboring coins. That's six coins (because every perimeter coin is in two triangles).</p>
+<img alt="Sketch of three circles of radius r, just touching each other in a triangle shape" loading="lazy" decoding="async" src="/img/kissing_discs-9Pmm1NeQEy-400.png" width="600" height="600" srcset="/img/kissing_discs-9Pmm1NeQEy-400.png 400w, /img/kissing_discs-9Pmm1NeQEy-600.png 600w" sizes="100vw">
+<p class="caption">I didn't have any pennies to hand to demonstrate this, so I used refrigerator magnets instead..</p>
+<h3 id="making-change-1" tabindex="-1">Making change <a class="header-anchor" href="#making-change-1">#</a></h3>
+<p>At the start, the allocations are:</p>
+<ul>
+<li>buyer: 100¢, 3¢, 2¢, and wants to make a 34¢ purchase</li>
+<li>seller: 50¢, 25¢</li>
+<li>customer: 10¢, 10¢, 5¢, 2¢, 1¢</li>
+</ul>
+<p>If the buyer gives the seller a dollar, then the change is 66¢, which obviously isn't going to work. So the buyer changes their 3¢ coin with the customer, for the 2¢ coin and the penny. This gives:</p>
+<ul>
+<li>buyer: 100¢, 2¢, 2¢, 1¢</li>
+<li>seller: 50¢, 25¢</li>
+<li>customer: 10¢, 10¢, 5¢, 3¢</li>
+</ul>
+<p>Now the buyer gives the seller $1.04, and needs 70¢ back.  So the seller changes their quarter with the customer for two dimes and a nickel:</p>
+<ul>
+<li>buyer: <s>100¢, 2¢, 2¢,</s> 1¢ and a 34¢ purchase</li>
+<li>seller: (100¢, 2¢, 2¢) 50¢, 10¢, 10¢, 5¢,</li>
+<li>customer: 25¢, 3¢</li>
+</ul>
+<p>A half-dollar and two dimes is 70¢, so the seller can make change, and everyone is happy.</p>
+
+</article>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2024-10-03-perplexed-banker/">The Perplexed Banker</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2024 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2024-10-08-coin-puzzles/ -->
+	</body>
+</html>
