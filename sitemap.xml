@@ -162,11 +162,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/writing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/data-science/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -177,17 +172,17 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/design/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/ab-testing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/svd/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/data-drift/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -207,17 +202,22 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/svd/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/chatgpt/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ninazumel.com/tags/website/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -303,7 +303,7 @@
 	
 	<url>
 		<loc>https://ninazumel.com/blog/2024-09-07-marginnotes-on-my-blog/</loc>
-		<lastmod>2024-09-04</lastmod>
+		<lastmod>2024-09-07</lastmod>
 	</url>
 	
 	<url>
@@ -329,5 +329,10 @@
 	<url>
 		<loc>https://ninazumel.com/blog/2024-10-08-coin-puzzles/</loc>
 		<lastmod>2024-10-08</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2024-10-10-wine-thief/</loc>
+		<lastmod>2024-10-10</lastmod>
 	</url>
 </urlset>
