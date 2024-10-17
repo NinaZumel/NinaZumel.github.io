@@ -14,7 +14,7 @@ French mathematician [Claude Gaspar Bachet de
 Méziriac](https://en.wikipedia.org/wiki/Claude_Gaspar_Bachet_de_M%C3%A9ziriac)
 (1551-1636).[^1]
 
-{% image "./images/four-weights.png", "Illustration of a balance scale and four weightss" %}
+{% image "./images/four-weights.png", "Illustration of a balance scale and four weights" %}
 <p class="caption">A balance scale and four weights.
 <a href="https://archive.org/details/TheStrandMagazineAnIllustratedMonthly/TheStrandMagazine1908bVol.XxxviJan-jun/page/n787/mode/1up?view=theater">Image Source</a></p>
 
