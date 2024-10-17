@@ -8,7 +8,7 @@ tags:
 {% image "./images/golden-scale.jpeg", "Old-School Golden scale in balance with a hand putting a coin on it" %}
 <p class="caption">Photo by Marco Verch, CC-2.0. <a href="https://foto.wuestenigel.com/old-school-golden-scale-in-balance-with-a-hand-putting-a-coin-on-it/">Source</a></p>
 
-This is a notoriously hard problem that comes in many flavors. I don't know where it comes from originally, but it garnered quite a bit of attention from mathematicians in the mid-twentieth century. Apparently some versions of it may have even distracted scientists away from their defense research during WWII!
+This is a notoriously hard problem that comes in many flavors. I don't know where it comes from originally, but it garnered quite a bit of attention from mathematicians in the mid-twentieth century. Apparently some versions of it may have even distracted scientists away from their defense research during WWII !
 
 > The problem was popular on both sides of the Atlantic during World War II; it was even suggested that it should be dropped over Germany in an attempt to sabotage their war effort...  (Guy & Nowakowski 1995){% marginnote "guy",  "Guy, Richard, and Richard Nowakowski. \"Coin-Weighing Problems,\" *The American Mathematical Monthly* Vol. 102, No. 2 (Feb. 1995). [JSTOR link](https://www.jstor.org/stable/2975353 )" %}
 
@@ -21,7 +21,7 @@ An additional detail:
 
 You can also find this puzzle (or some version of it) online as "The Twelve Balls problem." I made a point of not looking at any online solutions, but I did skim the Guy and Nowakowski paper cited above---it does not have a solution, just some history and other details.{% marginnote "paper", "Mostly, I used the observation that the coins are distinguishable in a balance pan. Without that allowance, I don't think the problem is solvable for twelve coins."%}
 
-John Mount skimmed the format of other solutions (he swears he didn't read any of them); they tend to be structured as a long and tedious case tree. So in addition to finding a solution, he and I also came up with a somewhat more consise notation and presentation for the solution. It does shorten the description of the identification procedure somewhat. Hopefully it also makes it easier to read.
+John Mount skimmed the format of other solutions (he swears he didn't read any of them); they tend to be structured as a long and tedious case tree. So in addition to finding a solution, he and I also came up with a somewhat more consise notation and presentation for the solution. It does shorten the description of the identification procedure somewhat. Hopefully, it also makes it easier to read.
 
 Our solution is after the three-cent nickel.
 
@@ -38,7 +38,7 @@ We will annotate the coins as follows:
 * $L$: the coin is possibly a dud, and if so, is lighter than a good coin
 * $H$: the coin is possibly a dud, and if so, is heavier than a good coin
 
-We'll count how many coins of a type we have with a superscript; so for example, $?^{12}$ means that we have 12 coins of unknown state (this is our starting position).
+We'll count how many coins of a type we have with a superscript; so for example, $?^{12}$ means that we have 12 coins of unknown state (this is our starting position). When there's only one coin, we'll drop the superscript.
 
 The goal is to end up in the state $X G^{11}$, where $X \in \{H, L, G\}$, the last value marking the situation where there is no dud. 
 
@@ -192,11 +192,11 @@ This resolves all cases, including the "no dud" case. We can identify the dud if
 
 ## Some Further Discussion
 
-After we finished our solution, we dug into some others. According to the Guy and Nowakowski paper, Freeman J. Dyson gave an "elegant" general solution to this problem (resolve $N$ coins in $n$ weighings) in 1946.{% marginnote "dyson", "Dyson, Freeman J. \"Note 1931--The problem of the pennies,\" *The Mathematical Gazette* Vol. 30, No 291) (October 1946). [JSTOR link](https://www.jstor.org/stable/3611225)" %}It is an *oblivious* solution, meaning Dyson predefines a sequence of weighings, which at the end is guaranteed to identify the dud (if there is one) and its weight, or report that there is no dud.  This contrasts with our---and I suspect, most---solutions, that determine the next weighing after seeing the results of the previous one. I imagine it is far more automatable than a solution like ours. In broad strokes, it seems to be a solution in the spirit of the [Four Weights problem](https://ninazumel.com/blog/2024-09-29-four-weights/): it involves labeling the coins with a trinary representation.
+After we finished our solution, we dug into some others. As referenced by Guy and Nowakowski, Freeman J. Dyson gave an "elegant" solution to the general problem (resolve $N$ coins in $n$ weighings) in 1946.{% marginnote "dyson", "Dyson, Freeman J. \"Note 1931--The problem of the pennies,\" *The Mathematical Gazette* Vol. 30, No 291) (October 1946). [JSTOR link](https://www.jstor.org/stable/3611225)" %}It is an *oblivious* solution, meaning Dyson predefines a sequence of weighings, which at the end is guaranteed to identify the dud (if there is one) and its weight, or report that there is no dud.  This contrasts with our---and I suspect, most---solutions, that determine the next weighing after seeing the results of the previous one. I imagine it is far more automatable than a solution like ours. In broad strokes, it seems to be an approach in the spirit of the [Four Weights Puzzle](https://ninazumel.com/blog/2024-09-29-four-weights/): it involves labeling the coins with a trinary representation.
 
 Dyson (and others) also show that twelve coins is the most that you can resolve in three weighings, under the conditions I gave in the problem statement. I suspect (though I don't see a proof for it, and I'm too lazy to prove it myself) that if we relax the problem to assume that there *is* a dud, and try to identify it, but not necessarily its weight, we can resolve up to thirteen coins in three weighings.{% marginnote "extracoin", "Dyson does show that if you have one extra coin that is known to be good, you can resolve 13 unknown coins in three weighings (and determine the weight of a dud)." %}
 
-If you remove the accomodation that coins are distinguishable in the balance pan (meaning that once you dump a bunch of coins in the pan, you can't tell where any individual coin came from), the maximum number of coins you can resolve appears to be ten (from a formula given by Guy and Nowakowski).
+If you remove the accomodation that coins are distinguishable in the balance pan (meaning that once you dump a bunch of coins in the pan, you can't tell where any individual coin came from), the maximum number of coins you can resolve in three weighings appears to be ten (from a formula given by Guy and Nowakowski).
 
 
 
