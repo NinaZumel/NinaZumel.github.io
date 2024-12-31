@@ -177,11 +177,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -222,7 +217,7 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
+		<loc>https://ninazumel.com/tags/design/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -238,6 +233,11 @@
 	
 	<url>
 		<loc>https://ninazumel.com/tags/marginalia/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
