@@ -142,26 +142,6 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/math-puzzles/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/base-n-arithmetic/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/fun-with-math/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/pen-and-pencil-calculation/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/blogging/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -202,6 +182,16 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/svd/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/python/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -222,22 +212,17 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/ab-testing/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://ninazumel.com/tags/website/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/svd/</loc>
+		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/data-drift/</loc>
+		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -257,7 +242,22 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
+		<loc>https://ninazumel.com/tags/math-puzzles/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/base-n-arithmetic/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/fun-with-math/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/pen-and-pencil-calculation/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
