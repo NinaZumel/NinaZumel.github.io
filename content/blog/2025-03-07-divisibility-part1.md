@@ -8,16 +8,16 @@ tags:
 ---
 
 I’ve been working on another puzzle post, which will eventually show up
-here (but probably first on [*Rworks*](Rworks.dev)). Because the puzzles
-I present come from older sources (in this case, *Strand Magazine* from
-1924), I try to solve the puzzles using techniques that a puzzle-solver
+here (but probably first on [*Rworks*](https://rworks.dev/)). Because the puzzles
+I present come from older sources---in this case, *Strand Magazine* from
+1924---I try to solve the puzzles using techniques that a puzzle-solver
 would have access to at the time—in other words, techniques other than
 brute force search via computer.
 
 While looking for such a solution to the current puzzle, I started
 thinking about various tricks for eyeballing the divisibility of
 integers. You probably remember these tricks from grade school: a number
-$N$ is divisible by 3 if the digits sum to something divisble by 3;
+$N$ is divisible by 3 if the digits sum to something divisible by 3;
 divisible by 5 if the last digit is 5 or 0; divisible by 9 if the digits
 sum to something divisible by 9; and so on. I remember learning tricks
 for divisibility by 2, 3, 5, 9, and 10. And even though I have access to
@@ -92,7 +92,7 @@ always divisible by $5^k$. So it is also true that
 - **$N$ is divisible by $5^k$ if its last $k$ digits are divisible by
   $5^k$.**
 
-So there’s some divisibility tricks you may not have known. Let’s try
+So those are some divisibility tricks you may not have known. Let’s try
 applying them.
 
 ## Fun with Mental Calculations
