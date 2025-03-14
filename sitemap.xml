@@ -142,6 +142,21 @@
 	</url>
 	
 	<url>
+		<loc>https://ninazumel.com/tags/blogging/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/teaching/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/technical-writing/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ninazumel.com/tags/musings/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
@@ -162,17 +177,7 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/blogging/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/teaching/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/technical-writing/</loc>
+		<loc>https://ninazumel.com/tags/design/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -188,6 +193,11 @@
 	
 	<url>
 		<loc>https://ninazumel.com/tags/pandas/</loc>
+		<lastmod>2024-02-19</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -212,12 +222,7 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/design/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/marginalia/</loc>
+		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -232,7 +237,7 @@
 	</url>
 	
 	<url>
-		<loc>https://ninazumel.com/tags/logistic-regression/</loc>
+		<loc>https://ninazumel.com/tags/marginalia/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -263,11 +268,6 @@
 	
 	<url>
 		<loc>https://ninazumel.com/tags/talks/</loc>
-		<lastmod>2024-02-19</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://ninazumel.com/tags/ab-testing/</loc>
 		<lastmod>2024-02-19</lastmod>
 	</url>
 	
@@ -384,5 +384,10 @@
 	<url>
 		<loc>https://ninazumel.com/blog/2025-03-10-divisibility-part2/</loc>
 		<lastmod>2025-03-10</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ninazumel.com/blog/2025-03-14-digital-difficulties/</loc>
+		<lastmod>2025-03-14</lastmod>
 	</url>
 </urlset>

@@ -4,12 +4,214 @@
 	<subtitle>Data Scientist, San Francisco</subtitle>
 	<link href="https://ninazumel.com/feed.xml" rel="self"/>
 	<link href="https://ninazumel.com/"/>
-	<updated>2025-03-10T00:00:00Z</updated>
+	<updated>2025-03-14T00:00:00Z</updated>
 	<id>https://ninazumel.com/</id>
 	<author>
 		<name>Nina B. Zumel</name>
 		<email>nzumel@win-vector.com</email>
 	</author>
+	
+	<entry>
+		<title>Digital Difficulties</title>
+		<link href="https://ninazumel.com/blog/2025-03-14-digital-difficulties/"/>
+		<updated>2025-03-14T00:00:00Z</updated>
+		<id>https://ninazumel.com/blog/2025-03-14-digital-difficulties/</id>
+		<content type="html">&lt;p&gt;&lt;em&gt;This was originally posted to &lt;a href=&quot;https://rworks.dev/posts/digital-difficulties/&quot;&gt;RWorks&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Here’s another puzzle, from Henry Dudeney’s &lt;a href=&quot;https://babel.hathitrust.org/cgi/pt?id=mdp.39015055410677&amp;amp;seq=115&quot;&gt;&lt;em&gt;Perplexities&lt;/em&gt;
+column&lt;/a&gt;
+in &lt;em&gt;Strand Magazine&lt;/em&gt;, January 1924.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Arrange the ten digits, 1 2 3 4 5 6 7 8 9 0, in such order that they
+shall form a number that may be divided by every number from 2 to 18
+without in any case a remainder. As an example, if I arrange them
+thus: 1 2 7 4 9 5 3 6 8 0, this number can be divided by 2,3,4,5, and
+so on up to 16, without any remainder, but it breaks down at 17.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One of the additional challenges in taking puzzles from these older
+sources is to try to solve them the way a puzzle-solver would have, back
+in 1924. In this case, I wasn’t successful at finding a pure
+paper-and-pencil solution, but I did find an elegant modern solution
+that would have been possible with the computational machines of the
+era.&lt;/p&gt;
+&lt;p&gt;But before I show you my solution, try it yourself, first! My solution
+after &lt;em&gt;The Mathematicians&lt;/em&gt;.&lt;/p&gt;
+&lt;img alt=&quot;Allegorical sketch of beings in a courtyard, both made of mathematical instruments&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/the-mathematicians-jRDHeoHFNf-400.png&quot; width=&quot;422&quot; height=&quot;600&quot; srcset=&quot;https://ninazumel.com/img/the-mathematicians-jRDHeoHFNf-400.png 400w, https://ninazumel.com/img/the-mathematicians-jRDHeoHFNf-422.png 422w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;The Mathematicians (1917)&lt;br&gt; Artist: Giorgio de Chirico. 
+Source: &lt;a href=&quot;https://www.wikiart.org/en/giorgio-de-chirico/the-mathematicians-1917&quot;&gt;WikiArt&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;solution&quot; tabindex=&quot;-1&quot;&gt;Solution &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Let’s look at a super brute force solution first, and then a more
+elegant, but still not quite paper-and-pencil one.&lt;/p&gt;
+&lt;h3 id=&quot;the-brute-force-solution&quot; tabindex=&quot;-1&quot;&gt;The Brute Force Solution &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;With a modern computer, one could simply generate all 10!= 3,628,800
+possible permutations of the ten digits. Then, for each permutation,
+check whether it is divisible by all the integers from 2 to 18. This is
+brutal, but it works.&lt;/p&gt;
+&lt;p&gt;We can also reduce the number of permutations by taking advantage of
+some facts about divisibility.&lt;/p&gt;
+&lt;p&gt;A number is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;divisible by 10 (and 5) if the last digit is 0&lt;/li&gt;
+&lt;li&gt;divisible by 4 (and 2) if the last two digits are a number divisible
+by 4 (For an explanation of why, see &lt;a href=&quot;https://ninazumel.com/blog/2025-03-07-divisibility-part1/&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Combining these facts, we can deduce that the last two digits of our
+target number must be 20, 40, 60, or 80. This leaves (for each case),
+8!= 40,320 permutations, giving us a total of 4* 40320 = 161,280
+candidates to examine. That’s a much smaller number!&lt;/p&gt;
+&lt;h3 id=&quot;an-elegant-modern-solution&quot; tabindex=&quot;-1&quot;&gt;An Elegant Modern Solution &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Here’s a solution that reduces the number of candidates even more. This
+time, we’ll start by finding the smallest number, &lt;em&gt;m&lt;/em&gt;, that is divisible
+by all the integers from 2 to 18. We know that our target number must be
+a multiple of &lt;em&gt;m&lt;/em&gt;. Next, we find all the multiples of &lt;em&gt;m&lt;/em&gt; in the
+appropriate range, and check which one(s) have ten unique digits. These
+will be the solutions.&lt;/p&gt;
+&lt;p&gt;Let’s code this solution up, in R.&lt;/p&gt;
+&lt;h4 id=&quot;find-the-least-common-multiple-lcm-of-the-integers-from-2-to-18&quot; tabindex=&quot;-1&quot;&gt;Find the Least Common Multiple (LCM) of the integers from 2 to 18 &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;We’ll start by multiplying all the primes in our range:&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;m &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;17&lt;/span&gt;
+m&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 510510
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that this number is also divisible by &lt;code&gt;6=2*3, 10=2*5, 14=2*7&lt;/code&gt;, and
+&lt;code&gt;15=3*5&lt;/code&gt;. What factors are left? To save the trouble of tracking this by
+hand, we’ll write a function to return which integers in the range 2:18
+a number &lt;code&gt;m&lt;/code&gt; is &lt;em&gt;not&lt;/em&gt; divisible by.&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;not_divisible_by &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  candidates &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;18&lt;/span&gt;
+  
+  remainders &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; m &lt;span class=&quot;token percent-operator operator&quot;&gt;%%&lt;/span&gt; candidates
+  candidates&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;remainders &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+not_divisible_by&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1]  4  8  9 12 16 18
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we further multiply &lt;em&gt;m&lt;/em&gt; by another 3, it will then be divisible by 9
+and 18. If we then also multiply &lt;em&gt;m&lt;/em&gt; by 4, it will be divisible by 4, 8,
+and 12. This leaves 16, which means we need another 2.&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 3 and 4, first&lt;/span&gt;
+m &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; m&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;
+not_divisible_by&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# now an extra 2&lt;/span&gt;
+m &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; m&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+not_divisible_by&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;integer(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That gives us m = 12252240, which should be the smallest number
+divisible by all integers from 2 to 18. The number we want must
+therefore be a multiple of &lt;code&gt;m&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;filter-all-the-multiples-of-m&quot; tabindex=&quot;-1&quot;&gt;Filter all the multiples of &lt;em&gt;m&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Now we need to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;find all the multiples of &lt;em&gt;m&lt;/em&gt; in the appropriate range&lt;/li&gt;
+&lt;li&gt;find all the resulting numbers that have ten unique digits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First, we’ll find the range of candidates.&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# the smallest possible candidate&lt;/span&gt;
+minC &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1234567890&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# the largest possible candidate&lt;/span&gt;
+maxC &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9876543210&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# the range of multipliers to consider&lt;/span&gt;
+crange &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; round&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;minC&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; maxC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+crange&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 101 806
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This leaves 706 candidates to check, which is far fewer than 161,280. We
+already know all these candidates are divisible by all the integers from
+2 to 18; we just need to check which ones are a number comprised of ten
+unique digits.&lt;/p&gt;
+&lt;p&gt;So let’s write the filter and do the calculation:&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;ten_unique_digits &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nint&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  nstring &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; as.character&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nint&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nchar&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nstring&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; return&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;token comment&quot;&gt;# create a vector of digits&lt;/span&gt;
+  digits &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; unlist&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nstring&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  
+  length&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;unique&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;digits&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;digits&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+
+candidates &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; m &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; crange&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;crange&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+cfilter &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vapply&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;candidates&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ten_unique_digits&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; logical&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+solns &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; candidates&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cfilter&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+solns&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 2438195760 3785942160 4753869120 4876391520
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are 4 solutions! Let’s check manually that all solutions are
+valid.&lt;/p&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; solns&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  print&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;paste&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Checking solution&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    stopifnot&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s &lt;span class=&quot;token percent-operator operator&quot;&gt;%%&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  print&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;--- Checks out&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] &amp;quot;Checking solution 2438195760&amp;quot;
+[1] &amp;quot;--- Checks out&amp;quot;
+[1] &amp;quot;Checking solution 3785942160&amp;quot;
+[1] &amp;quot;--- Checks out&amp;quot;
+[1] &amp;quot;Checking solution 4753869120&amp;quot;
+[1] &amp;quot;--- Checks out&amp;quot;
+[1] &amp;quot;Checking solution 4876391520&amp;quot;
+[1] &amp;quot;--- Checks out&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-r&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# let&#39;s also find the multipliers&lt;/span&gt;
+solns&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;m&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 199 309 388 398
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And we are done! ✅&lt;/p&gt;
+&lt;h2 id=&quot;but-how-would-dudeney-solve-this&quot; tabindex=&quot;-1&quot;&gt;But How Would Dudeney Solve This? &lt;a class=&quot;header-anchor&quot; href=&quot;https://ninazumel.com/blog/2025-03-14-digital-difficulties/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It’s easy to find &lt;em&gt;m&lt;/em&gt;, the LCM of the integers from 2 to 18, with pencil
+and paper. But I have a hard time imagining that a puzzle-solver in 1924
+would be willing to calculate candidate multiples of &lt;em&gt;m&lt;/em&gt; by hand to find
+one with ten unique digits. Even if they started at 101&lt;code&gt;m&lt;/code&gt; and worked
+their way up, they would have to check 199 - 101 + 1 = 99 candidates
+before they find a solution. That doesn’t sound fun anymore.&lt;/p&gt;
+&lt;p&gt;Fortunately, even in 1924, a sophisticated puzzle-solver (like Dudeney)
+might not need to do the calculation purely by pencil and paper. They
+could have used a mechanical calculator of the era, like the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Arithmometer&quot;&gt;Arithmometer&lt;/a&gt; below:&lt;/p&gt;
+&lt;img alt=&quot;The Odhner Arithmos, Type 5, circa 1912-1928. Source: Wikipedia&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://ninazumel.com/img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-400.png&quot; width=&quot;600&quot; height=&quot;450&quot; srcset=&quot;https://ninazumel.com/img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-400.png 400w, https://ninazumel.com/img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-600.png 600w&quot; sizes=&quot;100vw&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;The Odhner Arithmos, Type 5, circa 1912-1928. Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/File:Original-Odhner-Arithmos-Typ-5.jpg&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With such a device, a puzzle-solver could literally crank out multiples
+of &lt;em&gt;m&lt;/em&gt;, scanning each one as they go, rejecting values with repeated
+digits, until they discover a solution to the puzzle. I imagine it could
+be done in under ten minutes—which would not be considered a long time
+for someone accustomed to more manual calculations.&lt;/p&gt;
+&lt;p&gt;You can read more about older calculation technologies in John Mount’s
+article, &lt;a href=&quot;https://win-vector.com/2024/11/06/calculating-at-pencil-and-paper-scale/&quot;&gt;&lt;em&gt;Calculating at Pencil and Paper
+Scale&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of the descendants of the Arithmometer is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Curta&quot;&gt;Curta
+calculator&lt;/a&gt;, and we at Win Vector
+just happen to have one! Solving this problem with a Curta would be much
+like solving it with an Arithmometer. Here’s a video of John Mount
+“finding” the smallest solution to the puzzle:&lt;/p&gt;
+&lt;center&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KHiS7niRdQI?si=e9sLc6W5nvOz_wzj&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;p&gt;The discovered solution is in the black area, and the associated
+multiple of &lt;em&gt;m&lt;/em&gt; is in the white area. Keep in mind that John already
+knew how many cranks he had to do before a solution came up, and after
+about the first two or three cranks, he stopped checking for duplicate
+digits. So this is probably a little faster than it would take someone
+who really didn’t know what the answer was.&lt;/p&gt;
+&lt;p&gt;Now that I know about the Arithmometer and related devices, I’m not too
+worried about whether Dudeney could have executed my solution. But I do
+feel sorry for any poor &lt;em&gt;Strand Magazine&lt;/em&gt; readers who didn’t have the
+latest calculating technology. And I still wonder if I’m missing an even
+more clever trick, which would have made this solvable with just pencil
+and paper. If I ever find such a solution, I’ll post it here, and at &lt;a href=&quot;https://rworks.dev/index.html#category=Puzzle%20Corner&quot;&gt;Puzzle
+Corner&lt;/a&gt; on &lt;code&gt;Rworks.dev&lt;/code&gt;.
+And if you ever find one, please do write in and let me know!&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>A Trick For Checking Divisibility by 11</title>

@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Digital Difficulties</title>
+		<meta name="description" content="Data Scientist, San Francisco">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
+		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--description-color: #9B9C9D;
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-70: #dad8d8;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above.*/
+		--test-color: var(--color-gray-20);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 70em; /* a little wider to accomodate margin notes */
+}
+
+/* 
+https://css-tricks.com/barebones-css-for-fluid-images/ 
+Without this, images generated by eleventy-img will always use the largest available size
+-- ie, not be responsive.
+*/
+img {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  img[width] {
+	width: auto; /* Defer to max-width */
+  }
+  img[width][height] {
+	height: auto; /* Preserve aspect ratio */
+  }
+  
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+  }
+  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+p.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: #9B9C9D;
+ }
+ 
+/* for the credits at the bottom of a page */
+p.credit {
+	max-width: 50em;
+	font-size: 0.9em;
+	margin-left: auto;
+	margin-right: auto;
+ }
+
+li {
+	line-height: 1.5;
+	/* font-size: 1.2em; */
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/*
+  Custom containters
+*/
+div.message-box {
+	max-width: 50em; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1.5em; /* 24px /16 (I think)*/
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+	max-width: 50em; /* keep it narrower than the new wider body width */
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.post-metadata li {
+	font-size: 0.875em;
+}
+
+/* metadata for posts and talks */
+
+.posttalk-metadata {
+	list-style: none;
+	padding-left: 0;
+	color: var(--description-color);
+}
+
+.posttalk-metadata li {
+	font-size: 1.1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Footer */
+hr {
+    border: none;
+    background-color: #DADADB;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--background-color0);
+	;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #9B9C9D;
+}
+
+.footer-container .social_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.footer-container .social_icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-container .social_icons a:hover {
+    color: #DADADB;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Nina B. Zumel</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/pages/professional/">Professional</a></li>
+					<li class="nav-item"><a href="/pages/personal/">Personal</a></li>
+					<li class="nav-item"><a href="/pages/technical-blogging/">Technical Blogging</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+
+
+
+
+<h1>Digital Difficulties</h1>
+
+<div class="posttalk-metadata">
+  <time datetime="2025-03-14">14 March 2025</time>
+</div>
+<ul class="post-metadata">
+	<li><a href="/tags/math-puzzles/" class="post-tag">math puzzles</a></li>
+</ul>
+
+
+<article style="max-width:50em; padding-top: 1rem;">
+<p><em>This was originally posted to <a href="https://rworks.dev/posts/digital-difficulties/">RWorks</a>.</em></p>
+<p>Here’s another puzzle, from Henry Dudeney’s <a href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015055410677&amp;seq=115"><em>Perplexities</em>
+column</a>
+in <em>Strand Magazine</em>, January 1924.</p>
+<blockquote>
+<p>Arrange the ten digits, 1 2 3 4 5 6 7 8 9 0, in such order that they
+shall form a number that may be divided by every number from 2 to 18
+without in any case a remainder. As an example, if I arrange them
+thus: 1 2 7 4 9 5 3 6 8 0, this number can be divided by 2,3,4,5, and
+so on up to 16, without any remainder, but it breaks down at 17.</p>
+</blockquote>
+<p>One of the additional challenges in taking puzzles from these older
+sources is to try to solve them the way a puzzle-solver would have, back
+in 1924. In this case, I wasn’t successful at finding a pure
+paper-and-pencil solution, but I did find an elegant modern solution
+that would have been possible with the computational machines of the
+era.</p>
+<p>But before I show you my solution, try it yourself, first! My solution
+after <em>The Mathematicians</em>.</p>
+<img alt="Allegorical sketch of beings in a courtyard, both made of mathematical instruments" loading="lazy" decoding="async" src="/img/the-mathematicians-jRDHeoHFNf-400.png" width="422" height="600" srcset="/img/the-mathematicians-jRDHeoHFNf-400.png 400w, /img/the-mathematicians-jRDHeoHFNf-422.png 422w" sizes="100vw">
+<p class="caption">The Mathematicians (1917)</br> Artist: Giorgio de Chirico. 
+Source: <a href="https://www.wikiart.org/en/giorgio-de-chirico/the-mathematicians-1917">WikiArt</a></p>
+<h2 id="solution" tabindex="-1">Solution <a class="header-anchor" href="#solution">#</a></h2>
+<p>Let’s look at a super brute force solution first, and then a more
+elegant, but still not quite paper-and-pencil one.</p>
+<h3 id="the-brute-force-solution" tabindex="-1">The Brute Force Solution <a class="header-anchor" href="#the-brute-force-solution">#</a></h3>
+<p>With a modern computer, one could simply generate all 10!= 3,628,800
+possible permutations of the ten digits. Then, for each permutation,
+check whether it is divisible by all the integers from 2 to 18. This is
+brutal, but it works.</p>
+<p>We can also reduce the number of permutations by taking advantage of
+some facts about divisibility.</p>
+<p>A number is:</p>
+<ul>
+<li>divisible by 10 (and 5) if the last digit is 0</li>
+<li>divisible by 4 (and 2) if the last two digits are a number divisible
+by 4 (For an explanation of why, see <a href="/blog/2025-03-07-divisibility-part1/">here</a>).</li>
+</ul>
+<p>Combining these facts, we can deduce that the last two digits of our
+target number must be 20, 40, 60, or 80. This leaves (for each case),
+8!= 40,320 permutations, giving us a total of 4* 40320 = 161,280
+candidates to examine. That’s a much smaller number!</p>
+<h3 id="an-elegant-modern-solution" tabindex="-1">An Elegant Modern Solution <a class="header-anchor" href="#an-elegant-modern-solution">#</a></h3>
+<p>Here’s a solution that reduces the number of candidates even more. This
+time, we’ll start by finding the smallest number, <em>m</em>, that is divisible
+by all the integers from 2 to 18. We know that our target number must be
+a multiple of <em>m</em>. Next, we find all the multiples of <em>m</em> in the
+appropriate range, and check which one(s) have ten unique digits. These
+will be the solutions.</p>
+<p>Let’s code this solution up, in R.</p>
+<h4 id="find-the-least-common-multiple-lcm-of-the-integers-from-2-to-18" tabindex="-1">Find the Least Common Multiple (LCM) of the integers from 2 to 18 <a class="header-anchor" href="#find-the-least-common-multiple-lcm-of-the-integers-from-2-to-18">#</a></h4>
+<p>We’ll start by multiplying all the primes in our range:</p>
+<pre class="language-r" tabindex="0"><code class="language-r">m <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token number">3</span><span class="token operator">*</span><span class="token number">5</span><span class="token operator">*</span><span class="token number">7</span><span class="token operator">*</span><span class="token number">11</span><span class="token operator">*</span><span class="token number">13</span><span class="token operator">*</span><span class="token number">17</span>
+m</code></pre>
+<pre><code>[1] 510510
+</code></pre>
+<p>Note that this number is also divisible by <code>6=2*3, 10=2*5, 14=2*7</code>, and
+<code>15=3*5</code>. What factors are left? To save the trouble of tracking this by
+hand, we’ll write a function to return which integers in the range 2:18
+a number <code>m</code> is <em>not</em> divisible by.</p>
+<pre class="language-r" tabindex="0"><code class="language-r">not_divisible_by <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  candidates <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">:</span><span class="token number">18</span>
+  
+  remainders <span class="token operator">=</span> m <span class="token percent-operator operator">%%</span> candidates
+  candidates<span class="token punctuation">[</span>remainders <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+not_divisible_by<span class="token punctuation">(</span>m<span class="token punctuation">)</span></code></pre>
+<pre><code>[1]  4  8  9 12 16 18
+</code></pre>
+<p>If we further multiply <em>m</em> by another 3, it will then be divisible by 9
+and 18. If we then also multiply <em>m</em> by 4, it will be divisible by 4, 8,
+and 12. This leaves 16, which means we need another 2.</p>
+<pre class="language-r" tabindex="0"><code class="language-r"><span class="token comment"># 3 and 4, first</span>
+m <span class="token operator">=</span> m<span class="token operator">*</span><span class="token number">3</span><span class="token operator">*</span><span class="token number">4</span>
+not_divisible_by<span class="token punctuation">(</span>m<span class="token punctuation">)</span></code></pre>
+<pre><code>[1] 16
+</code></pre>
+<pre class="language-r" tabindex="0"><code class="language-r"><span class="token comment"># now an extra 2</span>
+m <span class="token operator">=</span> m<span class="token operator">*</span><span class="token number">2</span>
+not_divisible_by<span class="token punctuation">(</span>m<span class="token punctuation">)</span></code></pre>
+<pre><code>integer(0)
+</code></pre>
+<p>That gives us m = 12252240, which should be the smallest number
+divisible by all integers from 2 to 18. The number we want must
+therefore be a multiple of <code>m</code>.</p>
+<h4 id="filter-all-the-multiples-of-m" tabindex="-1">Filter all the multiples of <em>m</em> <a class="header-anchor" href="#filter-all-the-multiples-of-m">#</a></h4>
+<p>Now we need to</p>
+<ul>
+<li>find all the multiples of <em>m</em> in the appropriate range</li>
+<li>find all the resulting numbers that have ten unique digits</li>
+</ul>
+<p>First, we’ll find the range of candidates.</p>
+<pre class="language-r" tabindex="0"><code class="language-r"><span class="token comment"># the smallest possible candidate</span>
+minC <span class="token operator">=</span> <span class="token number">1234567890</span>
+
+<span class="token comment"># the largest possible candidate</span>
+maxC <span class="token operator">=</span> <span class="token number">9876543210</span>
+
+<span class="token comment"># the range of multipliers to consider</span>
+crange <span class="token operator">=</span> round<span class="token punctuation">(</span>c<span class="token punctuation">(</span>minC<span class="token punctuation">,</span> maxC<span class="token punctuation">)</span><span class="token operator">/</span>m<span class="token punctuation">)</span>
+crange</code></pre>
+<pre><code>[1] 101 806
+</code></pre>
+<p>This leaves 706 candidates to check, which is far fewer than 161,280. We
+already know all these candidates are divisible by all the integers from
+2 to 18; we just need to check which ones are a number comprised of ten
+unique digits.</p>
+<p>So let’s write the filter and do the calculation:</p>
+<pre class="language-r" tabindex="0"><code class="language-r">ten_unique_digits <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nint<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  nstring <span class="token operator">=</span> as.character<span class="token punctuation">(</span>nint<span class="token punctuation">)</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>nchar<span class="token punctuation">(</span>nstring<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">10</span><span class="token punctuation">)</span> return<span class="token punctuation">(</span><span class="token boolean">FALSE</span><span class="token punctuation">)</span>
+  
+  <span class="token comment"># create a vector of digits</span>
+  digits <span class="token operator">=</span> unlist<span class="token punctuation">(</span>strsplit<span class="token punctuation">(</span>nstring<span class="token punctuation">,</span> split<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  
+  length<span class="token punctuation">(</span>unique<span class="token punctuation">(</span>digits<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> length<span class="token punctuation">(</span>digits<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+candidates <span class="token operator">=</span> m <span class="token operator">*</span> crange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span>crange<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+cfilter <span class="token operator">=</span> vapply<span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> ten_unique_digits<span class="token punctuation">,</span> logical<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+solns <span class="token operator">=</span> candidates<span class="token punctuation">[</span>cfilter<span class="token punctuation">]</span>
+solns</code></pre>
+<pre><code>[1] 2438195760 3785942160 4753869120 4876391520
+</code></pre>
+<p>There are 4 solutions! Let’s check manually that all solutions are
+valid.</p>
+<pre class="language-r" tabindex="0"><code class="language-r"><span class="token keyword">for</span><span class="token punctuation">(</span>s <span class="token keyword">in</span> solns<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  print<span class="token punctuation">(</span>paste<span class="token punctuation">(</span><span class="token string">"Checking solution"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> <span class="token number">2</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stopifnot<span class="token punctuation">(</span>s <span class="token percent-operator operator">%%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  print<span class="token punctuation">(</span><span class="token string">"--- Checks out"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code>[1] &quot;Checking solution 2438195760&quot;
+[1] &quot;--- Checks out&quot;
+[1] &quot;Checking solution 3785942160&quot;
+[1] &quot;--- Checks out&quot;
+[1] &quot;Checking solution 4753869120&quot;
+[1] &quot;--- Checks out&quot;
+[1] &quot;Checking solution 4876391520&quot;
+[1] &quot;--- Checks out&quot;
+</code></pre>
+<pre class="language-r" tabindex="0"><code class="language-r"><span class="token comment"># let's also find the multipliers</span>
+solns<span class="token operator">/</span>m</code></pre>
+<pre><code>[1] 199 309 388 398
+</code></pre>
+<p>And we are done! ✅</p>
+<h2 id="but-how-would-dudeney-solve-this" tabindex="-1">But How Would Dudeney Solve This? <a class="header-anchor" href="#but-how-would-dudeney-solve-this">#</a></h2>
+<p>It’s easy to find <em>m</em>, the LCM of the integers from 2 to 18, with pencil
+and paper. But I have a hard time imagining that a puzzle-solver in 1924
+would be willing to calculate candidate multiples of <em>m</em> by hand to find
+one with ten unique digits. Even if they started at 101<code>m</code> and worked
+their way up, they would have to check 199 - 101 + 1 = 99 candidates
+before they find a solution. That doesn’t sound fun anymore.</p>
+<p>Fortunately, even in 1924, a sophisticated puzzle-solver (like Dudeney)
+might not need to do the calculation purely by pencil and paper. They
+could have used a mechanical calculator of the era, like the
+<a href="https://en.wikipedia.org/wiki/Arithmometer">Arithmometer</a> below:</p>
+<img alt="The Odhner Arithmos, Type 5, circa 1912-1928. Source: Wikipedia" loading="lazy" decoding="async" src="/img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-400.png" width="600" height="450" srcset="/img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-400.png 400w, /img/Original-Odhner-Arithmos-Typ-5-TEZCquHE94-600.png 600w" sizes="100vw">
+<p class="caption">The Odhner Arithmos, Type 5, circa 1912-1928. Source: <a href="https://en.wikipedia.org/wiki/File:Original-Odhner-Arithmos-Typ-5.jpg">Wikipedia</a></p>
+<p>With such a device, a puzzle-solver could literally crank out multiples
+of <em>m</em>, scanning each one as they go, rejecting values with repeated
+digits, until they discover a solution to the puzzle. I imagine it could
+be done in under ten minutes—which would not be considered a long time
+for someone accustomed to more manual calculations.</p>
+<p>You can read more about older calculation technologies in John Mount’s
+article, <a href="https://win-vector.com/2024/11/06/calculating-at-pencil-and-paper-scale/"><em>Calculating at Pencil and Paper
+Scale</em></a>.</p>
+<p>One of the descendants of the Arithmometer is the <a href="https://en.wikipedia.org/wiki/Curta">Curta
+calculator</a>, and we at Win Vector
+just happen to have one! Solving this problem with a Curta would be much
+like solving it with an Arithmometer. Here’s a video of John Mount
+“finding” the smallest solution to the puzzle:</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KHiS7niRdQI?si=e9sLc6W5nvOz_wzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</center>
+<p>The discovered solution is in the black area, and the associated
+multiple of <em>m</em> is in the white area. Keep in mind that John already
+knew how many cranks he had to do before a solution came up, and after
+about the first two or three cranks, he stopped checking for duplicate
+digits. So this is probably a little faster than it would take someone
+who really didn’t know what the answer was.</p>
+<p>Now that I know about the Arithmometer and related devices, I’m not too
+worried about whether Dudeney could have executed my solution. But I do
+feel sorry for any poor <em>Strand Magazine</em> readers who didn’t have the
+latest calculating technology. And I still wonder if I’m missing an even
+more clever trick, which would have made this solvable with just pencil
+and paper. If I ever find such a solution, I’ll post it here, and at <a href="https://rworks.dev/index.html#category=Puzzle%20Corner">Puzzle
+Corner</a> on <code>Rworks.dev</code>.
+And if you ever find one, please do write in and let me know!</p>
+
+</article>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2025-03-10-divisibility-part2/">A Trick For Checking Divisibility by 11</a></li>
+</ul>
+
+		</main>
+
+		<!-- footer -->
+		<hr />
+
+<div class="footer-container">
+	<p>&copy; 2025 Nina B. Zumel</p>
+	<div class="social_icons">
+	    <a
+			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
+			aria-label="Email"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fas fa-fw fa-envelope"></i>
+		</a>
+		<a
+			href="https://github.com/ninazumel"
+			aria-label="GitHub"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a
+			href="https://www.linkedin.com/in/ninazumel/"
+			aria-label="LinkedIn"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa-brands fa-linkedin"></i>
+		</a>
+		<a
+			href="/feed.xml"
+			aria-label="RSS"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="fa fa-fw fa-rss-square"></i>
+		</a>
+
+	</div>
+</div>
+		<!-- /footer-- >
+
+		<!-- Current page: /blog/2025-03-14-digital-difficulties/ -->
+	</body>
+</html>
