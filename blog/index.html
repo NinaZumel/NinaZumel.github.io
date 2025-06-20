@@ -11,13 +11,6 @@
 		
 		<style>.postlist { counter-reset: start-from 31 }
 * { box-sizing: border-box; }
-/* Defaults */
-:root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-}
-
-/* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
@@ -25,33 +18,72 @@
 	--color-gray-90: #333;
 
 	--description-color: #9B9C9D;
-	--background-color: #fff;
+	--caption-color: #9B9C9D;
+	--background-color:  #fff; 
+    --hrule-color: var(--color-gray-20);
+    --hrule-faint-color: var(--color-gray-20);
+	--box-border-color: #f5f5dc;
+
+	--header-anchor-color: var(--color-gray-50); /* for the # links on headers */
+	--icon-color: #08457e;
+	--icon-hover-color: #007ba7;
+	--tag-color: #08457e;
+	--tag-hover-color: #007ba7;
 
 	--text-color: var(--color-gray-70);
 	--text-color-link: #32506d;
 	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color-link-visited: #32506d;
 
-	--syntax-tab-size: 2;
 }
 
+
+/* colors from flexoki - https://stephango.com/flexoki */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-70: #dad8d8;
-		--color-gray-90: #dad8d8;
+		--black: #100F0F;
+		--base200: #CECDC3; 
+		--base300: #B7B5AC;
+		--base500: #878580;
+		--base600: #6F6E69;
+		--base700: #575653;
+		--base900: #282726;
+		--base950: #1C1B1A;
+		--blue400: #4385BE;
+		--blue600: #205EA6;
+		--blue700: #1A4F8C;
+		--red400: #D14D41;
+		--purple400: #8B7EC8;
+	
+		--description-color: var(--base500); 
+		--caption-color: var(--base500);
+		--background-color:  var(--black); 
+		--hrule-color: var(--base900);
+		--hrule-faint-color: var(--base950);
+		--box-border-color: var(--base950);
 
-		/* --text-color is assigned to --color-gray-_ above.*/
-		--test-color: var(--color-gray-20);
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--header-anchor-color: var(--base300); /* for the # links on headers */
+		--icon-color: var(--blue400);
+		--icon-hover-color: var(--blue600);
+		--tag-color: var(--blue400);
+		--tag-hover-color: var(--purple400);
 
-		--background-color: #15202b;
+		--text-color: var(--base200); 
+		--text-color-link: var(--base200); 
+		--text-color-link-active: var(--purple400); 
+		--text-color-link-visited: var(--base200); 
 	}
 }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
 
+
+:root {
+	--syntax-tab-size: 2;
+}
 
 /* Global stylesheet */
 * {
@@ -122,15 +154,18 @@ p.caption {
 	text-align: center;
 	font-style: italic;
 	font-size: 0.9em;
-	color: #9B9C9D;
+	color: var(--caption-color);
  }
  
+
+
 /* for the credits at the bottom of a page */
 p.credit {
 	max-width: 50em;
 	font-size: 0.9em;
 	margin-left: auto;
 	margin-right: auto;
+	color: var(--description-color);
  }
 
 li {
@@ -157,7 +192,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--hrule-color);
 }
 header:after {
 	content: "";
@@ -167,7 +202,7 @@ header:after {
 
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1px dashed var(--hrule-color);
 	padding: 1em 0;
 }
 
@@ -273,7 +308,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: var(--description-color);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -321,6 +356,16 @@ header {
 	font-size: 0.875em;
 }
 
+/* I don't want tag links to stand out too much */
+.post-metadata a[href] {
+	color: var(--tag-color);
+}
+
+.post-metadata a[href]:hover,
+               a[href]:active {
+	color: var(--tag-hover-color);
+}
+
 /* metadata for posts and talks */
 
 .posttalk-metadata {
@@ -331,6 +376,10 @@ header {
 
 .posttalk-metadata li {
 	font-size: 1.1em;
+}
+
+.posttalk-metadata a[href] {
+	color: var(--description-color);
 }
 
 /* Direct Links / Markdown Headers */
@@ -350,7 +399,7 @@ a[href].header-anchor:hover {
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-	color: #aaa;
+	color: var(--header-anchor-color);
 }
 
 h2 + .header-anchor {
@@ -360,7 +409,7 @@ h2 + .header-anchor {
 /* Footer */
 hr {
     border: none;
-    background-color: #DADADB;
+    background-color: var(--hrule-color); 
     height: 1px;
     width: 100%;
     margin: 0 auto;
@@ -377,13 +426,13 @@ hr {
     justify-content: space-around;
     align-items: center;
     padding: 2rem 0;
-    background-color: var(--background-color0);
+    background-color: var(--background-color);
 	;
 }
 
 .footer-container p {
     font-size: 1rem;
-    color: #9B9C9D;
+    color: var(--description-color); 
 }
 
 .footer-container .social_icons {
@@ -394,13 +443,13 @@ hr {
 }
 
 .footer-container .social_icons a {
-    color: #9B9C9D;
+    color: var(--icon-color); 
     font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
 }
 
 .footer-container .social_icons a:hover {
-    color: #DADADB;
+    color: var(--icon-hover-color); /* #DADADB; */
 }</style>
 	</head>
 	<body>

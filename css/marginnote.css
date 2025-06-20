@@ -66,8 +66,17 @@ article > p.caption {
     padding-left: var(--image-padding);
 	font-style: italic;
 	font-size: 0.9em;
-	color: #9B9C9D;
+	color: var(--caption-color); 
  }
+
+article > p.caption a {
+	color: var(--caption-color);
+}
+
+article > p.caption a:hover,
+article > p.caption a:active {
+    color: var(--text-color-link-active);
+}
 
 .footnote-item {
     max-width: var(--content-width); 

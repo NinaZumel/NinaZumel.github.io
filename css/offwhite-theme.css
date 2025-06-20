@@ -1,0 +1,65 @@
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: #4D4D4D;
+	--color-gray-90: #333;
+
+	--description-color: #9B9C9D;
+	--caption-color: #9B9C9D;
+	--background-color:  #fff; 
+    --hrule-color: var(--color-gray-20);
+    --hrule-faint-color: var(--color-gray-20);
+	--box-border-color: #f5f5dc;
+
+	--header-anchor-color: var(--color-gray-50); /* for the # links on headers */
+	--icon-color: #08457e;
+	--icon-hover-color: #007ba7;
+	--tag-color: #08457e;
+	--tag-hover-color: #007ba7;
+
+	--text-color: var(--color-gray-70);
+	--text-color-link: #32506d;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #32506d;
+
+}
+
+
+/* colors from flexoki - https://stephango.com/flexoki */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--black: #100F0F;
+		--base200: #CECDC3; 
+		--base300: #B7B5AC;
+		--base500: #878580;
+		--base600: #6F6E69;
+		--base700: #575653;
+		--base900: #282726;
+		--base950: #1C1B1A;
+		--blue400: #4385BE;
+		--blue600: #205EA6;
+		--blue700: #1A4F8C;
+		--red400: #D14D41;
+		--purple400: #8B7EC8;
+	
+		--description-color: var(--base500); 
+		--caption-color: var(--base500);
+		--background-color:  var(--black); 
+		--hrule-color: var(--base900);
+		--hrule-faint-color: var(--base950);
+		--box-border-color: var(--base950);
+
+		--header-anchor-color: var(--base300); /* for the # links on headers */
+		--icon-color: var(--blue400);
+		--icon-hover-color: var(--blue600);
+		--tag-color: var(--blue400);
+		--tag-hover-color: var(--purple400);
+
+		--text-color: var(--base200); 
+		--text-color-link: var(--base200); 
+		--text-color-link-active: var(--purple400); 
+		--text-color-link-visited: var(--base200); 
+	}
+}
+
+
