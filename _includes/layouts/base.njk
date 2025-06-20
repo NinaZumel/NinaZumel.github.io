@@ -26,8 +26,12 @@
 
 		{#- Add an arbitrary string to the bundle #}
 		{%- css %}* { box-sizing: border-box; }{% endcss %}
+
 		{#- Add the contents of a file to the bundle #}
+	 	{#- Theme first, then master css #}
+		{%- css %}{% include "public/css/offwhite-theme.css" %}{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+
 		{#- Or add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 

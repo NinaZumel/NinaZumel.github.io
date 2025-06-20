@@ -23,7 +23,7 @@
 .author_description p {
 	font-style: italic;
 	font-size: 1em;
-	color: #9B9C9D;
+	color: var(--description-color); 
 }
 
 .padded_author_container {

@@ -1,0 +1,16 @@
+
+article > p.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9em;
+	color: var(--caption-color); 
+ }
+
+article > p.caption a {
+	color: var(--caption-color);
+}
+
+article > p.caption a:hover,
+article > p.caption a:active {
+    color: var(--text-color-link-active);
+}
