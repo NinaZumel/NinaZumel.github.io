@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -796,10 +798,10 @@ hr {
 
 <article>
 <p>One of my favorite cheesy movies is a gem from 1984 called <a href="http://en.wikipedia.org/wiki/The_Adventures_of_Buckaroo_Banzai_Across_the_8th_Dimension"><em>The Adventures of Buckaroo Banzai Across the 8th Dimension</em></a>. For those who haven't seen it, Buckaroo Banzai is a brilliant young neurosurgeon and particle physicist who spends his days conducting cutting-edge research. At night, he and his research colleagues -- all engineers and scientists and doctors -- rock New Jersey as a band called the Hong Kong Cavaliers. In between the brilliant science and the rock-star night life, the Cavaliers find time to save the world from an alien invasion led by none other than John Lithgow.</p>
-<img alt="John Lithgow" loading="lazy" decoding="async" src="/img/Lithgow-iA5s1FULGt-400.png" width="400" height="230">
+<img src="/blog/2012-12-18-on-balance/Lithgow-iA5s1FULGt-400.png" alt="John Lithgow" loading="lazy" decoding="async" width="400" height="230">
 <p>It's very eighties: full of funky jackets with padded shoulders and some crazy hair. I can't recommend it enough.</p>
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AbBMzGUlIRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </p>
 <p>What happens if you want to be Buckaroo Banzai in real life? Here's what biologist Adam Ruben writes in his article <a href="http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_12_14/caredit.a1200137">"The Myth of the Well-Rounded Scientist:"</a></p>
 <blockquote><p>Scientists with outside interests are often regarded with suspicion in the lab; we can be seen as undedicated, unfocused, easily distracted, and so divorced from the scientific frame of mind that we’ll probably end up working in—oh, the shame—industry.</p></blockquote>
@@ -824,41 +826,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

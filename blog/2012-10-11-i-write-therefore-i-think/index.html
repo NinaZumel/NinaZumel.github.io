@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -798,7 +800,7 @@ hr {
 <article>
 <p>I came across an interesting article in <em>The Atlantic</em> a little while back <a href="http://www.theatlantic.com/magazine/archive/2012/10/the-writing-revolution/309090/">that discussed the connection between writing and thinking</a>. New Dorp, a Staten Island high school in a poor and working-class neighborhood, was able to improve student performance when they realized that their students couldn’t write. These underperforming students often could read and could do math. The majority of them were well-behaved, and seemed to want to learn. Yet they couldn't pass standard proficiency tests, and couldn't graduate. All because they couldn't form complex sentences.</p>
 <blockquote><p>The harder they looked, the teachers began to realize, the harder it was to determine whether the students were smart or not because the tools they had to express their thoughts were so limited that such a judgment was nearly impossible.</p></blockquote>
-<img alt="Fountain Pen. Photo by Nina Zumel" loading="lazy" decoding="async" src="/img/pen-o2B6gRdgLI-400.png" width="450" height="600" srcset="/img/pen-o2B6gRdgLI-400.png 400w, /img/pen-o2B6gRdgLI-450.png 450w" sizes="30vw">
+<img src="/blog/2012-10-11-i-write-therefore-i-think/pen-o2B6gRdgLI-450.jpeg" alt="Fountain Pen. Photo by Nina Zumel" style="width: 30vw; height: auto;" loading="lazy" decoding="async" width="450" height="600">
 <p class="caption">Photo: Nina Zumel</p>
 <p>The solution the teachers devised was to teach analytical writing skills in almost every class. For example, in chemistry classes, students had to describe the properties of chemical substances in sentences that used specific subordinate clause forms, such as a sentence with <em>although</em>, or with <em>unless</em>. Students in literature classes had to hold oral discussions using structured sentence forms: "I (dis)agree with your statement because...", "Can you explain your answer?" They had to write expository essays in history class.</p>
 <p>The result? Graduation rates have risen from 63% to almost 80% since the beginning of the program. Pass rates on proficiency tests rose from 67% to 89% for the English exam, and 64% to to 75% for the History exam. There's still room for improvement, but the outlook at New Dorp is optimistic.</p>
@@ -823,41 +825,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

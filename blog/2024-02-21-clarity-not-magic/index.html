@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -809,8 +811,8 @@ hr {
 <p>And this time, no magic incantations.</p>
 <p>So, this post will expand upon the points above, but it's really not about my adventures with Eleventy. It's meant to be a concrete exploration of some general principles about how to design a process; how to teach (or document) a process; and the difference between informed, purposeful action versus blindly following ritual.</p>
 <p>Read on.</p>
-<img alt="Illustration of the Sorcerer's Apprentice trying to bring the broom to life. Ferdinand Barth" loading="lazy" decoding="async" src="/img/sorcerer-barth-FaSJaIlHz3-400.png" width="435" height="480" srcset="/img/sorcerer-barth-FaSJaIlHz3-400.png 400w, /img/sorcerer-barth-FaSJaIlHz3-435.png 435w" sizes="20vw">
-<p class="caption">Illustration of Goethe's <em>Der Zauberlehrling</em> (The Sorcerer's Apprentice), 1882.</br> Artist: Ferdinand Barth. 
+<img src="/blog/2024-02-21-clarity-not-magic/sorcerer-barth-FaSJaIlHz3-435.png" alt="Illustration of the Sorcerer's Apprentice trying to bring the broom to life. Ferdinand Barth" style="width: 20vw; height: auto;" loading="lazy" decoding="async" width="435" height="480">
+<p class="caption">Illustration of Goethe's <em>Der Zauberlehrling</em> (The Sorcerer's Apprentice), 1882.<br> Artist: Ferdinand Barth. 
 Source: <a href="https://commons.wikimedia.org/wiki/File:Tovenaarsleerling_S_Barth.png">Wikimedia</a></p>
 <h2 id="newbie-friendly-non-opaque-design" tabindex="-1">Newbie-Friendly, Non-Opaque Design <a class="header-anchor" href="#newbie-friendly-non-opaque-design">#</a></h2>
 <p>The default way of putting a blog on Github Pages involves some mysterious (to me) interaction of Gemfiles and Github Actions and automated processes that are hidden from the user. I try reading the documentation, but it's written assuming some background context/knowledge that I don't have. I can make it work--I've put up at least three Jekyll blogs, starting from other people's templates--but I've never really understood the workings of the process. And every time I want to put up a blog, I have to look up how to do it.</p>
@@ -846,41 +848,21 @@ Source: <a href="https://commons.wikimedia.org/wiki/File:Tovenaarsleerling_S_Bar
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

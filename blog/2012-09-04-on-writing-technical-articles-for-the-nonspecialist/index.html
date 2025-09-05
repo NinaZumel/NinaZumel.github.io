@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -798,7 +800,7 @@ hr {
 
 <article>
 <p>I came across a post from Emily Willingham the other day: <a href="http://www.emilywillinghamphd.com/2012/08/is-phd-required-for-good-science-writing.html">"Is a PhD required for Good Science Writing?"</a>. As a science writer with a science PhD, her answer is: is it not required, and it can often be an impediment. I saw a similar sentiment echoed once by Lee Gutkind, the founder and editor of the journal <em>Creative Nonfiction</em>. I don't remember exactly what he wrote, but it was something to the effect that scientists are exactly the wrong people to produce literary, accessible writing about matters scientific.</p>
-<img alt="A pocket watch. Photo by John Mount" loading="lazy" decoding="async" src="/img/watch-5zFYr8EKPV-382.png" width="382" height="600">
+<img src="/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/watch-5zFYr8EKPV-382.jpeg" alt="A pocket watch. Photo by John Mount" loading="lazy" decoding="async" width="382" height="600">
 <p class="caption">Photo: John Mount</p>
 <p>I don't agree with Gutkind's point, but I can see where it comes from. Academic writing has a reputation for being deliberately obscure and prolix, jargonistic. Very few people read journal papers for fun (well, except me, but I'm weird). On the other hand, a science writer with a PhD has been trained for critical thinking, and should have a nose for bullpucky, even outside their field of expertise. This can come in handy when writing about medical research or controversial new scientific findings. Any scientist -- any person -- is going to hype up their work. It's the writer's job to see through that hype.</p>
 <p>I'm not a science writer in the sense that Dr. Willingham is. I write statistics and data science articles (blog posts) for non-statisticians. Generally, the audience that I write for is professionally interested in the topic, but aren't necessarily experts at it. And as a writer, many of my concerns are the same as those of a popular science writer.</p>
@@ -816,13 +818,13 @@ hr {
 <p>An example: the definition of <em>likelihood</em> (or likelihood function) from <em>The Cambridge Dictionary of Statistics</em> is as follows:</p>
 <blockquote><p>The probability of a set of observations given the value of some parameter or set of parameters.</p></blockquote>
 <p>The dictionary goes on to give an example, the likelihood of a random sample of n observations, <em>x1,..x2,...xn</em> with probability distribution <em>f(x,θ)</em>:</p>
-<img alt="Formula for the likelihood of a random sample of n observations" loading="lazy" decoding="async" src="/img/newimage-wTCVlVURcn-236.png" width="236" height="100">
+<img src="/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/newimage-wTCVlVURcn-236.png" alt="Formula for the likelihood of a random sample of n observations" loading="lazy" decoding="async" width="236" height="100">
 <p>This makes perfect sense, from a 50,000 foot point of view, especially if you are in the habit of thinking statistically. But what if you aren't? Or if you want to actually calculate a specific likelihood for a specific purpose? Like the person who asked a question about likelihood versus probability <a href="http://stats.stackexchange.com/questions/2641/what-is-the-difference-between-likelihood-and-probability">here</a>. This person received several excellent answers, most of which were elaborations of the Cambridge definition, with variations on how the likelihood formula was written. This seems to have helped the original questioner; but I can tell you that back in the days when I was struggling to learn these concepts, it wouldn't have helped me. I learn by concrete examples. Like this (borrowed from one of the answers at the link):</p>
 <p>I have an unfair coin, and I think that the probability that it will land heads is <em>p</em>. I flip the coin n times, and I record whether it lands heads (x_i=1), or whether it lands tails (x_i=0). The likelihood of observing my series of coin flips, given that I have guessed probability <em>p</em> correctly is:</p>
-<img alt="likelihood of a series of coin flips" loading="lazy" decoding="async" src="/img/newimage5-5vZ-DOQPmQ-400.png" width="429" height="100" srcset="/img/newimage5-5vZ-DOQPmQ-400.png 400w, /img/newimage5-5vZ-DOQPmQ-429.png 429w" sizes="30vw">
+<img src="/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/newimage5-5vZ-DOQPmQ-429.png" alt="likelihood of a series of coin flips" style="width: 30vw; height: auto;" loading="lazy" decoding="async" width="429" height="100">
 <p>Here, I'm using the notation L(x|p) to emphasize that the likelihood of the set of observations X is dependent on my "model" -- the estimate for <em>p</em>. If the likelihood is high, I have guessed <em>p</em> correctly; if it is low, I need to re-estimate <em>p</em>.</p>
 <p>We can generalize this to any set of observations X that lead to a binary outcome, and any model for the probability, P(x).</p>
-<img alt="likelihood of a binary outcome" loading="lazy" decoding="async" src="/img/newimage3-xL4snWtU74-400.png" width="600" height="97" srcset="/img/newimage3-xL4snWtU74-400.png 400w, /img/newimage3-xL4snWtU74-600.png 600w" sizes="100vw">
+<img src="/blog/2012-09-04-on-writing-technical-articles-for-the-nonspecialist/newimage3-xL4snWtU74-600.png" alt="likelihood of a binary outcome" loading="lazy" decoding="async" width="600" height="97">
 <p>Again, if the likelihood isn't high, then we need to adjust our model P(x), probably by tweaking some parameter or parameters θ within the model. This leads us back to the original Cambridge definition.</p>
 <p>My formula is not as general as the Cambridge formula (or the formulas given by the people who answered the question in my link above), and it may still not be clear enough for everyone. Still, it helped me; this is the formula I use to <a href="http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/"> explain the use of likelihood in deriving logistic regression</a>. Judging by Win-Vector's blog stats, it helps other people out there, too.</p>
 <p><strong>Few things are "obvious."</strong></p>
@@ -842,41 +844,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

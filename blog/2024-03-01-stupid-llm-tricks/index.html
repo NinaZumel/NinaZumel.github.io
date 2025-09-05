@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -804,7 +806,7 @@ hr {
 What are some good examples of continuous probability distribution functions with negative skew?</p>
 </blockquote>
 <p>A distribution with negative skew looks like below: tail to the left, the bulk of the distribution to the right (generally, the median is to the right of the mean). There are several <a href="https://www.statology.org/negatively-skewed-distribution-examples/">real-life distributions with negative skew</a>, but we were looking for a continuous &quot;closed-form&quot; distribution (with non-negative support, though that part didn't make it into the question).</p>
-<img alt="Graph of a negatively skewed (left-tailed) distribution and its mean" loading="lazy" decoding="async" src="/img/negative_skew-C6hjFAfnSa-400.png" width="1280" height="960" srcset="/img/negative_skew-C6hjFAfnSa-400.png 400w, /img/negative_skew-C6hjFAfnSa-800.png 800w, /img/negative_skew-C6hjFAfnSa-1200.png 1200w, /img/negative_skew-C6hjFAfnSa-1280.png 1280w" sizes="100vw">
+<img src="/blog/2024-03-01-stupid-llm-tricks/negative_skew-C6hjFAfnSa-1280.png" alt="Graph of a negatively skewed (left-tailed) distribution and its mean" loading="lazy" decoding="async" width="1280" height="960">
 <p>Here's the answer we got:</p>
 <blockquote>
 <p>Skewness in a probability distribution refers to its asymmetry. A negative skew indicates that the left tail of the distribution is longer or fatter than the right tail, with the bulk of the distribution concentrated on the right side. Some examples of continuous probability distribution functions with negative skew include:</p>
@@ -858,41 +860,21 @@ What are some good examples of continuous probability distribution functions wit
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

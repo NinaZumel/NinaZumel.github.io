@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -815,7 +817,7 @@ hr {
 <p>I would add that a solid understanding of statistics fundamentals is essential (and the whole <a href="http://www.win-vector.com/blog/">Win-Vector blog </a>attests to how much time we spend thinking about fundamentals), but stat and machine learning are not the core of the job. The real science, in my opinion -- the part where you form hypotheses, test them, revise them -- comes less in the modeling and more in the scrub and explore steps. Why does this branch of the bank report recoveries where they never reported losses? What is that "profit" column reporting, really? Does gross national product really predict mortgage defaults, or is it just a proxy variable for time (and in the recent economy, time predicts mortgage default rate pretty well)?</p>
 <p>And there is more science after the modeling, during the evaluation phase. Or more prosaically: the debug phase. Why does the model report absolute nonsense on this one subset of the data? Is the error in the modeling? The data handling? The programming? The "modeling" step itself is actually a very small, and relatively straightforward, part of the overall process.</p>
 <p>No one ever wants to hear this. We all come into the job hoping to wield support vector machines or neural nets like Wonder Woman wields her magic lasso: we capture the data, and then wrest the truth out of it, willy-nilly. I wish. I'd love to wear those cool bullet-deflecting bracelets, too.</p>
-<img alt="Wonder Woman, by Alex Ross" loading="lazy" decoding="async" src="/img/newimage6-4T5gU9-Eur-300.png" width="300" height="379">
+<img src="/blog/2012-09-19-on-being-a-data-scientist/newimage6-4T5gU9-Eur-300.png" alt="Wonder Woman, by Alex Ross" loading="lazy" decoding="async" width="300" height="379">
 <p class="caption">Art: Alex Ross</p>
 <p>My point here is that answering the original question is more a discussion of process than a checklist of skills to have and technologies to be familiar with.</p>
 <p>What would you add? What do you think a data scientist needs to know?</p>
@@ -827,41 +829,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -879,14 +881,14 @@ head<span class="token punctuation">(</span>traind<span class="token punctuation
     ## 6 0.2602110 0.5206304 0.0000000</code></pre>
 <p>Let’s plot a heatmap of the training data. Note that there’s lots of
 saturation.</p>
-<img alt="Heatmap of the true process" loading="lazy" decoding="async" src="/img/unnamed-chunk-6-1-Urzcld1ZwK-400.png" width="672" height="480" srcset="/img/unnamed-chunk-6-1-Urzcld1ZwK-400.png 400w, /img/unnamed-chunk-6-1-Urzcld1ZwK-672.png 672w" sizes="100vw">
+<img src="/blog/2024-08-20-saturated-models/unnamed-chunk-6-1-Urzcld1ZwK-672.png" alt="Heatmap of the true process" loading="lazy" decoding="async" width="672" height="480">
 <!--  ![](lm2d_adjust_files/figure-gfm/unnamed-chunk-6-1.png)-->
 <p>We’re going to use all the data to train our models, but it’s not easy
 to show comparison plots in three dimensions in a way that’s legible. So
 we’ll also look at slices of the data, by holding <code>u</code> restricted to a
 narrow range around a nominal value. Here’s a slice with <code>u</code> fixed to
 near 0.5.</p>
-<img alt="Slice of training data around u=0.5" loading="lazy" decoding="async" src="/img/unnamed-chunk-7-1-8SjDrKYvhC-400.png" width="672" height="480" srcset="/img/unnamed-chunk-7-1-8SjDrKYvhC-400.png 400w, /img/unnamed-chunk-7-1-8SjDrKYvhC-672.png 672w" sizes="100vw">
+<img src="/blog/2024-08-20-saturated-models/unnamed-chunk-7-1-8SjDrKYvhC-672.png" alt="Slice of training data around u=0.5" loading="lazy" decoding="async" width="672" height="480">
 <!-- ![](lm2d_adjust_files/figure-gfm/unnamed-chunk-7-1.png) -->
 <p>As you can see, the data is fairly noisy, in addition to being quite
 saturated. Now let’s train a linear model on the data, as well as all
@@ -975,7 +977,7 @@ slightly more bias.</p>
 different values and looking at slices of the prediction surfaces. We’ll
 just compare the original linear model, GAM-adjustment, and
 Tobit-adjustment.</p>
-<img alt="A comparison of model adjustments across various slices of the prediction surface" loading="lazy" decoding="async" src="/img/unnamed-chunk-10-1-epZZgVNig--400.png" width="768" height="672" srcset="/img/unnamed-chunk-10-1-epZZgVNig--400.png 400w, /img/unnamed-chunk-10-1-epZZgVNig--768.png 768w" sizes="100vw">
+<img src="/blog/2024-08-20-saturated-models/unnamed-chunk-10-1-epZZgVNig--768.png" alt="A comparison of model adjustments across various slices of the prediction surface" loading="lazy" decoding="async" width="768" height="672">
 <!-- ![](lm2d_adjust_files/figure-gfm/unnamed-chunk-10-1.png) -->
 <h3 id="test-on-holdout" tabindex="-1">Test on holdout <a class="header-anchor" href="#test-on-holdout">#</a></h3>
 <p>Let’s compare the models on holdout data. For this example the holdout
@@ -1133,7 +1135,7 @@ Tobit model serves us well.</p>
 <p><strong><em>Model RMSE and bias on holdout data</em></strong></p>
 <p>We get similar results. We can plot some slices to get an idea of what’s
 happening.</p>
-<img alt="Comparing Linear to thresholded GAM and Tobit models across various slices of the data" loading="lazy" decoding="async" src="/img/unnamed-chunk-16-1-pL2DBI2WxK-400.png" width="768" height="672" srcset="/img/unnamed-chunk-16-1-pL2DBI2WxK-400.png 400w, /img/unnamed-chunk-16-1-pL2DBI2WxK-768.png 768w" sizes="100vw">
+<img src="/blog/2024-08-20-saturated-models/unnamed-chunk-16-1-pL2DBI2WxK-768.png" alt="Comparing Linear to thresholded GAM and Tobit models across various slices of the data" loading="lazy" decoding="async" width="768" height="672">
 <!-- ![](lm2d_adjust_files/figure-gfm/unnamed-chunk-16-1.png) -->
 <h2 id="conclusions" tabindex="-1">Conclusions <a class="header-anchor" href="#conclusions">#</a></h2>
 <p>For our original problem—post-hoc adjustments of an already established
@@ -1181,41 +1183,21 @@ is saturated. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

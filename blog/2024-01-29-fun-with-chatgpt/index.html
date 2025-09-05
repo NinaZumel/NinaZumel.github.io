@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -800,7 +802,7 @@ hr {
 <p>What are some English words that are 4 letters long, start with f, and end with k?</p>
 </blockquote>
 <p>According to ChatGPT, there was only one word that fit that criterion: <em>fork</em>.  Upon prodding, it admitted that there were maybe a few more:</p>
-<img alt="Screenshot from ChatGPT 3.5" loading="lazy" decoding="async" src="/img/chatgpt_fk-DwBxoayKTh-400.png" width="3182" height="2287" srcset="/img/chatgpt_fk-DwBxoayKTh-400.png 400w, /img/chatgpt_fk-DwBxoayKTh-800.png 800w, /img/chatgpt_fk-DwBxoayKTh-1200.png 1200w, /img/chatgpt_fk-DwBxoayKTh-3182.png 3182w" sizes="100vw">
+<img src="/blog/2024-01-29-fun-with-chatgpt/chatgpt_fk-DwBxoayKTh-3182.png" alt="Screenshot from ChatGPT 3.5" loading="lazy" decoding="async" width="3182" height="2287">
 <p>Typing a similar query into DuckDuckGo (<em>4 letter word starting with f ending with k</em>) produced a page full of links to various crossword puzzle and Scrabble dictionaries. The first link gave me seven words. A little further down, I found a link that gave me thirteen words: faik, fank, feck, filk, fink, firk, fisk, flak, folk, fork, funk, fusk, and of course, &quot;the F-word.&quot;</p>
 <p>I'm sure that ChatGPT has filters to eliminate profanity, and admittedly, not all the above words are &quot;common,&quot; but, come on -- <em>folk</em>? <em>funk</em>? <em>flak</em>??  I particularly like <em>feck</em>, though I never hear of anyone being &quot;full of feck,&quot; only &quot;feckless&quot; ...</p>
 <p>I'm sure GPT-4 does better, but I don't care to pay to find out.</p>
@@ -812,41 +814,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

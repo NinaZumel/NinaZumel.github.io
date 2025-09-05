@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -798,7 +800,7 @@ hr {
 <article>
 <p>My jekyll-generated website (served by Github Pages) failed to build a couple of weeks ago; I don't know why. I'm not enough of a front-end developer to diagnose the problem. After looking around for an updated template to move to, I eventually decided to give the <a href="https://www.11ty.dev/">Eleventy static site generator</a> a try.</p>
 <p>So this is my new site, based on Eleventy's <a href="https://github.com/11ty/eleventy-base-blog">official starter blog</a> template. It wasn't too hard to figure out, and deployed surprisingly easily! Best of all, Eleventy is built to be <a href="https://www.11ty.dev/blog/stability/">stable</a>; which hopefully means I won't run into that <em>my website won't build, and I don't know why!</em> problem again.<label for="mn1" class="margin-toggle">⊕</label>
-<input type="checkbox" id="mn1" class="margin-toggle"/>
+<input type="checkbox" id="mn1" class="margin-toggle">
 <span class="marginnote">It's also designed to <a href="https://www.11ty.dev/docs/performance/">build really fast</a>, but that matters less to me.</span> Hurray!</p>
 <p>A better developer than I am probably could have migrated the old jekyll site completely, but I didn't manage to do that. I've only carried a few blog posts and pages over for the moment. I'll put a few more of the old posts back, and my publications page; eventually I'll figure out how to get my bookshelf and my talks pages back up, too. But at least there's something here, for now.</p>
 
@@ -809,41 +811,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

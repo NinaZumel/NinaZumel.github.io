@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -797,7 +799,7 @@ hr {
 
 <article>
 <p>I have a <a href="https://win-vector.com/2021/12/29/exploring-the-xi-correlation-coefficient/">new article</a> up on the Win-Vector blog, about the ξ ('XI') correlation coeffient that was recently introduced by Professor Sourav Chatterjee in his paper, <a href="https://arxiv.org/abs/1909.10140">“A New Coefficient of Correlation”</a>.</p>
-<img alt="XICOR coefficient" loading="lazy" decoding="async" src="/img/xicor-LotFIJdWtA-400.png" width="672" height="480" srcset="/img/xicor-LotFIJdWtA-400.png 400w, /img/xicor-LotFIJdWtA-672.png 672w" sizes="100vw"> 
+<img src="/blog/2021-12-30-new-article-on-XI-coefficient/xicor-LotFIJdWtA-672.png" alt="XICOR coefficient" loading="lazy" decoding="async" width="672" height="480"> 
 <p>Unlike traditional correlation coefficients, ξ does not assume that the relationship between <em>x</em> and <em>y</em> is linear; in principle, it can be any functional relationship. While this is potentially useful, ξ also has some disadvantages, too.</p>
 <p>In my <a href="https://win-vector.com/2021/12/29/exploring-the-xi-correlation-coefficient/">Win-Vector post</a>, I run some informal experiments to try to get a sense of what different values of ξ might mean.</p>
 <p>Please check it out.</p>
@@ -809,41 +811,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

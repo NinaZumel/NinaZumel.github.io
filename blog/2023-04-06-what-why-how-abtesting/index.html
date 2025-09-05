@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -804,7 +806,7 @@ hr {
 <h2 id="what-is-an-a-b-test" tabindex="-1">What is an A/B Test? <a class="header-anchor" href="#what-is-an-a-b-test">#</a></h2>
 <p>An <a href="https://en.wikipedia.org/wiki/A/B_testing">A/B test</a>, also called a controlled experiment or a randomized control trial, is a statistical method of determining which of a set of variants is the best. A/B tests allow organizations and policy-makers to make smarter, data-driven decisions that are less dependent on guesswork.</p>
 <p>In the simplest version of an A/B test, subjects are randomly assigned to either the control group (group A) or the treatment group (group B). Subjects in the treatment group receive the treatment (such as a new medicine, a special offer, or a new web page design) while the control group proceeds as normal without the treatment. Data is then collected on the outcomes and used to study the effects of the treatment.</p>
-<img alt="AB testing" loading="lazy" decoding="async" src="/img/AB-Testing-_poswn2rZ2-400.png" width="900" height="680" srcset="/img/AB-Testing-_poswn2rZ2-400.png 400w, /img/AB-Testing-_poswn2rZ2-800.png 800w, /img/AB-Testing-_poswn2rZ2-900.png 900w" sizes="100vw">
+<img src="/blog/2023-04-06-what-why-how-abtesting/AB-Testing-_poswn2rZ2-900.png" alt="AB testing" loading="lazy" decoding="async" width="900" height="680">
 <p class="caption">Author: Seobility - License: <a href="https://www.seobility.net/en/wiki/Creative_Commons_License_BY-SA_4.0">[CC BY-SA 4.0]</a>( "Creative Commons License BY-SA 4.0")</p>
 <h3 id="a-b-testing-in-history" tabindex="-1"><strong>A/B Testing in History</strong> <a class="header-anchor" href="#a-b-testing-in-history">#</a></h3>
 <p>This idea has been around for a long time. Historically, farmers have divided their fields into sections to test whether various treatments can improve their crop yield. Something like an A/B nutrition test even appears in the Old Testament!</p>
@@ -869,7 +871,7 @@ hr {
 <p>Continue the experiment as long as it seems valuable to refine the estimates of the OEC. From the posterior distributions of the effect sizes, it is possible to estimate the delta effect size.</p>
 </li>
 </ol>
-<img alt="Posterior distributions of a Bayesian treatment and control test." loading="lazy" decoding="async" src="/img/Fig+2-IqZooIpGrI-400.png" width="712" height="505" srcset="/img/Fig+2-IqZooIpGrI-400.png 400w, /img/Fig+2-IqZooIpGrI-712.png 712w" sizes="100vw">
+<img src="/blog/2023-04-06-what-why-how-abtesting/Fig+2-IqZooIpGrI-712.png" alt="Posterior distributions of a Bayesian treatment and control test." loading="lazy" decoding="async" width="712" height="505">
 <p class="caption">Posterior distributions of a Bayesian treatment/control test. Source: <a href="https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/">Win-Vector Blog</a></p>
 <p>Note that a Bayesian approach to A/B testing does not necessarily make the test any shorter; it simply makes quantifying the uncertainties in the experiment more straightforward, and arguably more intuitive. For a worked example of frequentist and Bayesian approaches to treatment/control experiments (in the context of clinical trials), see this <a href="https://win-vector.com/2013/05/06/bayesian-and-frequentist-approaches-ask-the-right-question/">blog post</a> from Win Vector LLC.</p>
 <h3 id="multi-armed-bandits" tabindex="-1"><strong>Multi-Armed Bandits</strong> <a class="header-anchor" href="#multi-armed-bandits">#</a></h3>
@@ -883,41 +885,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 

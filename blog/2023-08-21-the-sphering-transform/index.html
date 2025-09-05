@@ -228,6 +228,8 @@ article > h4 {
 /* 
   blockquotes should be a little shorter 
   This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
   */
   article > blockquote {
     width: calc(var(--content-width) - 2em); 
@@ -799,7 +801,7 @@ hr {
 
 <article>
 <p>I have a new blog post up on the Win Vector blog: <a href="https://win-vector.com/2023/08/20/detecting-data-differences-using-the-sphering-transform/">Detecting Data Differences Using the Sphering Transform</a>.</p>
-<img alt="Distributions of sphered norms for two data sets with different distributions" loading="lazy" decoding="async" src="/img/new_raw_comp_xformed-s2pbz_kSJE-400.png" width="609" height="470" srcset="/img/new_raw_comp_xformed-s2pbz_kSJE-400.png 400w, /img/new_raw_comp_xformed-s2pbz_kSJE-609.png 609w" sizes="50vw">
+<img src="/blog/2023-08-21-the-sphering-transform/new_raw_comp_xformed-s2pbz_kSJE-609.png" alt="Distributions of sphered norms for two data sets with different distributions" style="width: 50vw; height: auto;" loading="lazy" decoding="async" width="609" height="470">
 <p>In this post, I discuss how to convert the problem of detecting changes in multivariate distributions to the simpler problem of detecting changes in univariate distributions. Please check it out.</p>
 
 </article>
@@ -809,41 +811,21 @@ hr {
 		</main>
 
 		<!-- footer -->
-		<hr />
+		<hr>
 
 <div class="footer-container">
 	<p>&copy; 2025 Nina B. Zumel</p>
 	<div class="social_icons">
-	    <a
-			href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website"
-			aria-label="Email"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	    <a href="mailto:nzumel@win-vector.com?subject=Comment%20from%20Website" aria-label="Email" target="_blank" rel="noopener noreferrer">
 			<i class="fas fa-fw fa-envelope"></i>
 		</a>
-		<a
-			href="https://github.com/ninazumel"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://github.com/ninazumel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-github"></i>
 		</a>
-		<a
-			href="https://www.linkedin.com/in/ninazumel/"
-			aria-label="LinkedIn"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/ninazumel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
 			<i class="fa-brands fa-linkedin"></i>
 		</a>
-		<a
-			href="/feed.xml"
-			aria-label="RSS"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="/feed.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
 			<i class="fa fa-fw fa-rss-square"></i>
 		</a>
 
