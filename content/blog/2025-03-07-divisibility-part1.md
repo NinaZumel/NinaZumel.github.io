@@ -45,7 +45,7 @@ the value represented by the lowest $k$ digits of $N$. Then the number
 $M = N - n$ is the value represented by the highest $D - k$ digits,
 followed by $k$ zeros.
 
-As an example, if $k = 2$ then we write $N = 734$ as $732 = 700 + 34$.
+As an example, if $k = 2$ then we write $N = 734$ as $734 = 700 + 34$.
 
 Any integer where the lowest $k$ digits are zero is divisible by $10^k$.
 In our example, $M = 700$ is divisible by 100.
