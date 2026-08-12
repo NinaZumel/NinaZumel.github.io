@@ -20,9 +20,6 @@ eleventyNavigation:
     I am a data scientist based in San Francisco, with 20+ years of experience in machine learning, statistics, and analytics. </p>
     
     <p>Through <strong><a href="https://win-vector.com/">Win-Vector, LLC</a></strong>, the data science consulting firm that I co-founded, I work with clients in a variety of industries, designing and implementing data science solutions for their organizations' needs. In addition, I have developed teaching materials for a number of online and in-person courses, as well as bespoke training for several large corporations.</p> 
-    
-    <p>I am also the Vice President of Data Science Practice for <strong><a href="https://www.wallaroo.ai">Wallaroo.AI</a></strong>, helping their customers operationalize machine learning and AI initiatives in a more efficient and data-scientist friendly way.
-    </p>
 
     <p>
     With John Mount, I co-authored  <strong><a href="https://www.manning.com/books/practical-data-science-with-r-second-edition"><em>Practical Data Science with R</em></a></strong>, now in its second edition.

@@ -14,11 +14,6 @@ BSEE, Dept. of Electrical Engineering and Computer Science, 1989.</p>
 
 ## Professional Experience
 
-<p><strong>Wallaroo</strong> <br />
-VP, Data Science Practice, 2021-Present</p>
-<p>The Wallaroo platform operationalizes ML and AI models efficiently and at scale. While at Wallaroo, I have participated in the design of the Wallaroo SDK, to insure that it is intuitive and easy to use for data scientists seeking to deploy their own models with minimal assistance from DevOps. I also help Wallaroo's customers bring new data science initiatives to the production-ready stage.
-</p>
-
 <p><strong>Win-Vector, LLC.</strong> San Francisco, California<br />
 Principal Consultant, 2008-Present</p>
 <p>Win-Vector conducts data analysis and statistical research for a variety of private sector clients, particularly in the biotech, finance, and internet sectors. Engagements that I have led or been involved in have included: revenue attribution for Google ad-words, customer modeling from online transaction data, product recommendation systems, and loan risk modeling.</p>
@@ -39,6 +34,12 @@ Contributor to CRAN R projects:
 
 
 <p>Occasional contributor to the Win-Vector blog; started the popular <a href="http://www.win-vector.com/blog/category/statistics-to-english-translation/">Statistics to English Translation series</a>.</p>
+
+
+<p><strong>Wallaroo</strong> <br />
+VP, Data Science Practice, 2021-2024</p>
+<p>The Wallaroo platform operationalizes ML and AI models efficiently and at scale. While at Wallaroo, I have participated in the design of the Wallaroo SDK, to insure that it is intuitive and easy to use for data scientists seeking to deploy their own models with minimal assistance from DevOps. I also help Wallaroo's customers bring new data science initiatives to the production-ready stage.
+</p>
 
 <p><strong>Quimba Software, Inc</strong>. San Francisco, California<br />
 Co-founder, Owner. 2001-2008</p>

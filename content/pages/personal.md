@@ -28,11 +28,8 @@ eleventyNavigation:
 
 <p><strong><a href="https://exiw.wordpress.com">Ephemera</a></strong>:  a playground for my forays into translation, fiction, personal essay, or any writing that won’t fit my other blogs. </p>
 
-[**Dark Tales Sleuth**](https://ninazumel.com/dark_tales_sleuth/): a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works.
+[**Dark Tales Sleuth**](https://ninazumel.com/dark_tales_sleuth/): a blog where I document my efforts to track down author and translator attributions for some uncredited supernatural works. I also use this blog for "literary excavation" projects: compiling and sharing themed collections of public domain short stories, usually supernatually themed.
 
- Follow [@MultoGhost](https://micro.blog/MultoGhost) at Micro.blog to see a feed where I announce my latest blog posts across all my blogs.
- 
- Alternately, subscribe to my <strong>microblogging site [Short Thoughts](https://ninazumel.com/short_thoughts/)</strong> via RSS.
 
 </div>
 
