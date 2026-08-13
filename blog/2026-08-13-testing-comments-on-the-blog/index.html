@@ -3,80 +3,337 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tagged “website”</title>
+		<title>Testing Comments on the Blog</title>
 		<meta name="description" content="Data Scientist, San Francisco">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Nina B. Zumel">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Nina B. Zumel">
 		<script src="https://kit.fontawesome.com/9bbe6f85f9.js" crossorigin="anonymous"></script>
 		
-		<style>.postlist { counter-reset: start-from 5 }
-/* For displaying image and description*/
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
 
-.author_container {
-	text-align: center;
-	vertical-align: middle;
-}
-
-.author_container img {
-	  max-width: 175px;
-	  border-radius: 50%;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-}
-
-.author_description {
-	margin-left: auto;
-    margin-right: auto;
-	line-height: 1;
-
-}
-
-.author_description p {
-	font-style: italic;
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
-	color: var(--description-color); 
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
-.padded_author_container {
-	text-align: center;
-	padding-top: 100px;
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
 }
 
-.padded_author_container img {
-	max-width: 250px;
-	border-radius: 50%;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
 }
-/* Message Box */
-.message-box {
-	--color-message-box:  var(--background-color); 
-    --border-color: var(--box-border-color); 
+/* minimal implementation; just plain text in the margin, no blockquotes, code, etc */
+/* only (unnumbered) margin notes, no sidenotes */
+/* stripped down from https://github.com/edwardtufte/tufte-css */
 
-	display: block;
-	background-color: var(--color-message-box);
-	color: var(--text-color);
-	padding: 1em 0.625em;  /* 16px 10px /16 */
-	padding-left: 2em;  /* bit more on the left */
-	padding-right: 2em;  /* to balance it */
-	border: 2px solid var(--border-color);
-}
-.message-box ol {
-	margin-top: 0;
+/* need this for correct sidenote numbering; but I'm not using sidenotes */
+/*
+body {
+    counter-reset: sidenote-counter; 
+} 
+*/
+
+/* since I imagine these will change with different templates */
+:root {
+    --content-width: 65%;
+    --image-padding: 5%;
+    --image-max: 60%;  /* total image+padding <= content-width */
+    --notewidth: 30%; 
+    /* content-width + notewidth <  100%. I think you should leave some wiggle room. */
+    --note-right-margin: -45%; 
+    /* if this margin is -(notewidth), the note will start just on the right border of the text */
+    /* so push it a little to the right (more negative) */
 }
 
-.message-box h1 {
-	text-align: center;
+article {
+	padding-top: 1rem; 
 }
 
-.message-box h2 {
-	text-align: center;
+/* make room for the notes in the article container */
+article > p,
+article > pre,
+article > ul,
+article > ol {
+    width: var(--content-width);
 }
 
-.message-box h3 {
-	text-align: center;
+article > hr {
+    max-width: var(--content-width);
+    margin: 0
+}
+
+article > h1, 
+article > h2,
+article > h3,
+article > h4 {
+    max-width: var(--content-width);
+}
+
+
+/* 
+  blockquotes should be a little shorter 
+  This assumes that left indentation is 2em, which is what it looks like.
+  Normally I'd make the subtraction larger to indent on the right side, too,
+  but this is needed to line up marginnotes in blockquotes in that one article
+  */
+  article > blockquote {
+    width: calc(var(--content-width) - 2em); 
+}
+
+/* keep images/captions in the text column, rather than centered in the article container */
+article > img {
+    margin-left: 0;
+    padding-left: var(--image-padding);
+    max-width: var(--image-max); 
+}
+
+article > p.caption {
+	text-align: left;
+    padding-left: var(--image-padding);
+	font-style: italic;
+	font-size: 0.9em;
+	color: var(--caption-color); 
+ }
+
+article > p.caption a {
+	color: var(--caption-color);
+}
+
+article > p.caption a:hover,
+article > p.caption a:active {
+    color: var(--text-color-link-active);
+}
+
+.footnote-item {
+    max-width: var(--content-width); 
+}
+ /* finally, the margin note */
+.marginnote {    
+    float: right;
+    clear: right;
+    width: var(--notewidth);         
+    margin-right: var(--note-right-margin);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+
+input.margin-toggle {
+    display: none;
+}
+
+
+label.margin-toggle {    
+    display: none;
+
+}
+
+/* The mobile fallback: */
+/* making max-width bigger makes the note fall inline sooner */
+@media (max-width: 768px) {  
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    article > p,
+    article > blockquote,
+    article > pre,
+    article > ul,
+    article > details  {
+        width: 100%;
+    }
+
+    article > h1, 
+    article > h2,
+    article > h3,
+    article > h4 {
+        max-width: 100%;
+    }
+
+    label.margin-toggle {
+        display: inline;
+    }
+       
+    .marginnote {           
+         display: none;        
+        }    
+
+      
+    .margin-toggle:checked + .marginnote {            
+        display: block;            
+        float: left;            
+        left: 1rem;            
+        clear: both;            
+        width: 95%;            
+        margin: 1rem 2.5%;            
+        vertical-align: baseline;            
+        position: relative;        
+    }
+    label {
+        cursor: pointer;
+    }
 }
 * { box-sizing: border-box; }
 :root {
@@ -538,38 +795,69 @@ hr {
 		<main id="skip">
 			
 
+<h1>Testing Comments on the Blog</h1>
 
-<h1>Tagged “website”</h1>
-
-
-
-<ol reversed="" class="postlist">
-
-	<li class="postlist-item">
-		<a href="/blog/2026-08-13-testing-comments-on-the-blog/" class="postlist-link">Testing Comments on the Blog</a>
-		<time class="postlist-date" datetime="2026-08-13">13 August 2026</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-09-07-marginnotes-on-my-blog/" class="postlist-link">I Added Margin Notes to my Blog</a>
-		<time class="postlist-date" datetime="2024-09-07">07 September 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-09-04-sidenotes/" class="postlist-link">Playing With Sidenotes</a>
-		<time class="postlist-date" datetime="2024-09-04">04 September 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-02-19-new-blogging-framework/" class="postlist-link">Blog Migration</a>
-		<time class="postlist-date" datetime="2024-02-19">19 February 2024</time>
-	</li>
-
-</ol>
+<div class="posttalk-metadata">
+  <time datetime="2026-08-13">13 August 2026</time>
+</div>
+<ul class="post-metadata">
+	<li><a href="/tags/website/" class="post-tag">website</a></li>
+</ul>
 
 
-<p>See <a href="/tags/">all tags</a>.</p>
+<article>
+<p>I've added a comment system! I know it's an odd thing to do, since this is a fairly inactive blog, but that's also what makes it a safe testing ground.</p>
+<p>I've wanted a comment system ever since I switched to a static blog, but it's hard to find one that meets all my desiderata. It has to be hosted, but inexpensive--I don't want to figure out how to serve it myself, and I don't want to pay a lot of money when I basically expect zero comments. It has to be low friction and inclusive--I considered <a href="https://utteranc.es/">Utterances</a>, which requires logging into Github to comment. That's probably okay for this blog, but people who read <em>Dark Tales Sleuth</em> won't necessarily have a Github account. <em>And</em> it has to look like an active project. <a href="https://commentbox.io/">Commentbox.io</a> looked almost perfect, but I don't see any activity around it since 2018. Also, I have reservations about using Google or Facebook authentication.</p>
+<p>So I'm testing out <a href="https://www.remarkbox.com">Remarkbox</a>. It's pay-what-you-can and allows commenting without signing into anything. I know lack of verification is risky, but Remarkbox's email verification method was acting wonky. If it becomes a problem, I can turn off the comment auto-approval.</p>
+<p>So feel free to try it, below. You don't need to log in to anything (unless you want to be notified about replies); just type in the comment box. Markdown will work.</p>
+<p>If this works okay, I'll probably add comments to <em>Dark Tales Sleuth</em>, too.</p>
 
+</article>
+
+<!-- Remarkbox - Your readers want to communicate with you -->
+<div id="remarkbox-div">
+  <noscript>
+    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width:100%;border:none!important" tabindex="0"></iframe>
+  </noscript>
+</div>
+<script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+<script>
+  var rb_owner_key = "4f904c1c-975b-11f1-b395-040140774501";
+  var thread_uri = window.location.href;
+  var thread_title = window.document.title;
+  var thread_fragment = window.location.hash;
+
+  // rb owner was here.
+  var rb_src = "https://my.remarkbox.com/embed" +
+      "?rb_owner_key=" + rb_owner_key +
+      "&thread_title=" + encodeURI(thread_title) +
+      "&thread_uri=" + encodeURIComponent(thread_uri) +
+      "&mode=light" +
+      thread_fragment;
+
+  function create_remarkbox_iframe() {
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("id", "remarkbox-iframe");
+    ifrm.setAttribute("scrolling", "no");
+    ifrm.setAttribute("src", rb_src);
+    ifrm.setAttribute("frameborder", "0");
+    ifrm.setAttribute("tabindex", "0");
+    ifrm.setAttribute("title", "Remarkbox");
+    ifrm.style.width = "100%";
+    document.getElementById("remarkbox-div").appendChild(ifrm);
+  }
+  create_remarkbox_iframe();
+  iFrameResize(
+    {
+      checkOrigin: ["https://my.remarkbox.com"],
+      inPageLinks: true,
+      initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+    },
+    document.getElementById("remarkbox-iframe")
+  );
+</script>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2025-03-14-digital-difficulties/">Digital Difficulties</a></li>
+</ul>
 
 		</main>
 
@@ -596,6 +884,6 @@ hr {
 </div>
 		<!-- /footer-- >
 
-		<!-- Current page: /tags/website/ -->
+		<!-- Current page: /blog/2026-08-13-testing-comments-on-the-blog/ -->
 	</body>
 </html>
