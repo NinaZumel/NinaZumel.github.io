@@ -751,6 +751,49 @@ S<span class="token punctuation">[</span>ix<span class="token punctuation">,</sp
 <p>The first solution is the &quot;standard&quot; solution, meaning 500 encoded in binary (backwards). The second solution is because our last bag doesn't have the correct number of coins in it, and in fact has fewer than 500. You can tell it's not the standard answer because we use bag 1, meaning the answer appears to be odd. But this evens out, because bag10 has an odd number of coins in it.</p>
 
 </article>
+
+<!-- Remarkbox - Your readers want to communicate with you -->
+<div id="remarkbox-div">
+  <noscript>
+    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width:100%;border:none!important" tabindex="0"></iframe>
+  </noscript>
+</div>
+<script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+<script>
+  var rb_owner_key = "4f904c1c-975b-11f1-b395-040140774501";
+  var thread_uri = window.location.href;
+  var thread_title = window.document.title;
+  var thread_fragment = window.location.hash;
+
+  // rb owner was here.
+  var rb_src = "https://my.remarkbox.com/embed" +
+      "?rb_owner_key=" + rb_owner_key +
+      "&thread_title=" + encodeURI(thread_title) +
+      "&thread_uri=" + encodeURIComponent(thread_uri) +
+      "&mode=light" +
+      thread_fragment;
+
+  function create_remarkbox_iframe() {
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("id", "remarkbox-iframe");
+    ifrm.setAttribute("scrolling", "no");
+    ifrm.setAttribute("src", rb_src);
+    ifrm.setAttribute("frameborder", "0");
+    ifrm.setAttribute("tabindex", "0");
+    ifrm.setAttribute("title", "Remarkbox");
+    ifrm.style.width = "100%";
+    document.getElementById("remarkbox-div").appendChild(ifrm);
+  }
+  create_remarkbox_iframe();
+  iFrameResize(
+    {
+      checkOrigin: ["https://my.remarkbox.com"],
+      inPageLinks: true,
+      initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+    },
+    document.getElementById("remarkbox-iframe")
+  );
+</script>
 <ul class="links-nextprev"><li>Previous: <a href="/blog/2024-09-29-four-weights/">Bachet’s Four Weights Problem</a></li><li>Next: <a href="/blog/2024-10-08-coin-puzzles/">Coin Puzzles</a></li>
 </ul>
 
