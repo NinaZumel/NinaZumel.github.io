@@ -571,6 +571,11 @@ div.message-box {
 	margin-right: auto;
 }
 
+/* to keep the comment box in the text area of the page */
+iframe {  
+	max-width: 50em;  
+}
+
 
 
 /* Header */
@@ -858,10 +863,11 @@ The seller had only a half-dollar and a quarter (25 cents). But another customer
 <ul class="links-nextprev"><li>Previous: <a href="/blog/2024-10-03-perplexed-banker/">The Perplexed Banker</a></li><li>Next: <a href="/blog/2024-10-10-wine-thief/">The Wine Thief Problem</a></li>
 </ul>
 
+
 <!-- Remarkbox - Your readers want to communicate with you -->
 <div id="remarkbox-div">
   <noscript>
-    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width:100%;border:none!important" tabindex="0"></iframe>
+    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width=100%;border:none!important" tabindex="0"></iframe>
   </noscript>
 </div>
 <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>

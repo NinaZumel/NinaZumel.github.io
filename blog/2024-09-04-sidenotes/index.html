@@ -571,6 +571,11 @@ div.message-box {
 	margin-right: auto;
 }
 
+/* to keep the comment box in the text area of the page */
+iframe {  
+	max-width: 50em;  
+}
+
 
 
 /* Header */
@@ -819,10 +824,11 @@ hr {
 <ul class="links-nextprev"><li>Previous: <a href="/blog/2024-08-20-saturated-models/">Adjusting Saturated Multivariate Linear Models</a></li><li>Next: <a href="/blog/2024-09-07-marginnotes-on-my-blog/">I Added Margin Notes to my Blog</a></li>
 </ul>
 
+
 <!-- Remarkbox - Your readers want to communicate with you -->
 <div id="remarkbox-div">
   <noscript>
-    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width:100%;border:none!important" tabindex="0"></iframe>
+    <iframe id="remarkbox-iframe" src="https://my.remarkbox.com/embed?nojs=true&mode=light" style="height:600px;width=100%;border:none!important" tabindex="0"></iframe>
   </noscript>
 </div>
 <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
