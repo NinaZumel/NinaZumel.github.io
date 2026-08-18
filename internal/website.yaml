@@ -1,0 +1,24 @@
+name: website
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - black
+  - dateparser
+  - IPython
+  - ipywidgets
+  - jinja2
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas>=2.*.*
+  - pip
+  - python=3.13.*
+  - rapidfuzz
+  - setuptools
+  - requests
+  - pip:
+    - python-pptx
+    - wvpy
+    - wvu
+
