@@ -2,6 +2,7 @@
 layout: layouts/post_nonotes.njk
 title: "Digital Difficulties"
 date: 2025-03-14
+kommentpage: https://komments.cloud/c46fc009a56a59ed3adea6
 tags:
   - math puzzles
 ---
